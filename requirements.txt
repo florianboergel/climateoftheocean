@@ -1,3 +1,6 @@
 jupyter-book
 matplotlib
 numpy
+xarray
+netcdf4
+ipywidgets
