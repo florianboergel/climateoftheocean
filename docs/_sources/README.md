@@ -1,14 +1,26 @@
-# Auto-convert Jupyter Notebooks To Posts
+# Climate of the ocean
 
-[`fastpages`](https://github.com/fastai/fastpages) will automatically convert [Jupyter](https://jupyter.org/) Notebooks saved into this directory as blog posts!
+build with jupyter books
 
-You must save your notebook with the naming convention `YYYY-MM-DD-*.ipynb`.  Examples of valid filenames are:
+Copy and paste your book’s _build contents into a new folder¶
 
-```shell
-2020-01-28-My-First-Post.ipynb
-2012-09-12-how-to-write-a-blog.ipynb
-```
+The simplest way to host your book online is to simply copy everything that is inside _build and put it in a location where GitHub Pages knows to look. There are two places we recommend:
 
-If you fail to name your file correctly, `fastpages` will automatically attempt to fix the problem by prepending the last modified date of your notebook. However, it is recommended that you name your files properly yourself for more transparency.
+In a separate branch
 
-See [Writing Blog Posts With Jupyter](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter) for more details.
+    You can configure GitHub Pages to build any books that are in a branch that you specify. By default, this is gh-pages.
+In a docs/ folder of your main branch
+
+    If you’d like to keep your built book alongside your book’s source files, you may paste them into a docs/ folder.
+
+    Warning
+
+    Note that copying all of your book’s build files into the same branch as your source files will cause your repository to become very large over time, especially if you have many images in your book.
+
+In either case, follow these steps:
+
+    Copy the contents of _build/html directory into docs (or your other branch).
+
+    Add a file called .nojekyll alongside your book’s contents. This tells GitHub Pages to treat your files as a “static HTML website”.
+
+    Push your changes to GitHub, and configure it to start hosting your documentation.

@@ -3,7 +3,6 @@
 
 title: Climate of the ocean
 author: H. E. Markus Meier, Florian Börgel
-logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

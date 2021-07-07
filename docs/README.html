@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auto-convert Jupyter Notebooks To Posts &#8212; Climate of the ocean</title>
+    <title>Climate of the ocean &#8212; Climate of the ocean</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -69,8 +69,6 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
       
       <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
       
@@ -83,7 +81,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+   Climate of the ocean
   </a>
  </li>
 </ul>
@@ -242,16 +240,31 @@
         
               <div>
                 
-  <div class="section" id="auto-convert-jupyter-notebooks-to-posts">
-<h1>Auto-convert Jupyter Notebooks To Posts<a class="headerlink" href="#auto-convert-jupyter-notebooks-to-posts" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/fastai/fastpages"><code class="docutils literal notranslate"><span class="pre">fastpages</span></code></a> will automatically convert <a class="reference external" href="https://jupyter.org/">Jupyter</a> Notebooks saved into this directory as blog posts!</p>
-<p>You must save your notebook with the naming convention <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD-*.ipynb</span></code>.  Examples of valid filenames are:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="m">2020</span>-01-28-My-First-Post.ipynb
-<span class="m">2012</span>-09-12-how-to-write-a-blog.ipynb
+  <div class="section" id="climate-of-the-ocean">
+<h1>Climate of the ocean<a class="headerlink" href="#climate-of-the-ocean" title="Permalink to this headline">¶</a></h1>
+<p>build with jupyter books</p>
+<p>Copy and paste your book’s _build contents into a new folder¶</p>
+<p>The simplest way to host your book online is to simply copy everything that is inside _build and put it in a location where GitHub Pages knows to look. There are two places we recommend:</p>
+<p>In a separate branch</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>You can configure GitHub Pages to build any books that are in a branch that you specify. By default, this is gh-pages.
 </pre></div>
 </div>
-<p>If you fail to name your file correctly, <code class="docutils literal notranslate"><span class="pre">fastpages</span></code> will automatically attempt to fix the problem by prepending the last modified date of your notebook. However, it is recommended that you name your files properly yourself for more transparency.</p>
-<p>See <a class="reference external" href="https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter">Writing Blog Posts With Jupyter</a> for more details.</p>
+<p>In a docs/ folder of your main branch</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>If you’d like to keep your built book alongside your book’s source files, you may paste them into a docs/ folder.
+
+Warning
+
+Note that copying all of your book’s build files into the same branch as your source files will cause your repository to become very large over time, especially if you have many images in your book.
+</pre></div>
+</div>
+<p>In either case, follow these steps:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Copy the contents of _build/html directory into docs (or your other branch).
+
+Add a file called .nojekyll alongside your book’s contents. This tells GitHub Pages to treat your files as a “static HTML website”.
+
+Push your changes to GitHub, and configure it to start hosting your documentation.
+</pre></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
