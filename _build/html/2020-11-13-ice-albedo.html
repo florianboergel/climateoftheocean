@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria &#8212; Climate of the ocean</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 5, Evolution in time and space" href="2020-12-01-advection-diffusion.html" />
+    <link rel="prev" title="Lecture 3, Nonlinear dynamics, stability and bifurcations" href="2020-11-12-non-linear-dynamics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lecture
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-11-09-introduction_to_python.html">
+   Lecture 1, Introduction to python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-11-11-energy-model.html">
+   Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-11-12-non-linear-dynamics.html">
+   Lecture 3, Nonlinear dynamics, stability and bifurcations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-12-01-advection-diffusion.html">
+   Lecture 5, Evolution in time and space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-12-02-heat-transport.html">
+   Lecture 6, Heat transports
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Exercise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-11-14-climate-of-the-ocean-h1.html">
+   Exercise 1, policy goals under uncertainty
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-11-15-climate-of-the-ocean-h2.html">
+   Exercise 2, melting the snowball earth
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Other code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2020-11-05-red_noise_binder.html">
+   Red noise
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/2020-11-13-ice-albedo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F2020-11-13-ice-albedo.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/2020-11-13-ice-albedo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
+   Snowball Earth, the ice-albedo feedback, and multiple equilibria
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#review-of-lecture-2">
+     Review of Lecture 2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background-snowball-earth">
+     1) Background: Snowball Earth
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-ice-albedo-feedback">
+       1.1) The ice-albedo feedback
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model">
+       1.2) Adding the ice-albedo feedback to our simple climate model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-equilibria">
+     2) Multiple Equilibria
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#excourse">
+       Excourse:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#radiative-stability-analysis">
+       2.2) Radiative stability analysis
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transitioning-to-and-from-snowball-earth">
+     3) Transitioning to and from Snowball Earth
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#turning-up-the-sun">
+       3.1) Turning up the Sun
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball">
+       3.2) Did the increasing brightness of the Sun melt the Snowball?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#abrupt-climate-transitions">
+       Abrupt climate transitions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-not-the-sun-how-did-snowball-earth-melt">
+       3.3) If not the Sun, how did Snowball Earth melt?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#towards-realistic-climate-modelling">
+       Towards realistic climate modelling
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
+<h1>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>work under progress; bifurcations need to be added</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>toc: False</p></li>
+<li><p>badges: true</p></li>
+<li><p>comments: False</p></li>
+<li><p>categories: [jupyter]</p></li>
+</ul>
+<p>Thanks a lot to <a class="reference external" href="https://github.com/hdrake">Henri Drake</a> for providing the lecture.</p>
+<p>The original lecture is part of the MIT class <a class="reference external" href="https://computationalthinking.mit.edu/Fall20/lecture20/">Introduction to Computational Thinking</a>.</p>
+<p>This class uses the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>. The orignal code can be found under <a class="reference external" href="https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl">https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl</a></p>
+</div>
+<div class="section" id="snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
+<h1>Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this headline">¶</a></h1>
+<p><img alt="" src="https://static01.nyt.com/images/2019/12/17/science/02TB-SNOWBALLEARTH1/02TB-SNOWBALLEARTH1-superJumbo-v2.jpg?quality=90&amp;auto=webp" />
+<a class="reference external" href="https://static01.nyt.com/images/2019/12/17/science/02TB-SNOWBALLEARTH1/02TB-SNOWBALLEARTH1-superJumbo-v2.jpg?quality=90&amp;auto=webp">Source (New York Times)</a></p>
+<div class="section" id="review-of-lecture-2">
+<h2>Review of Lecture 2<a class="headerlink" href="#review-of-lecture-2" title="Permalink to this headline">¶</a></h2>
+<p>Recall from the last Lecture that the zero-dimensional energy balance equation is</p>
+<p>\begin{gather}
+\color{brown}{C \frac{dT}{dt}}
+; \color{black}{=} ; \color{orange}{\frac{(1 - α)S}{4}}
+; \color{black}{-} ; \color{blue}{(A - BT)}
+; \color{black}{+} ; \color{grey}{a \ln \left( \frac{[\text{CO}₂]}{[\text{CO}₂]_{\text{PI}}} \right)},
+\end{gather}</p>
+<p><img alt="" src="https://raw.githubusercontent.com/hdrake/hdrake.github.io/master/figures/planetary_energy_balance.png" /></p>
+<p>Today, we will ignore changes in CO<span class="math notranslate nohighlight">\(_2\)</span>, so that</p>
+<p><span class="math notranslate nohighlight">\(\ln \left( \frac{ [\text{CO}₂]_{\text{PI}} }{[\text{CO}₂]_{\text{PI}}} \right) = \ln(1) = 0\)</span></p>
+<p>and the model simplifies to</p>
+<p>\begin{gather}
+\color{brown}{C \frac{dT}{dt}}
+; \color{black}{=} ; \color{orange}{\frac{(1 - α)S}{4}}
+; \color{black}{-} ; \color{blue}{(A - BT)}.
+\end{gather}</p>
+<p>The dynamics of this <strong>Ordinary Differential Equation (ODE)</strong> are quite simple because it is <em>linear</em>: we can rewrite it in the form</p>
+<div class="math notranslate nohighlight">
+\[\dot{T} = f(T(t))\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \alpha x + \beta\]</div>
+<p>is a <em>linear</em> function of x. A linear ODE permits only one stable solution, <span class="math notranslate nohighlight">\(\dot{T} = 0\)</span>, which in Lecture 1 we found was Earth’s pre-industrial temperature <span class="math notranslate nohighlight">\(T_{0} = 14\)</span>°C.</p>
+<p>In this lecture, we show how a small modification that makes one term in our simple climate model non-linear completely changes its dynamics, allowing us to explain the existence of both “Snowball Earth” and the relatively warm pre-industrial climate that allowed humans to thrive.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="background-snowball-earth">
+<h2>1) Background: Snowball Earth<a class="headerlink" href="#background-snowball-earth" title="Permalink to this headline">¶</a></h2>
+<p>Geological evidence shows that the Neoproterozoic Era (550 to 1000 million years ago) is marked by two global glaciation events, in which Earth’s surface was covered in ice and snow from the Equator to the poles (see review by <a class="reference external" href="https://www.annualreviews.org/doi/full/10.1146/annurev-earth-040809-152447">Pierrehumbert et al. 2011</a>.</p>
+<p><img alt="" src="https://news.cnrs.fr/sites/default/files/styles/asset_image_full/public/assets/images/frise_earths_glaciations_72dpi.jpg?itok=MgKrHlIV" /></p>
+<div class="section" id="the-ice-albedo-feedback">
+<h3>1.1) The ice-albedo feedback<a class="headerlink" href="#the-ice-albedo-feedback" title="Permalink to this headline">¶</a></h3>
+<p>In Lecture 1, we used a <strong>constant</strong> value <span class="math notranslate nohighlight">\(α = 0.3\)</span> for Earth’s planetary albedo, which is a reasonable thing to do for small climate variations relative to the present (such as the difference between the present-day and preindustrial climates). In the case of large variations, however, this approximation is not very reliable.</p>
+<p>While oceans are dark and absorbant, <span class="math notranslate nohighlight">\(α_{ocean} \approx 0.05\)</span>, ice and snow are bright and reflective: <span class="math notranslate nohighlight">\(\alpha_{ice,\,snow} \approx 0.5\)</span> to <span class="math notranslate nohighlight">\(0.9\)</span>. Thus, if much of the ocean’s surface freezes over, we expect Earth’s albedo to rise dramatically, causing more sunlight to be reflected to space, which in turn causes even more cooling and more of the ocean to freeze, etc. This <em>non-linear positive feedback effect</em> is referred to as the <strong>ice-albedo feedback</strong> (see illustration below).</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/d/df/Ice_albedo_feedback.jpg" /></p>
+<p>We can represent the ice-albedo feedback crudely in our energy balance model by allowing the albedo to depend on temperature:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha(T) = \begin{cases}
+\alpha_{i} &amp; \mbox{if }\;\; T \leq -10\text{°C} &amp;\text{(completely frozen)}\\
+\alpha_{i} + (\alpha_{0}-\alpha_{i})\frac{T + 10}{20} &amp; \mbox{if }\;\; -10\text{°C} \leq T \leq 10\text{°C} &amp;\text{(partially frozen)}\\
+\alpha_{0} &amp;\mbox{if }\;\; T \geq 10\text{°C} &amp;\text{(no ice)}
+\end{cases}\end{split}\]</div>
+</div>
+<div class="section" id="adding-the-ice-albedo-feedback-to-our-simple-climate-model">
+<h3>1.2) Adding the ice-albedo feedback to our simple climate model<a class="headerlink" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model" title="Permalink to this headline">¶</a></h3>
+<p>First, we program albedo as a function of temperature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_alpha</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">alpha0</span><span class="p">,</span> <span class="n">alphai</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">deltaT</span><span class="o">=</span><span class="mf">10.</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">T</span> <span class="o">&lt;</span> <span class="o">-</span> <span class="n">deltaT</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">alphai</span>
+    <span class="k">elif</span> <span class="o">-</span><span class="n">deltaT</span> <span class="o">&lt;=</span> <span class="n">T</span> <span class="o">&lt;</span> <span class="n">deltaT</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">alphai</span> <span class="o">+</span> <span class="p">(</span><span class="n">alpha0</span> <span class="o">-</span> <span class="n">alphai</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T</span> <span class="o">+</span> <span class="n">deltaT</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">deltaT</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">T</span> <span class="o">&gt;=</span> <span class="n">deltaT</span><span class="p">:</span>         
+        <span class="k">return</span> <span class="n">alpha0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calc_alpha_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="n">calc_alpha</span><span class="p">)</span> <span class="c1"># boolean evaluations need to be vectorized</span>
+<span class="n">T_example</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_example</span><span class="p">,</span> <span class="n">calc_alpha_vec</span><span class="p">(</span><span class="n">T_example</span><span class="p">[:],</span> <span class="mf">0.3</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">],</span> <span class="n">y1</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="n">y1</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;albedo $α$</span><span class="se">\n</span><span class="s2">(planetary reflectivity)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">18.5</span><span class="p">,</span> <span class="mf">0.252</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&quot;completely</span><span class="se">\n</span><span class="s2">frozen&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.252</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&quot;partiall frozen&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkgrey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">0.252</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&quot;no ice&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkred&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(13, 0.252, &#39;no ice&#39;)
+</pre></div>
+</div>
+<img alt="_images/2020-11-13-ice-albedo_11_1.png" src="_images/2020-11-13-ice-albedo_11_1.png" />
+</div>
+</div>
+<p>To add this function into our energy balance model from Lecture 1 (which we’ve copied into the cell below), all we have to do is overwrite the definition of the timestep! method to specify that the temperature-dependent albedo should be updated based on the current state:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ebm</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Zero order energy balance model</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">CO2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">=</span> <span class="n">deltat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">=</span> <span class="mf">51.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mf">5.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">co2_pi</span> <span class="o">=</span> <span class="mf">280.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">S</span> <span class="o">=</span> <span class="mf">1368.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">co2</span> <span class="o">=</span> <span class="n">CO2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">CO2_PI</span> <span class="o">=</span> <span class="mf">280.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="mf">221.2</span>
+
+    <span class="k">def</span> <span class="nf">absorbed_solar_radiation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span><span class="p">)</span><span class="o">/</span><span class="mf">4.</span><span class="p">)</span>  <span class="c1"># [W/m^2]</span>
+    <span class="k">def</span> <span class="nf">outgoing_thermal_radiation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">greenhouse_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">co2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">CO2_PI</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">co2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">CO2_PI</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">tendency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+             <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">absorbed_solar_radiation</span><span class="p">()</span>
+            <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">outgoing_thermal_radiation</span><span class="p">()</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">greenhouse_effect</span><span class="p">()</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">absorbed_solar_radiation</span><span class="p">()</span>
+            <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">outgoing_thermal_radiation</span><span class="p">()</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">greenhouse_effect</span><span class="p">()</span>
+            <span class="p">)</span>        
+        
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">end_year</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timestep</span><span class="p">()</span>
+     
+    <span class="k">def</span> <span class="nf">timestep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">=</span> <span class="n">calc_alpha</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">alpha0</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span> <span class="c1"># Added the function call here</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tendency</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">=</span> <span class="n">calc_alpha</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha0</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span> <span class="c1"># Added the function call here</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tendency</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-equilibria">
+<h2>2) Multiple Equilibria<a class="headerlink" href="#multiple-equilibria" title="Permalink to this headline">¶</a></h2>
+<p>OR: the existence of “alternate Earths”</p>
+<p>Human civilization flourished over the last several thousand years in part because Earth’s global climate has been remarkably stable and forgiving. The preindustrial combination of natural greenhouse effect and incoming solar radiation yielded temperatures between the freezing and boiling points of water across most of the planet, allowing ecoystems based on liquid water to thrive.</p>
+<p>The climate system, however, is rife with non-linear effects like the ice-albedo effect, which reveal just how fragile our habitable planet is and just how unique our stable pre-industrial climate was.</p>
+<p>We learned in the last lecture that in response to temperature fluctuations, net-negative feedbacks act to restore Earth’s temperature back towards a single equilibrium state in which absorbed solar radiation is balanced by outgoing thermal radiation. Here, we explore how non-linear positive feedbacks can temporarily result in a net-positive feedback and modify Earth’s state space.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CO2_const</span><span class="p">(</span><span class="n">t</span><span class="p">):</span> <span class="c1"># define CO2 scenario</span>
+    <span class="k">return</span> <span class="mi">280</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">T0_sample</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">)):</span>
+    <span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T0_sample</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="n">CO2_const</span><span class="p">)</span>
+    <span class="n">EBM</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">EBM</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">EBM</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&quot;Completly frozen&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">y1</span><span class="o">=-</span><span class="mi">60</span><span class="p">,</span> <span class="n">y2</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">y1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.09</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s2">&quot;no ice&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;darkred&quot;</span><span class="p">)</span>
+
+<span class="n">T_un</span> <span class="o">=</span> <span class="mf">7.5472</span>
+<span class="n">deltaTs</span> <span class="o">=</span> <span class="mf">1e-2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">deltaT</span> <span class="ow">in</span> <span class="n">deltaTs</span><span class="p">:</span>
+    <span class="n">ebm_un</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T_un</span><span class="o">+</span><span class="n">deltaT</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CO2_const</span><span class="p">)</span>
+    <span class="n">ebm_un</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ebm_un</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">ebm_un</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">)</span>
+    
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Our pre-industrial climate (stable &#39;&#39;warm&#39;&#39; branch)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mf">38.3</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Alternate universe pre-industrial climate (stable &#39;&#39;cold&#39;&#39; branch)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;aqua&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">T_un</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Impossible alternate climate (unstable branch&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7efe0f539eb0&gt;
+</pre></div>
+</div>
+<img alt="_images/2020-11-13-ice-albedo_16_1.png" src="_images/2020-11-13-ice-albedo_16_1.png" />
+</div>
+</div>
+<p>We see that for T₀ ⪆ 7.55 °C, all of the curves seem to converge on the T = 14°C equilibrium (or fixed point) that we saw in Lecture 20. Curves that start below this value warm up and while curves that start above this value will cool down. For T₀ ⪅ 7.55 °C, however, the temperatures converge on a much colder equilibrium around T = -40°C. This is the Snowball Earth equilibrium. These two states are referred to as stable equilibria because even if the state gets temporarily pushed slightly away from its equilibrium, it will eventually converge right back to its equilibrium.</p>
+<p>So what happens is T₀ ≈ 7.55 °C? For some exact temperature near there, there is indeed an equilibrim state: if you start with that temperature you will stay there forever. However, if the temperature starts off even one one-hundredth of a degree above or below this exact value, we see that temperatures eventually converge to one of the other two equilibria. Thus, we call this intermediate equilibrium an unstable equilibrium, because any infinitesimal push away will cause it to careen away towards another state.</p>
+<div class="section" id="excourse">
+<h3>Excourse:<a class="headerlink" href="#excourse" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Nonlinear dynamics: stability and bifurcations</p></li>
+</ul>
+<p><a class="reference external" href="https://github.com/mitmath/18S191/blob/master/lecture_notebooks/week11/nonlinear_dynamics_bifurcations.jl">https://github.com/mitmath/18S191/blob/master/lecture_notebooks/week11/nonlinear_dynamics_bifurcations.jl</a></p>
+</div>
+<div class="section" id="radiative-stability-analysis">
+<h3>2.2) Radiative stability analysis<a class="headerlink" href="#radiative-stability-analysis" title="Permalink to this headline">¶</a></h3>
+<p>We can understand why our model has two stable equilibria and one unstable equilibrium by applying concepts from dynamical systems theory.</p>
+<p>Recall that, with fixed CO₂ concentrations, our energy balance model differential equation can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[C\frac{dT}{dT} = ASR(T) - OTR(T)\]</div>
+<p>where now the Absorbed Solar Radiatio (ASR) is also temperature dependent because the albedeo <span class="math notranslate nohighlight">\(\alpha (T)\)</span> is.</p>
+<p>In particular, by plotting the right-hand-side tendency terms as a function of the state variable <span class="math notranslate nohighlight">\(T\)</span>, we can plot a stability diagram for our system that tells us whether the plan will warm (<span class="math notranslate nohighlight">\(C\frac{dT}{dt}\)</span> &gt; 0) or cool (<span class="math notranslate nohighlight">\(C\frac{dT}{dt}\)</span> &lt; 0)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T_un</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CO2_const</span><span class="p">)</span>
+<span class="n">temp_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">OTR</span><span class="p">,</span> <span class="n">ASR</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_range</span><span class="p">))),</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">temp_range</span><span class="p">)))</span>
+
+<span class="k">for</span> <span class="n">count</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">temp_range</span><span class="p">):</span>
+    <span class="n">EBM</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">EBM</span><span class="o">.</span><span class="n">alpha2</span> <span class="o">=</span> <span class="n">calc_alpha</span><span class="p">(</span><span class="n">EBM</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">EBM</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
+    
+    <span class="n">OTR</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">EBM</span><span class="o">.</span><span class="n">outgoing_thermal_radiation</span><span class="p">()</span>
+    <span class="n">ASR</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">EBM</span><span class="o">.</span><span class="n">absorbed_solar_radiation</span><span class="p">()</span>
+    
+<span class="n">imbalance</span> <span class="o">=</span> <span class="n">ASR</span> <span class="o">-</span> <span class="n">OTR</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">bx</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_range</span><span class="p">,</span> <span class="n">OTR</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span> <span class="s2">&quot;Outgoing Thermal Radiation&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_range</span><span class="p">,</span> <span class="n">ASR</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Absorbed Solar Radiation&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;temperature [°C]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;energy flux [W/$m^2$]&quot;</span><span class="p">)</span>
+
+<span class="n">bx</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="n">y1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="n">y1</span><span class="o">=-</span><span class="mi">50</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;temperature [°C]&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;energy flux [W/$m^2$]&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_range</span><span class="p">,</span> <span class="n">imbalance</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Radiative Imbalance</span><span class="se">\n</span><span class="s2"> (ASR-OTR)&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;warming&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;darkred&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;cooling&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">bx</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span> <span class="n">bx</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2020-11-13-ice-albedo_21_0.png" src="_images/2020-11-13-ice-albedo_21_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transitioning-to-and-from-snowball-earth">
+<h2>3) Transitioning to and from Snowball Earth<a class="headerlink" href="#transitioning-to-and-from-snowball-earth" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="turning-up-the-sun">
+<h3>3.1) Turning up the Sun<a class="headerlink" href="#turning-up-the-sun" title="Permalink to this headline">¶</a></h3>
+<p>Over the entire history of the Earth, the Sun is thought to have brightened by about 40%.</p>
+<p><img alt="" src="https://rainbow.ldeo.columbia.edu/courses/s4021/ec98/fys.gif" /></p>
+<p>In the Neoproterozoic (~700 million years ago), the Sun was 93% as bright as it is today, such that the incoming solar radiation was <span class="math notranslate nohighlight">\(S\)</span> = 1272 W/m², Earth’s average temperature plunged to <span class="math notranslate nohighlight">\(T = -50\)</span>°C, and Earth’s ice-covered surface had a high albedo (reflectivity) of <span class="math notranslate nohighlight">\(\alpha_i = 0.5\)</span>.</p>
+</div>
+<div class="section" id="did-the-increasing-brightness-of-the-sun-melt-the-snowball">
+<h3>3.2) Did the increasing brightness of the Sun melt the Snowball?<a class="headerlink" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball" title="Permalink to this headline">¶</a></h3>
+<p>If we start out in the Neoproterozoic climate and all we do is increase solar insolation to today’s value of <span class="math notranslate nohighlight">\( S = 1368 W/m^2\)</span>, can we warm the planet up to the pre-industrial temperature of T = 14°C?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smin</span> <span class="o">=</span> <span class="mi">1200</span>
+<span class="n">smax</span> <span class="o">=</span> <span class="mi">1800</span>
+<span class="n">smax_limited</span> <span class="o">=</span> <span class="mi">1650</span>
+<span class="n">svec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">smin</span><span class="p">,</span> <span class="n">smax</span><span class="p">)</span>
+<span class="n">svec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">svec</span><span class="p">,</span> <span class="n">svec</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tvec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">svec</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_restart</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">S</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">svec</span><span class="p">):</span>
+    <span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">t_restart</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="n">CO2_const</span><span class="p">);</span>
+    <span class="n">EBM</span><span class="o">.</span><span class="n">S</span> <span class="o">=</span> <span class="n">S</span>
+    <span class="n">EBM</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+    <span class="n">t_restart</span> <span class="o">=</span> <span class="n">EBM</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">tvec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">EBM</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">svec</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">svec</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">],</span> <span class="n">tvec</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">svec</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;cool branch&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">svec</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">svec</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">:],</span> <span class="n">tvec</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">svec</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">:],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;warm branch&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">1368</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Pre-industiral / present insolation&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1368</span><span class="p">,</span> <span class="n">tvec</span><span class="p">[</span><span class="n">svec</span><span class="o">==</span><span class="mi">1368</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Our preindustrial climate&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1368</span><span class="p">,</span> <span class="n">tvec</span><span class="p">[</span><span class="n">svec</span><span class="o">==</span><span class="mi">1368</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Alternate preindustrial climate&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1368</span><span class="o">*</span><span class="mf">0.93</span><span class="p">,</span> <span class="o">-</span><span class="mi">48</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;neoproterozoic (700 Mya)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgrey&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;solar insolation S [W/m$^2$]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Global temperature T [°C]&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1800</span><span class="p">],</span> <span class="n">y1</span><span class="o">=-</span><span class="mi">60</span><span class="p">,</span> <span class="n">y2</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">1800</span><span class="p">],</span> <span class="n">y1</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">y2</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.09</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span><span class="mi">1800</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2020-11-13-ice-albedo_27_0.png" src="_images/2020-11-13-ice-albedo_27_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="abrupt-climate-transitions">
+<h3>Abrupt climate transitions<a class="headerlink" href="#abrupt-climate-transitions" title="Permalink to this headline">¶</a></h3>
+<p>In this model, temperature variations are fairly smooth unless temperatures rise above -10°C or fall below 10°C, in which case the <em>ice-albedo positive feedback</em> kicks in and causes an <strong>abrupt climate transition</strong>. While this is just a simple hypothetical model, these kinds of abrupt climate transitions show up all the time in the paleoclimate record and in more realistic climate model simulations.
+<img alt="" src="https://www.pnas.org/content/pnas/115/52/13288/F1.large.jpg" /></p>
+<p>This simulation teaches us that we should not take the stability of our climate for granted and that pushing our present climate outside of its historical regime of stability could trigger catastrophic abrupt climate transitions.</p>
+</div>
+<div class="section" id="if-not-the-sun-how-did-snowball-earth-melt">
+<h3>3.3) If not the Sun, how did Snowball Earth melt?<a class="headerlink" href="#if-not-the-sun-how-did-snowball-earth-melt" title="Permalink to this headline">¶</a></h3>
+<p>The leading theory is that a slow but steady outgassing of CO<span class="math notranslate nohighlight">\(_2\)</span> from volcanoes eventually caused a strong enough greenhouse gas effect to offset the cooling effect of the frozen surface’s high albedo and raise temperatures above the melting point <span class="math notranslate nohighlight">\(-10\)</span>°C.</p>
+<p><img alt="" src="https://hartm242.files.wordpress.com/2011/03/snowball-earth.jpg" /></p>
+<p>In Homework 1, you will extend the above model to include the effect of CO₂ and determine how much CO2 would need to be added to the snowball for it to melt.</p>
+</div>
+<div class="section" id="towards-realistic-climate-modelling">
+<h3>Towards realistic climate modelling<a class="headerlink" href="#towards-realistic-climate-modelling" title="Permalink to this headline">¶</a></h3>
+<p>In this simple model, the preindustrial climate of °C is so warm that there is no ice anywhere on the planet. Indeed, the only two valid stable climates are one with no ice or one with ice everywhere.</p>
+<p>So how did Earth’s preindustrial climate, which was relatively stable for thousands of years, have substantial ice caps at the poles?</p>
+<p>The “Aquaplanet”, a simple three-dimensional ocean-world climate model</p>
+<p>An “Aquaplanet” is a three-dimensional global climate simulation of a hypothetical planet covered entirely by a single global Ocean. While this is of course very different from Earth, where 27% of the planet is covered in land, the “Aquaplanet” exhibits many of the same characteristics as Earth and is much more realistic than our zero-dimensional climate model above.</p>
+<p>The video below shows that the Aquaplanet simulation exhibits a third equilibrium state, with a mostly-liquid ocean but ice caps at the poles, in addition to the two we found in our zero-dimensional model.</p>
+<p>In Homework 2, you will build a simple two-dimensional version of the aqua-planet and explore its stability.</p>
+<p><a class="reference external" href="https://www.youtube-nocookie.com/embed/lYm_IyBHMUs">youtube</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="2020-11-12-non-linear-dynamics.html" title="previous page">Lecture 3, Nonlinear dynamics, stability and bifurcations</a>
+    <a class='right-next' id="next-link" href="2020-12-01-advection-diffusion.html" title="next page">Lecture 5, Evolution in time and space</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By H. E. Markus Meier, Florian Börgel<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

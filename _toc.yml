@@ -1,0 +1,21 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Lecture
+    chapters:
+    - file: 2020-11-09-introduction_to_python
+    - file: 2020-11-11-energy-model
+    - file: 2020-11-12-non-linear-dynamics
+    - file: 2020-11-13-ice-albedo
+    - file: 2020-12-01-advection-diffusion
+    - file: 2020-12-02-heat-transport
+  - caption: Exercise
+    chapters:
+    - file: 2020-11-14-climate-of-the-ocean-h1
+    - file: 2020-11-15-climate-of-the-ocean-h2
+  - caption: Other code
+    chapters:
+    - file: 2020-11-05-red_noise_binder
