@@ -4,11 +4,6 @@
 # # Lecture 3, Nonlinear dynamics, stability and bifurcations
 # 
 # > ordinary differential equations (ODE)
-# 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # Thanks a lot to [David P. Sanders](https://github.com/dpsanders) for providing the lecture. The original lecture is part of the MIT class [Introduction to Computational Thinking](https://computationalthinking.mit.edu/Fall20/lecture20/).
 # 

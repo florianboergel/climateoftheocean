@@ -2,13 +2,6 @@
 # coding: utf-8
 
 # # Exercise 1, policy goals under uncertainty
-# 
-# > 
-# 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # ## Exercise 1, policy goals under uncertainty
 # A recent ground-breaking [review paper](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019RG000678) produced the most comprehensive and up-to-date estimate of the *climate feedback parameter*, which they find to be

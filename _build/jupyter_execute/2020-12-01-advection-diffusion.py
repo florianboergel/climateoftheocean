@@ -4,11 +4,6 @@
 # # Lecture 5, Evolution in time and space
 # 
 # > Advection and diffusion in 1D
-# 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # In[17]:
 

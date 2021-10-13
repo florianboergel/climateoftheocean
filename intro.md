@@ -19,9 +19,29 @@ In this class you will get an introduction to fundamental processes of the clima
     - tutorials and exercises
     - 45 minutes examination
 
-## Literature relevant for the Baltic Sea 
-- BACC II Author Team (2015). Second assessment of climate change for the Baltic Sea basin. Regional climate studies. Berlin, Springer.
-- Feistel, R., Nausch, G. and N., Wasmund(Eds), 2008. State and Evaluation of the Baltic Sea, 1952–2005. A detailed 50-year survey of Meteorology and Climate, Physics, Chemistry, biology, and Marine Environment. John Wiley & Sons, Inc., Hoboken, New Jersey, USA. 
-- Fennel, W. and T., Neumann, 2004. Introduction to modellingthe Marine Ecosystems. Elsevier Oceanography Series 72.
-- Leppäranta, M. and K. Myrberg, 2009. Physical oceanography of the Baltic Sea. Praxis publishing Ltd, Chiester, UK, Springer-VerlagBerlin Heidelberg New York ISBN 978-3-540-79702-9.
-- Wulff, F., L. Rahm & P. Larsson (Eds), 2001. A Systems Analysis of the Baltic Sea. Ecological Studies, Vol. 148. Springer, Berlin.
+## Literature 
+### Climate assessment
+- IPCC (www.ipcc.ch, open access)
+- BACC I and II (www.baltic.earth, open access)
+- NOSCCA (http://link.springer.com/book/10.1007/978-3-319-39745-0, open access)
+
+### Atmospheric and oceanic fluid dynamics:
+
+- James R. Holton: An introduction to dynamic meteorology
+- Geoffrey K. Vallis: Climate and the oceans
+- Geoffrey K. Vallis: Atmospheric and oceanic fluid dynamics
+- Olbers, Willebrand and Eden: Ocean Dynamics, Springer (2012)
+
+### Climate of the Baltic Sea Region:
+
+- Lectures from Askö 2015 available as youtube movies
+
+www.baltic.earth, Askö 2016 (pdf), password protected
+
+### Lecture Notes
+
+- Courtesy: Lectures from Ulrich Cubasch, Erik Kjellström
+- Lecture notes: Dietmar Dommenget
+http://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.notes.pdf
+- Hamburger Bildungsserver
+http://bildungsserver.hamburg.de/klimawandel/ (only in German)

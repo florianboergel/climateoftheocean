@@ -3,11 +3,6 @@
 
 # # Red noise
 # > Simple red noise null hypothesis
-# 
-# - toc: true 
-# - badges: true
-# - comments: true
-# - categories: [jupyter]
 
 # # Hasselmann (as explained by Dommenget and Latif, 2000)
 # 
