@@ -20,21 +20,33 @@
 # 
 # If you never coded before than starting with Python is perfect! Python is one of the easiest and most straight forward languages.
 
-# In[7]:
+# In[ ]:
 
 
 x = 1
 
 
-# In[8]:
+# In[ ]:
+
+
+
+
+
+# In[ ]:
 
 
 x = "abcd"
 
 
+# In[ ]:
+
+
+
+
+
 # x as an integer and then a string? The same concept is applicable for many other different examples. Python has a minimalistic approech and follows a simple syntax. This is why source code is very easy to read.
 
-# In[9]:
+# In[ ]:
 
 
 x = 0
@@ -48,7 +60,7 @@ else:
 print(statement)
 
 
-# In[10]:
+# In[ ]:
 
 
 x = 5 - 4       # Comments are made with a hash Raute
@@ -73,40 +85,44 @@ print("y :", y)
 # ### Variable
 # The value of a variable can be obtained by writing its name.
 
-# In[11]:
+# In[ ]:
 
 
-height = 1.79
+pi = 3.14
 
-weight = 68.7 
-
-weight
+radius = 68.7 
 
 
-# **Second example:**
+# In[ ]:
+
+
+
+
+
+# **Example:**
 # 
-# Calculate your BMI
+# Calculate the area of the circle 
 # 
-# BMI = $\frac{weight [kg]}{size^2 [m]}$ 
+# A = $\pi r^2$ 
 # 
 # Exponentiation in Python is defined as
 # 
-# Variable ** 2 .
+# r**2 
 # 
 # 
 
-# In[12]:
+# In[ ]:
 
 
-BMI = 60/(1.65**2)
-print(BMI)
+area = 
+print(area)
 
 
 # ### Types
 # 
 # Without going into detail:
 
-# In[13]:
+# In[ ]:
 
 
 pi = 3.141516546859754674896794
@@ -115,8 +131,8 @@ x = 'Hey Guys'
 y = "Also works this way ..."
 z = True
 
-print('days_of_week: ', type(days_of_week))
 print('pi: ', type(pi))
+print('days_of_week: ', type(days_of_week))
 print('x: ', type(x))
 print('y: ', type(y))
 print('z: ', type(z))
@@ -124,19 +140,19 @@ print('z: ', type(z))
 
 # Does this really matter? Actually, no, since Python's use of variables is very intuitive. Still, keep in mind that a different variable type can lead to different behaviour:
 
-# In[14]:
+# In[ ]:
 
 
 2 + 3 
 
 
-# In[15]:
+# In[ ]:
 
 
 'ab' + 'cd'
 
 
-# In[16]:
+# In[ ]:
 
 
 # We define two integers and assign the division to c
@@ -148,7 +164,7 @@ c = a / b
 
 # What is the value of c?
 
-# In[17]:
+# In[ ]:
 
 
 print(c)
@@ -172,7 +188,7 @@ print(c)
 # 
 # Don't get confused here: "hallway" is a string, while hall is a variable that represents the float 11.25 you specified earlier.
 
-# In[18]:
+# In[ ]:
 
 
 # area variables (in square meters)
@@ -185,15 +201,24 @@ bath = 9.50
 # house information as list of lists
 house = [["hallway", hall],
          ["kitchen", kit],
-         ["living room", liv]]
-
-# Print out house
-
-
-# Print out the type of house
+         ["living room", liv],
+         ["bedroom"], bed]
 
 
-# ### Subset and conquer
+# ### Example
+# 
+# - Print out house
+# - Print out the type of house
+# - Add the the bath to the house
+# 
+
+# In[ ]:
+
+
+
+
+
+# ## Subset and conquer
 # Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list x and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
 # 
 # ```python
@@ -202,8 +227,50 @@ house = [["hallway", hall],
 # x[-3] # same result!
 # ```
 # 
-# 
+# ### Example
 # Remember the areas list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+
+# In[ ]:
+
+
+
+
+
+# ### Tip
+# 
+# Some times it makes sense to avoid lists of lists and instead use dictionaries.
+# 
+# ```python
+# house = {
+#     "hallway": hall,
+#     "kitchen": kit,
+#     "living room": liv,
+#     "bedroom": bath
+# }
+# ```
+
+# In[ ]:
+
+
+house = {
+    "hallway": hall,
+    "kitchen": kit,
+    "living room": liv,
+    "bedroom": bed
+}
+
+
+# In[ ]:
+
+
+house.keys()
+
+
+# In[ ]:
+
+
+house["hallway"]
+
 
 # ### Familiar functions
 # Out of the box, Python offers a bunch of built-in functions to make your life as a data scientist easier. You already know two such functions: print() and type(). You've also used the functions str(), int(), bool() and float() to switch between data types. These are built-in functions as well.
@@ -216,7 +283,7 @@ house = [["hallway", hall],
 # 
 # output = function_name(input)
 
-# In[19]:
+# In[ ]:
 
 
 # Create variables var1 and var2
@@ -233,8 +300,10 @@ int(var2)
 
 
 # ## Numpy
+# 
+#  Numpy is a library, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
 
-# In[20]:
+# In[ ]:
 
 
 import numpy as np
@@ -251,7 +320,7 @@ print("This is an array: {} and looks like \n {}".format(type(A), A))
 
 # ### Create arrays of a give length
 
-# In[21]:
+# In[ ]:
 
 
 y_ar = np.arange(0, 1, 0.1)
@@ -266,7 +335,7 @@ print(x_ar)
 
 # ### Multidimensional arrays
 
-# In[22]:
+# In[ ]:
 
 
 z_ar = np.zeros((100)) #creates an array of shape (100,) with zeros
@@ -286,7 +355,7 @@ z_ar[0, 0, 1, 2]
 
 # .shape gives you the dimensions of the array, while len() only returns the lenght of the first dimension!
 
-# In[23]:
+# In[ ]:
 
 
 import time
@@ -304,7 +373,7 @@ for count in range(len(a)):
 print(c)
 
 
-# In[24]:
+# In[ ]:
 
 
 a = np.array([1., 2., 3.])
@@ -315,7 +384,7 @@ print(a + b)
 
 # ### Why do we do this?
 
-# In[25]:
+# In[ ]:
 
 
 a = [1 for x in range(1000000)]
@@ -342,7 +411,7 @@ print('This took %0.3f ms' % ((time2-time1)*1000.0))
 # ### Useful functions:
 # 
 
-# In[26]:
+# In[ ]:
 
 
 z = np.random.rand(10, 20, 30)
@@ -350,7 +419,7 @@ z = np.random.rand(10, 20, 30)
 print(z.shape)
 
 
-# In[27]:
+# In[ ]:
 
 
 z_mean = np.nanmean(z, axis = 1)
@@ -366,7 +435,7 @@ z_mean_sqrt = np.sqrt(z_mean) # square root
 
 # ## masked arrays
 
-# In[28]:
+# In[ ]:
 
 
 z = np.random.rand(20, 20)
@@ -376,7 +445,7 @@ print(mask)
 print(mask.shape)
 
 
-# In[29]:
+# In[ ]:
 
 
 z_masked = np.ma.asarray(z)
@@ -385,19 +454,19 @@ z_masked.mask = mask
 print(z_masked)
 
 
-# In[30]:
+# In[ ]:
 
 
 import matplotlib.pyplot as plt
 
 
-# In[31]:
+# In[ ]:
 
 
 plt.pcolor(z)
 
 
-# In[32]:
+# In[ ]:
 
 
 plt.pcolor(z_masked)
@@ -405,7 +474,7 @@ plt.pcolor(z_masked)
 
 # ## Functions
 
-# In[33]:
+# In[ ]:
 
 
 def multiply_constant(x, constant = 5):
@@ -421,7 +490,7 @@ print(multiply_constant(a, constant = 2.5))
 
 # ## 1D Plot
 
-# In[34]:
+# In[ ]:
 
 
 import numpy as np
@@ -447,7 +516,7 @@ plt.legend()
 
 # ## 2D Plots
 
-# In[35]:
+# In[ ]:
 
 
 z = np.random.rand(20,20)
@@ -463,7 +532,7 @@ f.colorbar(im)
 
 # # netCDF4-files
 
-# In[37]:
+# In[ ]:
 
 
 import xarray as xr
@@ -473,31 +542,31 @@ url = "https://ds.nccs.nasa.gov/thredds/dodsC/CMIP5/ESGF/GISS/rcp45/E2-R_rcp45_r
 ds = xr.open_dataset(url)
 
 
-# In[38]:
+# In[ ]:
 
 
 ds.isel(time = 1)
 
 
-# In[39]:
+# In[ ]:
 
 
 ds.isel(time = 1).tos.plot()
 
 
-# In[43]:
+# In[ ]:
 
 
 tmp = ds.sel(lon = slice(150,200)).isel(time = slice(1,100)).tos.mean(["lon","lat"])
 
 
-# In[46]:
+# In[ ]:
 
 
 tmp.plot()
 
 
-# In[45]:
+# In[ ]:
 
 
 tmp.rolling(time = 10, min_periods =1).mean().plot()
