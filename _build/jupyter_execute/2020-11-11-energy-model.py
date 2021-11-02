@@ -9,7 +9,7 @@
 # 
 # This class uses the [Julia programming language](http://www.julialang.org/). The orignal code can be found under https://github.com/hdrake/simplEarth/blob/master/1_energy_balance_model.jl
 
-# In[5]:
+# In[ ]:
 
 
 import xarray as xr
@@ -41,7 +41,7 @@ import matplotlib.pyplot as plt
 # At Earth's orbital distance from the Sun, the power of the Sun's rays that intercept the Earth is equal to
 # 
 
-# In[13]:
+# In[ ]:
 
 
 S = 1368 # solar insolation [W/m^2]  (energy per unit time per unit area)
@@ -49,7 +49,7 @@ S = 1368 # solar insolation [W/m^2]  (energy per unit time per unit area)
 
 # A small fraction
 
-# In[14]:
+# In[ ]:
 
 
 alpha = 0.3 # albedo, or planetary reflectivity [unitless]
@@ -64,11 +64,11 @@ alpha = 0.3 # albedo, or planetary reflectivity [unitless]
 # 
 # $\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}$
 
-# In[15]:
+# In[ ]:
 
 
-def absorbed_solar_radiation(S, alpha):
-    return (S*(1-alpha)/4)  # [W/m^2]
+def absorbed_solar_radiation():
+    # return absorbed solar radiation 
 
 
 # ### 1.2) Outgoing thermal radiation
@@ -83,7 +83,7 @@ def absorbed_solar_radiation(S, alpha):
 # around the pre-industrial equilibrium temperature
 # 
 
-# In[16]:
+# In[ ]:
 
 
 T0 = 14. # preindustrial temperature [°C]
@@ -99,16 +99,15 @@ T0 = 14. # preindustrial temperature [°C]
 # 
 # $$ \text{outgoing thermal radiation} \equiv G(T) \sim A - BT$$
 
-# In[17]:
+# In[ ]:
 
 
-def outgoing_thermal_radiation(T, A, B):
-    return A - B*T
+def outgoing_thermal_radiation():
 
 
 # The value of the climate feedback parameter used here,
 
-# In[18]:
+# In[ ]:
 
 
 B = -1.3 # climate feedback parameter [W/m^2/°C],
@@ -128,11 +127,16 @@ B = -1.3 # climate feedback parameter [W/m^2/°C],
 # 
 # By rearanging this equation, we find that the value of $A$ is given by
 
-# In[19]:
+# In[ ]:
 
 
-A = S*(1. - alpha)/4 + B*T0 # [W/m^2].
-A
+A = 
+
+
+# In[ ]:
+
+
+print(A)
 
 
 # ### Human-caused greenhouse effect
@@ -143,26 +147,25 @@ A
 # 
 # where
 
-# In[20]:
+# In[ ]:
 
 
 a = 5 # CO2 forcing coefficient [W/m^2]
 
 
-# In[21]:
+# In[ ]:
 
 
 CO2_PI = 280 # preindustrial CO2 concentration [parts per million; ppm];
 
 
-# In[22]:
+# In[ ]:
 
 
-def greenhouse_effect(CO2, a=5, CO2_PI = 280):
-    return a*np.log(CO2/CO2_PI)
+def greenhouse_effect():
 
 
-# In[23]:
+# In[ ]:
 
 
 co2_present = 420
@@ -182,7 +185,7 @@ plt.grid()
 # 
 # The heat content $CT$ is determined by the temperature $T$ (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of
 
-# In[24]:
+# In[ ]:
 
 
 C = 51
@@ -222,7 +225,7 @@ C = 51
 
 # which we implement below (don't forget to update the time as well, $t_{n+1} = t_n + \Delta t$), which takes in an instance of our anticipated energy balance model EBM type as its only argument.
 
-# In[25]:
+# In[ ]:
 
 
 class ebm():
@@ -273,42 +276,37 @@ class ebm():
 # 
 # 
 
-# In[26]:
+# In[ ]:
 
 
-def run_ebm(ebm, end_year):
-    for year in range(end_year):
-        ebm.timestep
+
 
 
 # For example, let us consider the case where CO₂ emissions increase by 1% year-over-year from the preindustrial value [CO$_2$] = $280.0$ ppm, starting at T=T₀=14°C in year t=0 and with a timestep Δt = 1 year.
 
-# In[27]:
+# In[ ]:
 
 
-def CO2_test(t):
-    return CO2_PI ** (1 + 1/100)**t
-
-EBM = ebm(T0, t=0, deltat=1, CO2=CO2_test)
 
 
-# In[28]:
+
+# In[ ]:
 
 
-EBM.timestep
 
 
-# In[29]:
+
+# In[ ]:
 
 
-EBM.T
+
 
 
 # ## 3) Energy balance model applications
 # ### 3.1) Why was Earth's preindustrial climate so stable?
 # Let us consider the simple case where CO₂ concentrations remain at their pre-industrial temperatures.
 
-# In[30]:
+# In[ ]:
 
 
 def CO2_test(t):
@@ -317,13 +315,13 @@ def CO2_test(t):
 EBM = ebm(T0, 0, 1, CO2_test)
 
 
-# In[31]:
+# In[ ]:
 
 
 run_ebm(EBM, 200) 
 
 
-# In[32]:
+# In[ ]:
 
 
 t0s = np.arange(0,28,2)
@@ -348,14 +346,14 @@ plt.ylabel("temperature [°C]")
 # 
 # The observed increase of CO2 concentrations can be fairly accurately modelled by the simple cubic formula below.
 
-# In[33]:
+# In[ ]:
 
 
 def co2_hist(t):
     return 280 * (1+ ((t-1850)/220)**3)
 
 
-# In[34]:
+# In[ ]:
 
 
 EBM = ebm(T0, 1850, 1, co2_hist)
@@ -363,7 +361,7 @@ EBM = ebm(T0, 1850, 1, co2_hist)
 run_ebm(EBM, 170) 
 
 
-# In[35]:
+# In[ ]:
 
 
 import pandas as pd
@@ -382,7 +380,7 @@ co2_data.index = pd.to_datetime(co2_data.index)
 co2_data = co2_data.groupby(co2_data.index.year).mean() 
 
 
-# In[36]:
+# In[ ]:
 
 
 f, (ax, bx) = plt.subplots(1,2, figsize=(8,4))
@@ -423,7 +421,7 @@ f.tight_layout()
 # 
 # 2) a high-emissions world in which emissions continue increasing and CO2 concentrations soar upwards of 1200 ppm ("RCP8.5").
 
-# In[37]:
+# In[ ]:
 
 
 def CO2_RCP26(t):
@@ -434,17 +432,13 @@ def CO2_RCP85(t):
 
 # In the low-emissions scenario, the temperature increase stays below $\Delta T$ = 2 °C by 2100, while in the high-emissions scenario temperatures soar upwards of 3.5ºC above pre-industrial levels.
 
-# In[38]:
+# In[ ]:
 
 
-EBM1 = ebm(T0, 1850, 1, CO2_RCP26)
-EBM2 = ebm(T0, 1850, 1, CO2_RCP85)
-
-run_ebm(EBM1, 249) 
-run_ebm(EBM2, 249) 
 
 
-# In[39]:
+
+# In[ ]:
 
 
 f, (ax, bx) = plt.subplots(1,2, figsize = (8,4))

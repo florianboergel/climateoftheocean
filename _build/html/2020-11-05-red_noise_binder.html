@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -33,19 +33,19 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -89,17 +89,12 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Lecture
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-09-introduction_to_python.html">
-   Lecture 1, Introduction to python
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2020-11-11-energy-model.html">
    Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate
@@ -126,7 +121,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Exercise
  </span>
@@ -143,7 +138,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Other code
  </span>
@@ -296,13 +291,13 @@
         
               <div>
                 
-  <div class="section" id="red-noise">
+  <div class="tex2jax_ignore mathjax_ignore section" id="red-noise">
 <h1>Red noise<a class="headerlink" href="#red-noise" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><p>Simple red noise null hypothesis</p>
 </div></blockquote>
 </div>
-<div class="section" id="hasselmann-as-explained-by-dommenget-and-latif-2000">
+<div class="tex2jax_ignore mathjax_ignore section" id="hasselmann-as-explained-by-dommenget-and-latif-2000">
 <h1>Hasselmann (as explained by Dommenget and Latif, 2000)<a class="headerlink" href="#hasselmann-as-explained-by-dommenget-and-latif-2000" title="Permalink to this headline">¶</a></h1>
 <p>Hasselmann (1976) attempts to explain the mechanism of natural climate variabilty by dividing the climate system into a fast system and a slow system. The fast system could be the atmosphere, represented as white noise. The slower component is the ocean and is explained by the integration of white noise (AR-1). In this picture the ocean is merely a passive part of the climate system, which amplifies long-term variability, due to its large heat capacity, but dynamical processes in the ocean are not considered.</p>
 <p>The resulting stochastic model of the SST variability is described by an autoregressive process of the first order, which is the simplest statistical model that can be applied to a stationary process. The stochastic climate model by Hasselmann is tehrefore often chosen as the null hypothesis of SST variability.</p>
@@ -335,7 +330,7 @@
 AMO and AMOC.</p>
 </div>
 </div>
-<div class="section" id="simple-red-noise-null-hypothesis">
+<div class="tex2jax_ignore mathjax_ignore section" id="simple-red-noise-null-hypothesis">
 <h1>Simple red noise null hypothesis<a class="headerlink" href="#simple-red-noise-null-hypothesis" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
