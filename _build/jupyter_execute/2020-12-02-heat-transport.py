@@ -5,10 +5,6 @@
 # 
 # > Two-dimensional advection-diffusion of heat
 # 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # In[1]:
 

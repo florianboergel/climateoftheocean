@@ -2,13 +2,6 @@
 # coding: utf-8
 
 # # Lecture 1, Introduction to python
-# 
-# > 
-# 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # # Getting started
 # 

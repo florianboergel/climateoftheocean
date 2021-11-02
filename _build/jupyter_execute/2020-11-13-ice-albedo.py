@@ -2,13 +2,6 @@
 # coding: utf-8
 
 # # Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
-# 
-# > work under progress; bifurcations need to be added
-# 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # Thanks a lot to [Henri Drake](https://github.com/hdrake) for providing the lecture.
 # 

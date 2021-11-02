@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,15 +42,15 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Lecture 5, Evolution in time and space" href="2020-12-01-advection-diffusion.html" />
@@ -74,13 +74,14 @@
     <a class="navbar-brand text-wrap" href="index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -256,7 +257,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
@@ -354,15 +355,6 @@
                 
   <div class="section" id="lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
 <h1>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><p>work under progress; bifurcations need to be added</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>toc: False</p></li>
-<li><p>badges: true</p></li>
-<li><p>comments: False</p></li>
-<li><p>categories: [jupyter]</p></li>
-</ul>
 <p>Thanks a lot to <a class="reference external" href="https://github.com/hdrake">Henri Drake</a> for providing the lecture.</p>
 <p>The original lecture is part of the MIT class <a class="reference external" href="https://computationalthinking.mit.edu/Fall20/lecture20/">Introduction to Computational Thinking</a>.</p>
 <p>This class uses the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>. The orignal code can be found under <a class="reference external" href="https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl">https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl</a></p>
@@ -773,16 +765,36 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2020-11-12-non-linear-dynamics.html" title="previous page">Lecture 3, Nonlinear dynamics, stability and bifurcations</a>
-    <a class='right-next' id="next-link" href="2020-12-01-advection-diffusion.html" title="next page">Lecture 5, Evolution in time and space</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="2020-11-12-non-linear-dynamics.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Lecture 3, Nonlinear dynamics, stability and bifurcations</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="2020-12-01-advection-diffusion.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Lecture 5, Evolution in time and space</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

@@ -4,11 +4,6 @@
 # # Exercise 2, melting the snowball earth
 # 
 # > Start after finishing excercise 1 
-# 
-# - toc: False 
-# - badges: true
-# - comments: False
-# - categories: [jupyter]
 
 # In the last lectures we implemented a energy balance model. The energy balance equation is give by
 # 
