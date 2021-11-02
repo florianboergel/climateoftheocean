@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 5, Evolution in time and space &#8212; Climate of the ocean</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Climate of the ocean
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Lecture
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-11-energy-model.html">
+   Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-12-non-linear-dynamics.html">
+   Lecture 3, Nonlinear dynamics, stability and bifurcations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-13-ice-albedo.html">
+   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-12-01-advection-diffusion.html">
+   Lecture 5, Evolution in time and space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-12-02-heat-transport.html">
+   Lecture 6, Heat transports
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Exercise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-14-climate-of-the-ocean-h1.html">
+   Exercise 1, policy goals under uncertainty
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-15-climate-of-the-ocean-h2.html">
+   Exercise 2, melting the snowball earth
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Other code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-05-red_noise_binder.html">
+   Red noise
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/solutions/2020-12-01-advection-diffusion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/florianboergel/climateoftheocean"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/florianboergel/climateoftheocean/issues/new?title=Issue%20on%20page%20%2Fsolutions/2020-12-01-advection-diffusion.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/florianboergel/climateoftheocean/main?urlpath=tree/solutions/2020-12-01-advection-diffusion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lecture 5, Evolution in time and space
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evolution-in-time-and-space-advection-and-diffusion-in-1d">
+   Evolution in time and space: Advection and diffusion in 1D
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-profiles-and-discretization">
+     Temperature profiles and discretization
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advection">
+     Advection
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerics-for-the-advection-equation">
+     Numerics for the advection equation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diffusion">
+     Diffusion
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advection-diffusion">
+     Advection–diffusion
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-5-evolution-in-time-and-space">
+<h1>Lecture 5, Evolution in time and space<a class="headerlink" href="#lecture-5-evolution-in-time-and-space" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Advection and diffusion in 1D</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="evolution-in-time-and-space-advection-and-diffusion-in-1d">
+<h1>Evolution in time and space: Advection and diffusion in 1D<a class="headerlink" href="#evolution-in-time-and-space-advection-and-diffusion-in-1d" title="Permalink to this headline">¶</a></h1>
+<p>So far we have been looking at dynamics in time, for example how does the temperature of the Earth change over time. But the Earth does not have a single, uniform temperature; rather, at a particular moment in time, different places on Earth are at different temperatures, and those different temperatures change over time due to several mechanisms.</p>
+<p>In this notebook we will look at two fundamental mechanisms: <strong>advection</strong> and <strong>diffusion</strong>. Let’s think about the temperature in the ocean. Since the ocean is a fluid that is in motion, a warm “parcel” of water can flow (move) to a new location due to the physical motion of the water itself; this is <strong>advection</strong>.  And even if the water doesn’t move, temperature or a higher concentration of some substance dissolved in the fluid can spread out due to molecular mechanisms; this is <strong>diffusion</strong>.</p>
+<p>In this notebook we will restrict ourselves to 1 space dimension.
+So we will think about the temperature <span class="math notranslate nohighlight">\(T\)</span>, for example, being a function
+$<span class="math notranslate nohighlight">\(T(t, x)\)</span>$
+of</p>
+<ul class="simple">
+<li><p>time: <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>space: <span class="math notranslate nohighlight">\(x\)</span></p></li>
+</ul>
+<p>We want to calculate a value of the temperature <span class="math notranslate nohighlight">\(T\)</span> at each point <span class="math notranslate nohighlight">\((t, x)\)</span>.</p>
+<div class="section" id="temperature-profiles-and-discretization">
+<h2>Temperature profiles and discretization<a class="headerlink" href="#temperature-profiles-and-discretization" title="Permalink to this headline">¶</a></h2>
+<p>An ordinary differential equation needs an initial value for each variable. Similarly, we will need an initial <em>function</em> <span class="math notranslate nohighlight">\(T_0(x)\)</span> that gives us the temperature at each position <span class="math notranslate nohighlight">\(x\)</span>. Let’s suppose that the position is restricted to the interval <span class="math notranslate nohighlight">\([0, L_x]\)</span>.</p>
+<p>As usual, to represent the continuous function <span class="math notranslate nohighlight">\(T_0(x)\)</span> on a computer, we will need to <strong>discretise</strong> it in some way, i.e. <em>approximate</em> the continuous function by a <em>finite</em> set of numbers in the computer.</p>
+<p>The simplest (but far from the only!) discretisation method is to <strong>sample</strong> the function at discrete <strong>grid points</strong> (or <strong>nodes</strong>) <span class="math notranslate nohighlight">\(x_i\)</span>, for <span class="math notranslate nohighlight">\(i = 1, \dots, N_x\)</span>. For simplicity we will take these equally spaced, with spacing <span class="math notranslate nohighlight">\(x_{i+1} - x_i =: \delta x := L_x / N_x\)</span>.</p>
+<p>For example, let’s consider an initial temperature profile given by a sine curve:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">t0</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>and define the grid points as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nx</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">Lx</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">deltax</span> <span class="o">=</span> <span class="n">Lx</span> <span class="o">/</span> <span class="n">Nx</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="n">Lx</span><span class="p">,</span> <span class="n">deltax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.025, 0.075, 0.125, 0.175, 0.225, 0.275, 0.325, 0.375, 0.425,
+       0.475, 0.525, 0.575, 0.625, 0.675, 0.725, 0.775, 0.825, 0.875,
+       0.925, 0.975])
+</pre></div>
+</div>
+</div>
+</div>
+<p>It turns out to be a good idea to take the grid points at the <em>centre</em> of each interval, so that we have <span class="math notranslate nohighlight">\(N_x\)</span> intervals and <span class="math notranslate nohighlight">\(N_x\)</span> grid points, starting at <span class="math notranslate nohighlight">\(x_1 = \delta x/2\)</span> and finishing at <span class="math notranslate nohighlight">\(x_N = L_x - \delta x / 2\)</span>.</p>
+<p>We call such a function of <span class="math notranslate nohighlight">\(x\)</span> at a given time a <strong>temperature profile</strong>. Let’s draw it as a function and as a heatmap:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">Lx</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;$T_0$&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">t0</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;sampled&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;x nodes&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">xmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="n">Lx</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">t0</span><span class="p">(</span><span class="n">x</span><span class="p">)],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$T_0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc1addd36a0&gt;
+</pre></div>
+</div>
+<img alt="../_images/2020-12-01-advection-diffusion_11_11.png" src="../_images/2020-12-01-advection-diffusion_11_11.png" />
+</div>
+</div>
+<p>We will denote by <span class="math notranslate nohighlight">\(T^0_i\)</span> the initial temperature at grid point number <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<p>A useful way to think about <span class="math notranslate nohighlight">\(T^n_i\)</span> is as the (spatial) average of <span class="math notranslate nohighlight">\(T(t_n, x)\)</span> over the interval of positions between neighbouring grid points, so <span class="math notranslate nohighlight">\(T_i\)</span> is the average over the interval between <span class="math notranslate nohighlight">\(x_i - \frac{\delta x}{2}\)</span> and <span class="math notranslate nohighlight">\(x_i + \frac{\delta x}{2}\)</span>. We can thus think of the following <strong>piecewise constant</strong> approximation to the original continuous function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Lx</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t0</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;$T_0$&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">t0</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;sampled&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">xs</span><span class="o">.</span><span class="n">size</span><span class="p">)),</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;x nodes&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">xmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="n">Lx</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">t0</span><span class="p">(</span><span class="n">x</span><span class="p">)],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">t0</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">xmin</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">deltax</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">deltax</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">deltax</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">t0</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">deltax</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">t0</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$T_0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc1ae03a2b0&gt;
+</pre></div>
+</div>
+<img alt="../_images/2020-12-01-advection-diffusion_14_11.png" src="../_images/2020-12-01-advection-diffusion_14_11.png" />
+</div>
+</div>
+</div>
+<div class="section" id="advection">
+<h2>Advection<a class="headerlink" href="#advection" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s think of this as the temperature in a fluid, and let’s suppose that the fluid is moving to the right with a constant, uniform speed <span class="math notranslate nohighlight">\(U\)</span>. (<strong>Uniform</strong> here means that the speed is the same in all parts of the fluid.) Then the temperature profile should also <em>move with the fluid</em>. We call a quantity, such as the temperature, that is carried along with the fluid a <strong>tracer</strong>.</p>
+<p>If we fix our attention at a single point in space, say the grid point <span class="math notranslate nohighlight">\(x_i\)</span>, the temperature there will vary over time due to the motion of the fluid. How it varies in time depends on the values at neighbouring grid points, since they determine how much heat will be <em>transported into</em> the current cell.</p>
+<p>Let’s think about a time-stepping algorithm, and let <span class="math notranslate nohighlight">\(\delta t\)</span> be the duration of a time step. We’ll denote by <span class="math notranslate nohighlight">\(T^n_i\)</span> the approximate value of <span class="math notranslate nohighlight">\(T\)</span> to calculate at position <span class="math notranslate nohighlight">\(x_i\)</span> and at the <span class="math notranslate nohighlight">\(n\)</span>th time step <span class="math notranslate nohighlight">\(t_n\)</span>, i.e. an approximation of <span class="math notranslate nohighlight">\(T(t_n, x_i)\)</span>, where <span class="math notranslate nohighlight">\(t_n = n \, \delta t\)</span>.
+For example, <span class="math notranslate nohighlight">\(T^{n+1}_i \simeq T(t_n + \delta t, x_i)\)</span> and <span class="math notranslate nohighlight">\(T^{n}_{i+1} \simeq T(t_n, x_i + \delta x)\)</span>.</p>
+<p><strong>Note</strong> that the superscript <span class="math notranslate nohighlight">\(n\)</span> in these algorithms does not denote a power; it’s just a label for the time step. We could write <span class="math notranslate nohighlight">\(T_i^{(n)}\)</span> instead, but that is annoying to both write and read, so we suppress the parentheses.</p>
+<p>Suppose the fluid is moving to the right with speed <span class="math notranslate nohighlight">\(U\)</span>. During a time step of duration <span class="math notranslate nohighlight">\(\delta t\)</span>, the temperature <span class="math notranslate nohighlight">\(T^n_i\)</span> at cell <span class="math notranslate nohighlight">\(i\)</span> changes due to the amount of heat that leaves cell <span class="math notranslate nohighlight">\(i\)</span>, and the amount that enters that cell.
+Most of the fluid that starts within cell <span class="math notranslate nohighlight">\(i\)</span> remains within that cell during the time step (if the time step is short enough). Only fluid that is within a distance <span class="math notranslate nohighlight">\(U \, \delta t\)</span> from the boundary of the cell will cross over that cell. So a <em>proportion</em> <span class="math notranslate nohighlight">\((U \, \delta t) / \delta x\)</span> of the amount in cell <span class="math notranslate nohighlight">\(i\)</span> crosses the boundary.</p>
+<p>Hence, roughly an amount <span class="math notranslate nohighlight">\(T^n_i (U \delta t) / \delta x\)</span> will leave cell number <span class="math notranslate nohighlight">\(i\)</span> and cross into cell <span class="math notranslate nohighlight">\(i+1\)</span> (the cell to the right). Similarly, an amount <span class="math notranslate nohighlight">\(T^n_{i-1} (U \delta t) / \delta x\)</span> will <em>enter</em> cell <span class="math notranslate nohighlight">\(i\)</span> from the neighbouring cell <span class="math notranslate nohighlight">\(i-1\)</span> on the left. Hence we have
+$<span class="math notranslate nohighlight">\(T^{n+1}_i = T^{n}_i + (T^n_{i-1} - T^n_{i})\, U \, \delta t / \delta x.\)</span>$</p>
+<p>Thus
+$<span class="math notranslate nohighlight">\(\frac{T^{n+1}_i - T^{n}_i}{\delta t} =  \frac{T^n_{i-1} - T^n_{i}}{\delta x}\, U.\)</span>$</p>
+<p>Taking the continuum limit when <span class="math notranslate nohighlight">\(\delta t \to 0\)</span> and <span class="math notranslate nohighlight">\(\delta x \to 0\)</span>, we recognise the definition of <strong>partial derivatives</strong> with respect to time and space variables from multivariable calculus. (Note the different indices that change on the two sides of the equation.)
+Denoting these partial derivatives using <span class="math notranslate nohighlight">\(\partial\)</span>, we arrive at the <strong>advection equation</strong>:
+$<span class="math notranslate nohighlight">\(\frac{\partial T(t, x)}{\partial t} = -U \frac{\partial T(t, x)}{\partial x},\)</span><span class="math notranslate nohighlight">\(
+or for short
+\)</span><span class="math notranslate nohighlight">\(\frac{\partial T}{\partial t} = -U \frac{\partial T}{\partial x}.\)</span><span class="math notranslate nohighlight">\(
+Since \)</span>T<span class="math notranslate nohighlight">\( is a function of both \)</span>x<span class="math notranslate nohighlight">\( and \)</span>t<span class="math notranslate nohighlight">\(, and this equation involves partial derivatives with respect to both of the independent variables, this is a **partial differential equation** (PDE). It describes how the function \)</span>T(t, x)$ changes continuously as a function both of time and space.
+Although there are some analytical methods to solve PDEs, often it’s necessary to use numerical methods. Here we’ll look at simple numerical methods to solve such equations.</p>
+</div>
+<div class="section" id="numerics-for-the-advection-equation">
+<h2>Numerics for the advection equation<a class="headerlink" href="#numerics-for-the-advection-equation" title="Permalink to this headline">¶</a></h2>
+<p>Let’s return to the version of the equation in which the value at the <em>following</em> time step is isolated:
+$<span class="math notranslate nohighlight">\(T^{n+1}_i = T^{n}_i - \left( U \frac{\delta t}{\delta x} \right) (T^n_{i} - T^n_{i-1}).\)</span><span class="math notranslate nohighlight">\(
+In the last term on the right-hand side, we see that we require combinations of values of \)</span>T$ at the <em>same</em> time step from <em>different</em> places, with certain coefficients.</p>
+<p>There are many approaches to implementing this numerically. The simplest is to directly transcribe the equation for the <span class="math notranslate nohighlight">\(i\)</span>th entry of the vector.
+Calling <code class="docutils literal notranslate"><span class="pre">T</span></code> the current vector, i.e. <span class="math notranslate nohighlight">\(\mathbf{T}^n := (T^n_i)_{i=1, \ldots, N_x}\)</span>, and <code class="docutils literal notranslate"><span class="pre">T′</span></code> the new vector at the next time step, we have the following basic expression:</p>
+<blockquote>
+<div><p>T′[i] = T[i] + δt * U * (T[i-1] - T[i]) / δx</p>
+</div></blockquote>
+<p>But now we realise a problem: What should we do when <span class="math notranslate nohighlight">\(i=0\)</span>? This will try to access the index -1 of the vector <code class="docutils literal notranslate"><span class="pre">T</span></code>, which does not exist!</p>
+<p>This illustrates the necessity of choosing <strong>boundary conditions</strong> that specify what happens at the edge of the domain.
+For simplicity we will choose to use <strong>periodic boundary conditions</strong>. This is a convenient mathematical fiction that allows us to treat all cells as being on the same footing, by wrapping the system around a torus, so that cells <span class="math notranslate nohighlight">\(i=0\)</span> and <span class="math notranslate nohighlight">\(i=N_x\)</span> are neighbours.</p>
+<p>We can then write this as follows, where we separate out the case <span class="math notranslate nohighlight">\(i=0\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">advection</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">U</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">T2</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+        <span class="n">T2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">U</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">deltax</span>
+        
+    <span class="n">T2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">U</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">deltax</span>
+    
+    <span class="k">return</span> <span class="n">T2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We use a function <code class="docutils literal notranslate"><span class="pre">plot_func</span></code> that carries out a generic time evolution. This is basically the Euler method again, except now we apply it to a vector of values at different points in space at each step.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deltat</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">U</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">initcondition</span> <span class="o">=</span> <span class="n">t0</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initcondition</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.15643447,  0.4539905 ,  0.70710678,  0.89100652,  0.98768834,
+        0.98768834,  0.89100652,  0.70710678,  0.4539905 ,  0.15643447,
+       -0.15643447, -0.4539905 , -0.70710678, -0.89100652, -0.98768834,
+       -0.98768834, -0.89100652, -0.70710678, -0.4539905 , -0.15643447])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_func</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">T0</span> <span class="o">=</span> <span class="n">initcondition</span><span class="p">):</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">T0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">deltax</span> <span class="o">=</span> <span class="n">xs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+        <span class="n">T</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">step</span><span class="o">*</span><span class="n">deltat</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;x(t)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">plot_func</span><span class="p">,</span> 
+         <span class="n">function</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection</span><span class="p">),</span>
+         <span class="n">steps</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Timesteps&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span>
+         <span class="n">deltat</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">deltat</span><span class="p">),</span> <span class="c1">#widgets.FloatSlider(description = &quot;$\Delta t$&quot;,value = 0.001, min = 0.0001, max = 0.01, step = 0.0001, readout_format=&#39;.4f&#39;),</span>
+         <span class="n">U</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">U</span><span class="p">),</span>         
+         <span class="n">xs</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span>
+         <span class="n">T0</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection</span><span class="p">(</span><span class="n">initcondition</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">U</span><span class="p">)));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "4398e9698cf14c4ba20ba4e7869c5561", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+<p>Unfortunately this does <em>not</em> behave as we expect: instead of preserving the shape of the profile over time, it is decaying. This is due to the way we are approximating.</p>
+<p>A better way to discretize the spatial derivative is using the following <strong>centered difference</strong>:
+$<span class="math notranslate nohighlight">\(\frac{\partial T(t_n, x_i)}{\partial x} \simeq \frac{T^n_{i+1} - T^n_{i-1}}{2 \delta x}\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">advection2</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">U</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">T2</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">T2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">U</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">deltax</span><span class="p">)</span>
+        
+    <span class="n">T2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">U</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">deltax</span><span class="p">)</span>
+    <span class="n">T2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">U</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">deltax</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">T2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">plot_func</span><span class="p">,</span> 
+         <span class="n">function</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection2</span><span class="p">),</span>
+         <span class="n">steps</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Timesteps&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span>
+         <span class="n">deltat</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">deltat</span><span class="p">),</span><span class="c1">#widgets.FloatSlider(description = &quot;$\Delta t$&quot;,value = 0.001, min = 0.0001, max = 0.01, step = 0.0001, readout_format=&#39;.4f&#39;),</span>
+         <span class="n">U</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">U</span><span class="p">),</span>         
+         <span class="n">xs</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span>
+         <span class="n">T0</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection</span><span class="p">(</span><span class="n">initcondition</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">U</span><span class="p">)));</span>
+         
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "fcdb59f62019478fb022e250220e9237", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+</div>
+<div class="section" id="diffusion">
+<h2>Diffusion<a class="headerlink" href="#diffusion" title="Permalink to this headline">¶</a></h2>
+<p>Another key physical process is <strong>diffusion</strong>. This models how temperature or mass spreads out from hot or high concentration regions towards regions where it is cold or where there is a low concentration.
+The PDE describing this is the <strong>heat equation</strong>, or <strong>diffusion equation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial t} = D \frac{\partial^2 T}{\partial x^2}.\]</div>
+<p>To obtain a numerical method to solve this equation, we again need to discretise this, in particular the second derivative. One possible discretisation is
+$<span class="math notranslate nohighlight">\(\frac{\partial^2 T}{\partial x^2}(t_n, x_i) \simeq \frac{T^n_{i+1} - 2 T^n_i + T^n_{i-1}}{\delta x^2}.\)</span>$</p>
+<p>This may again be transcribed directly into code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diffusion</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">T2</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">T2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">D</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">deltax</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        
+    <span class="n">T2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">D</span> <span class="o">*</span>     <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">deltax</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">T2</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">deltat</span> <span class="o">*</span> <span class="n">D</span> <span class="o">*</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">deltax</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">T2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">plot_func</span><span class="p">,</span> 
+         <span class="n">function</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">diffusion</span><span class="p">),</span>
+         <span class="n">steps</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Timesteps&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span>
+         <span class="n">deltat</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">deltat</span><span class="p">),</span><span class="c1">#widgets.FloatSlider(description = &quot;$\Delta t$&quot;,value = 0.001, min = 0.0001, max = 0.01, step = 0.0001, readout_format=&#39;.4f&#39;),</span>
+         <span class="n">U</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="mf">0.01</span><span class="p">),</span>         
+         <span class="n">xs</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span>
+         <span class="n">T0</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection</span><span class="p">(</span><span class="n">initcondition</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">U</span><span class="p">)));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "aebebd168b33464980e5643833f5130d", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+</div>
+<div class="section" id="advection-diffusion">
+<h2>Advection–diffusion<a class="headerlink" href="#advection-diffusion" title="Permalink to this headline">¶</a></h2>
+<p>Finally we can combine both mechanisms, to describe a tracer that is both being advected at a constant speed and diffusing. This basically utilises the composition of the advection and diffusion functions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">advection_diffusion</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">U</span><span class="p">):</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="mf">0.01</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">advection2</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">U</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">diffusion</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">deltax</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">plot_func</span><span class="p">,</span> 
+         <span class="n">function</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection_diffusion</span><span class="p">),</span>
+         <span class="n">steps</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Timesteps&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">),</span>
+         <span class="n">deltat</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">deltat</span><span class="p">),</span><span class="c1">#widgets.FloatSlider(description = &quot;$\Delta t$&quot;,value = 0.001, min = 0.0001, max = 0.01, step = 0.0001, readout_format=&#39;.4f&#39;),</span>
+         <span class="n">U</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>         
+         <span class="n">xs</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span>
+         <span class="n">T0</span> <span class="o">=</span> <span class="n">fixed</span><span class="p">(</span><span class="n">advection</span><span class="p">(</span><span class="n">initcondition</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">U</span><span class="p">)));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "59dfbc03caf245f29c6bfcd28102b113", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./solutions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By H. E. Markus Meier, Florian Börgel<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
