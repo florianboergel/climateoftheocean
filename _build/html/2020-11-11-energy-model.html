@@ -280,6 +280,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observations-from-mauna-loa-volcano">
+     Observations from Mauna Loa Volcano
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#change-in-heat-content">
      1.4) Change in heat content
     </a>
@@ -405,11 +410,12 @@
 </div>
 </div>
 </div>
-<p>of this incoming solar radiation is reflected back out to space (by reflective surfaces like white clouds, snow, and ice), with the remaining fraction <span class="math notranslate nohighlight">\((1-\alpha)\)</span> being absorbed.
-Since the incoming solar rays are all approximately parallel this far from the Sun, the cross-sectional area of the Earth that intercepts them is just a disc of area <span class="math notranslate nohighlight">\(\pi R^{2}\)</span>. Since all of the other terms we will consider act on the entire surface area <span class="math notranslate nohighlight">\(4\pi R^{2}\)</span> of the spherical Earth, the absorbed solar radiation <em>per unit surface area</em> (averaged over the entire globe) is reduced by a factor of 4.</p>
+<p>of this incoming solar radiation is reflected back out to space (by reflective surfaces like white clouds, snow, and ice), with the remaining fraction <span class="math notranslate nohighlight">\((1-\alpha)\)</span> being absorbed.</p>
+<p>Since the incoming solar rays are all approximately parallel this far from the Sun, the cross-sectional area of the Earth that intercepts them is just a disc of area <span class="math notranslate nohighlight">\(\pi R^{2}\)</span>. Since all of the other terms we will consider act on the entire surface area <span class="math notranslate nohighlight">\(4\pi R^{2}\)</span> of the spherical Earth, the absorbed solar radiation <em>per unit surface area</em> (averaged over the entire globe) is reduced by a factor of 4.</p>
 <p><img alt="" src="https://www.open.edu/openlearn/ocw/pluginfile.php/101161/mod_oucontent/oucontent/890/639dcd57/ce3f1c3a/s250_3_002i.jpg" /></p>
 <p>The absorbed solar radiation per unit area is thus</p>
-<p><span class="math notranslate nohighlight">\(\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">absorbed_solar_radiation</span><span class="p">():</span>
@@ -421,11 +427,13 @@ Since the incoming solar rays are all approximately parallel this far from the S
 </div>
 <div class="section" id="outgoing-thermal-radiation">
 <h3>1.2) Outgoing thermal radiation<a class="headerlink" href="#outgoing-thermal-radiation" title="Permalink to this headline">¶</a></h3>
-<p>The outgoing thermal radiation term  (or “blackbody cooling to space”) represents the combined effects of negative feedbacks that dampen warming, such as blackbody radiation, and positive feedbacks that amplify warming, such as the water vapor feedback.</p>
-<p>Since these physics are too complicated to deal with here, we linearize the model by considering only the first term of a Taylor Series expansion</p>
+<p>The outgoing thermal radiation term <span class="math notranslate nohighlight">\(G(T)\)</span> (or “blackbody cooling to space”) represents the combined effects of negative feedbacks that <em>dampen warming</em>, such as <strong>blackbody radiation</strong>, and positive feedbacks that <em>amplify warming</em>, such as the <strong>water vapor feedback</strong>.</p>
+<p>Since these physics are too complicated to deal with here, we <em>linearize</em> the model comining the incoming and the outgoing.</p>
+<p>We assume that the preindustrial world was in energy balance, and thus the equilibrium temperature is the preindustrial temperature.</p>
+<p>We assume thus only the first term of a Taylor Series expansion</p>
 <div class="math notranslate nohighlight">
 \[ G(T) \sim G(T_0) + G^{'}(T_0) (T-T_0) = G^{'}(T_0)T + (G(T_0)-G^{'}(T_0)T_0) \]</div>
-<p>around the pre-industrial equilibrium temperature</p>
+<p>around the pre-industrial equilibrium temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T0</span> <span class="o">=</span> <span class="mf">14.</span> <span class="c1"># preindustrial temperature [°C]</span>
@@ -434,7 +442,7 @@ Since the incoming solar rays are all approximately parallel this far from the S
 </div>
 </div>
 <p>To simplify the expression, we define:</p>
-<p><span class="math notranslate nohighlight">\( A \equiv G^{'}(T_0)T_0 \)</span></p>
+<p><span class="math notranslate nohighlight">\( A \equiv G(T_0) - G^{'}(T_0)T_0 \)</span></p>
 <p><span class="math notranslate nohighlight">\( B \equiv - G^{'}(T_0) \text{       (the climate feedback parameter),}\)</span></p>
 <p>which gives</p>
 <div class="math notranslate nohighlight">
@@ -455,8 +463,8 @@ Since the incoming solar rays are all approximately parallel this far from the S
 </div>
 </div>
 <p>comes from a bottom-up estimate based on the best understanding of the various climate feedbacks (read more <a class="reference external" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwikwbfrm9LsAhVjhuAKHQhZCm8QFjAEegQIAhAC&amp;url=https%3A%2F%2Fclimateextremes.org.au%2Fwp-content%2Fuploads%2F2020%2F07%2FWCRP_ECS_Final_manuscript_2019RG000678R_FINAL_200720.pdf&amp;usg=AOvVaw0hWIM3t4kJTovxoeobcRIN">here</a>).</p>
-<p>Note: Since <span class="math notranslate nohighlight">\(B&lt;0\)</span> , this tells us that the overall climate feedback is negative (i.e. stabilizing). Positivefeedbacks cause  to become less negative, reducing the efficiency with which Earth cools itself by radiating thermal energy to space, and thus amplifying warming.</p>
-<p>The value <span class="math notranslate nohighlight">\(A\)</span> of  is given by the definition of a preindustrial equilibrium, i.e. the fact that before human influence, Earth’s energy budget was perfectly balanced:</p>
+<p>Note: Since <span class="math notranslate nohighlight">\(B&lt;0\)</span> , this tells us that the overall climate feedback is negative (i.e. stabilizing). Positive feedbacks cause <span class="math notranslate nohighlight">\(B\)</span> to become less negative, reducing the efficiency with which Earth cools itself by radiating thermal energy to space, and thus amplifying warming.</p>
+<p>The value <span class="math notranslate nohighlight">\(A\)</span> of is given by the definition of a preindustrial equilibrium, i.e. the fact that before human influence, Earth’s energy budget was perfectly balanced:</p>
 <blockquote>
 <div><p>absorbed solar radiation = outgoing thermal radiation</p>
 </div></blockquote>
@@ -482,9 +490,9 @@ Since the incoming solar rays are all approximately parallel this far from the S
 </div>
 <div class="section" id="human-caused-greenhouse-effect">
 <h3>Human-caused greenhouse effect<a class="headerlink" href="#human-caused-greenhouse-effect" title="Permalink to this headline">¶</a></h3>
-<p>Empirically, the greenhouse effect is known to be a logarithmic function of gaseous carbon dioxide (CO<span class="math notranslate nohighlight">\(_2\)</span>) concentrations</p>
+<p>Empirically, the greenhouse effect is known to be a logarithmic function of gaseous carbon dioxide (<span class="math notranslate nohighlight">\(CO_2\)</span>) concentrations</p>
 <div class="math notranslate nohighlight">
-\[ \text{Human-caused greenhouse effect} = a * ln  \frac{CO_2}{CO{_2}_{PI}}  \]</div>
+\[ \text{Human-caused greenhouse effect} = a * ln  \frac{CO_2}{CO_{2, PI}}  \]</div>
 <p>where</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -525,17 +533,21 @@ Since the incoming solar rays are all approximately parallel this far from the S
 </div>
 </div>
 </div>
+<div class="section" id="observations-from-mauna-loa-volcano">
+<h3>Observations from Mauna Loa Volcano<a class="headerlink" href="#observations-from-mauna-loa-volcano" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="https://i.pinimg.com/originals/df/1a/e7/df1ae72cfd5e6d0d535c0ec99e708f6f.jpg" /></p>
+</div>
 <div class="section" id="change-in-heat-content">
 <h3>1.4) Change in heat content<a class="headerlink" href="#change-in-heat-content" title="Permalink to this headline">¶</a></h3>
-<p>The heat content <span class="math notranslate nohighlight">\(CT\)</span> is determined by the temperature <span class="math notranslate nohighlight">\(T\)</span> (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of</p>
+<p>The heat content <span class="math notranslate nohighlight">\(C_{temp}\)</span> is determined by the temperature <span class="math notranslate nohighlight">\(T\)</span> (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="mi">51</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="mi">51</span> <span class="c1"># atmosphere and upper-ocean heat capacity [J/m^2/°C]</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The change in heat content over time is thus simply given by <span class="math notranslate nohighlight">\(\frac{d(CT)}{dt}\)</span>. Since the heat capacity of sea water hardly changes with temperature, we can rewrite this in terms of the change in temperature with time as:</p>
+<p>The change in heat content over time is thus simply given by <span class="math notranslate nohighlight">\(\frac{d(C_{temp})}{dt}\)</span>. Since the heat capacity of sea water hardly changes with temperature, we can rewrite this in terms of the change in temperature with time as:</p>
 <div class="math notranslate nohighlight">
 \[\text{change in heat content} = C\frac{dT}{dt} \]</div>
 </div>

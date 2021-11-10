@@ -56,13 +56,14 @@ alpha = 0.3 # albedo, or planetary reflectivity [unitless]
 
 
 # of this incoming solar radiation is reflected back out to space (by reflective surfaces like white clouds, snow, and ice), with the remaining fraction $(1-\alpha)$ being absorbed.
+# 
 # Since the incoming solar rays are all approximately parallel this far from the Sun, the cross-sectional area of the Earth that intercepts them is just a disc of area $\pi R^{2}$. Since all of the other terms we will consider act on the entire surface area $4\pi R^{2}$ of the spherical Earth, the absorbed solar radiation *per unit surface area* (averaged over the entire globe) is reduced by a factor of 4.
 # 
 # ![](https://www.open.edu/openlearn/ocw/pluginfile.php/101161/mod_oucontent/oucontent/890/639dcd57/ce3f1c3a/s250_3_002i.jpg)
 # 
 # The absorbed solar radiation per unit area is thus
 # 
-# $\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}$
+# $$\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}$$
 
 # In[ ]:
 
@@ -73,14 +74,17 @@ def absorbed_solar_radiation():
 
 # ### 1.2) Outgoing thermal radiation
 # 
-# The outgoing thermal radiation term  (or "blackbody cooling to space") represents the combined effects of negative feedbacks that dampen warming, such as blackbody radiation, and positive feedbacks that amplify warming, such as the water vapor feedback.
+# The outgoing thermal radiation term $G(T)$ (or "blackbody cooling to space") represents the combined effects of negative feedbacks that *dampen warming*, such as **blackbody radiation**, and positive feedbacks that *amplify warming*, such as the **water vapor feedback**.
 # 
-# Since these physics are too complicated to deal with here, we linearize the model by considering only the first term of a Taylor Series expansion
+# Since these physics are too complicated to deal with here, we *linearize* the model comining the incoming and the outgoing.
 # 
+# We assume that the preindustrial world was in energy balance, and thus the equilibrium temperature is the preindustrial temperature.
+# 
+# We assume thus only the first term of a Taylor Series expansion
 # 
 # $$ G(T) \sim G(T_0) + G^{'}(T_0) (T-T_0) = G^{'}(T_0)T + (G(T_0)-G^{'}(T_0)T_0) $$
 # 
-# around the pre-industrial equilibrium temperature
+# around the pre-industrial equilibrium temperature.
 # 
 
 # In[ ]:
@@ -91,7 +95,7 @@ T0 = 14. # preindustrial temperature [°C]
 
 # To simplify the expression, we define:
 # 
-# $ A \equiv G^{'}(T_0)T_0 $
+# $ A \equiv G(T_0) - G^{'}(T_0)T_0 $
 # 
 # $ B \equiv - G^{'}(T_0) \text{       (the climate feedback parameter),}$
 # 
@@ -115,9 +119,9 @@ B = -1.3 # climate feedback parameter [W/m^2/°C],
 
 # comes from a bottom-up estimate based on the best understanding of the various climate feedbacks (read more [here](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwikwbfrm9LsAhVjhuAKHQhZCm8QFjAEegQIAhAC&url=https%3A%2F%2Fclimateextremes.org.au%2Fwp-content%2Fuploads%2F2020%2F07%2FWCRP_ECS_Final_manuscript_2019RG000678R_FINAL_200720.pdf&usg=AOvVaw0hWIM3t4kJTovxoeobcRIN)).
 
-# Note: Since $B<0$ , this tells us that the overall climate feedback is negative (i.e. stabilizing). Positivefeedbacks cause  to become less negative, reducing the efficiency with which Earth cools itself by radiating thermal energy to space, and thus amplifying warming.
+# Note: Since $B<0$ , this tells us that the overall climate feedback is negative (i.e. stabilizing). Positive feedbacks cause $B$ to become less negative, reducing the efficiency with which Earth cools itself by radiating thermal energy to space, and thus amplifying warming.
 # 
-# The value $A$ of  is given by the definition of a preindustrial equilibrium, i.e. the fact that before human influence, Earth's energy budget was perfectly balanced:
+# The value $A$ of is given by the definition of a preindustrial equilibrium, i.e. the fact that before human influence, Earth's energy budget was perfectly balanced:
 
 # > absorbed solar radiation = outgoing thermal radiation
 # 
@@ -141,9 +145,9 @@ print(A)
 
 # ### Human-caused greenhouse effect
 # 
-# Empirically, the greenhouse effect is known to be a logarithmic function of gaseous carbon dioxide (CO$_2$) concentrations
+# Empirically, the greenhouse effect is known to be a logarithmic function of gaseous carbon dioxide ($CO_2$) concentrations
 # 
-# $$ \text{Human-caused greenhouse effect} = a * ln  \frac{CO_2}{CO{_2}_{PI}}  $$
+# $$ \text{Human-caused greenhouse effect} = a * ln  \frac{CO_2}{CO_{2, PI}}  $$
 # 
 # where
 
@@ -181,17 +185,21 @@ plt.legend(loc = 4)
 plt.grid()
 
 
+# ### Observations from Mauna Loa Volcano
+# 
+# ![](https://i.pinimg.com/originals/df/1a/e7/df1ae72cfd5e6d0d535c0ec99e708f6f.jpg)
+
 # ### 1.4) Change in heat content
 # 
-# The heat content $CT$ is determined by the temperature $T$ (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of
+# The heat content $C_{temp}$ is determined by the temperature $T$ (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of
 
 # In[ ]:
 
 
-C = 51
+C = 51 # atmosphere and upper-ocean heat capacity [J/m^2/°C]
 
 
-# The change in heat content over time is thus simply given by $\frac{d(CT)}{dt}$. Since the heat capacity of sea water hardly changes with temperature, we can rewrite this in terms of the change in temperature with time as:
+# The change in heat content over time is thus simply given by $\frac{d(C_{temp})}{dt}$. Since the heat capacity of sea water hardly changes with temperature, we can rewrite this in terms of the change in temperature with time as:
 
 # $$\text{change in heat content} = C\frac{dT}{dt} $$
 
