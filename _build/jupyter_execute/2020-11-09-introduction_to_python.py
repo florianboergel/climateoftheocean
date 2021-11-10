@@ -226,9 +226,19 @@ house = [["hallway", hall],
 # x[1]
 # x[-3] # same result!
 # ```
-# 
+
+# In[ ]:
+
+
+# Feel free to test:
+
+x = ["a", "b", "c", "d"]
+
+
 # ### Example
 # Remember the areas list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
+# 
+# Print out the area of the bath.
 
 # In[ ]:
 
@@ -245,7 +255,7 @@ house = [["hallway", hall],
 #     "hallway": hall,
 #     "kitchen": kit,
 #     "living room": liv,
-#     "bedroom": bath
+#     "bedroom": bed
 # }
 # ```
 
@@ -406,6 +416,21 @@ time1 = time.time()
 c = a + b
 time2 = time.time()   
 print('This took %0.3f ms' % ((time2-time1)*1000.0))
+
+
+# In[ ]:
+
+
+# If you are not familiar with for loops please try yourself:
+
+for i in range(0, 5):
+    print("for loop version 1: {}".format(i))
+
+for i in range(5):
+    print("for loop version 2: {}".format(i))
+
+for i in [0,1,2,3,4]:
+    print("for loop version 3: {}".format(i))
 
 
 # ### Useful functions:
