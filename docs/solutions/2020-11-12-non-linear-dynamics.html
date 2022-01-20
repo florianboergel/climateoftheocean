@@ -1,0 +1,835 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 3, Nonlinear dynamics, stability and bifurcations &#8212; Climate of the ocean</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Climate of the ocean
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Lecture
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-09-introduction_to_python.html">
+   Lecture 1, Introduction to python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-11-energy-model.html">
+   Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-12-non-linear-dynamics.html">
+   Lecture 3, Nonlinear dynamics, stability and bifurcations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-13-ice-albedo.html">
+   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-12-01-advection-diffusion.html">
+   Lecture 5, Evolution in time and space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-12-02-heat-transport.html">
+   Lecture 6, Heat transports
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Exercise
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-14-climate-of-the-ocean-h1.html">
+   Exercise 1, policy goals under uncertainty
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-15-climate-of-the-ocean-h2.html">
+   Exercise 2, melting the snowball earth
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Other code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2020-11-05-red_noise_binder.html">
+   Red noise
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/solutions/2020-11-12-non-linear-dynamics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/florianboergel/climateoftheocean"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/florianboergel/climateoftheocean/issues/new?title=Issue%20on%20page%20%2Fsolutions/2020-11-12-non-linear-dynamics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/florianboergel/climateoftheocean/main?urlpath=tree/solutions/2020-11-12-non-linear-dynamics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solving-the-ode-euler-method">
+   Solving the ODE: Euler method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qualitative-behaviour-fixed-points-and-their-stability">
+   Qualitative behaviour: Fixed points and their stability
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#state-space-vector-field-and-phase-portrait">
+   State space: Vector field and phase portrait
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bifurcations">
+   Bifurcations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bistability-and-hysteresis">
+   Bistability and hysteresis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hysteresis">
+   Hysteresis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slow-fast-systems">
+   Slow–fast systems
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lecture-3-nonlinear-dynamics-stability-and-bifurcations">
+<h1>Lecture 3, Nonlinear dynamics, stability and bifurcations<a class="headerlink" href="#lecture-3-nonlinear-dynamics-stability-and-bifurcations" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>ordinary differential equations (ODE)</p>
+</div></blockquote>
+<p>Thanks a lot to <a class="reference external" href="https://github.com/dpsanders">David P. Sanders</a> for providing the lecture. The original lecture is part of the MIT class <a class="reference external" href="https://computationalthinking.mit.edu/Fall20/lecture20/">Introduction to Computational Thinking</a>.</p>
+<p>This class uses the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>. The orignal code can be found under <a class="reference external" href="https://github.com/mitmath/18S191/blob/master/lecture_notebooks/week11/nonlinear_dynamics_bifurcations.jl">github.com</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>How does the climate change over time? In the last lecture we saw that our simple model is already quite good simulating how the climate changes over time.</p>
+<p>Our simple model is based on <em>ordinary differential equations (ODEs)</em>, where some variables change in time - with the rate of change as function of their current values.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dx(t)}{dt} = f(x(t)) \]</div>
+<p>The simplest numerical method to solve such an equation is the <strong>(forward) Euler method</strong>, in which we convert this equation into an explicit time-stepping routine:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dx(t)}{dt} = \frac{x(t+\Delta t) - x(t)}{\Delta t}\]</div>
+<p>with the approximation</p>
+<div class="math notranslate nohighlight">
+\[ x(t+\Delta t) \simeq x(t) + \Delta t f(x(t)) \]</div>
+<div class="section" id="solving-the-ode-euler-method">
+<h2>Solving the ODE: Euler method<a class="headerlink" href="#solving-the-ode-euler-method" title="Permalink to this headline">¶</a></h2>
+<p>Let’s use this to simulate a simple nonlinear ODE that describes the dynamics of a population of bacteria. The bacteria will grow by reproduction at a rate <span class="math notranslate nohighlight">\(\lambda\)</span> provided there is sufficient food, in which case we would have <span class="math notranslate nohighlight">\(\dot{x} = \lambda x\)</span>. But the available food will actually always limit the sustainable population to a value <span class="math notranslate nohighlight">\(K\)</span>. A simple model for this is as follows:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = \lambda \, x \, (K - x).\]</div>
+<p>When <span class="math notranslate nohighlight">\(x\)</span> is close to <span class="math notranslate nohighlight">\(0\)</span>, the growth rate is <span class="math notranslate nohighlight">\(\lambda\)</span>, but that rate decreases as <span class="math notranslate nohighlight">\(x\)</span> increases.</p>
+<p>This is sometimes called the <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_function#Logistic_differential_equation"><strong>logistic</strong> differential equation</a> (although the name does not seem particularly helpful).</p>
+<p>Our goal is to use computational thinking, but we will actually not be interested so much in the exact dynamics in time, but rather in the <strong>qualitative</strong> features of the behaviour of the system. For example, at long times (formally <span class="math notranslate nohighlight">\(t \to \infty\)</span>) does the population get arbitrarily large? Or does it, for example, oscillate around a particular value? Or does it converge to a particular size? This forms the subject of <strong>nonlinear dynamics</strong> or <strong>dynamical systems</strong> theory.</p>
+<p>Let’s simulate the system using the Euler method to try to guess the answer to this question. We should never use the Euler method in practice, but should use a tried and tested library instead, and algorithms that provide much better accuracy in the solutions, if we are interested in faithful numerical results.</p>
+<p>We’ll rescale the variables to the simplest form:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dx}{dt} = x\,(1-x) \]</div>
+<div class="math notranslate nohighlight">
+\[ x_{n+1} = x_n + \Delta t \cdot \text{tendency}(x_n; ...)\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">logistic</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">timesteps</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">timesteps</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">dxdt</span> <span class="o">=</span> <span class="n">logistic</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">t1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">dxdt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fbe22157490&gt;]
+</pre></div>
+</div>
+<img alt="../_images/2020-11-12-non-linear-dynamics_9_11.png" src="../_images/2020-11-12-non-linear-dynamics_9_11.png" />
+</div>
+</div>
+<p>We see that for this particular initial condition, the solution seems to settle down to a fixed value after some time, and then remains at that value thereafter.
+Such a value is called a <strong>fixed point</strong> or a <strong>stationary point</strong> of the ODE.</p>
+</div>
+<div class="section" id="qualitative-behaviour-fixed-points-and-their-stability">
+<h2>Qualitative behaviour: Fixed points and their stability<a class="headerlink" href="#qualitative-behaviour-fixed-points-and-their-stability" title="Permalink to this headline">¶</a></h2>
+<p>But what happens if we have a different initial condition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<span class="s1">code_show=true; </span>
+<span class="s1">function code_toggle() {</span>
+<span class="s1">    if (code_show){</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).hide();</span>
+<span class="s1">    } else {</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).show();</span>
+<span class="s1">    }</span>
+<span class="s1">    code_show = !code_show</span>
+<span class="s1">} </span>
+<span class="s1">$( document ).ready(code_toggle);</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">To show/hide this cell&#39;s raw code input, click &lt;a href=&quot;javascript:code_toggle()&quot;&gt;here&lt;/a&gt;.&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_func</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">logistic</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">,</span> <span class="n">t1</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;x(t)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="n">interact</span><span class="p">(</span><span class="n">plot_func</span><span class="p">,</span> <span class="n">initial_condition</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                                                            <span class="nb">min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                                                            <span class="nb">max</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                                                            <span class="n">step</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script>
+code_show=true; 
+function code_toggle() {
+    if (code_show){
+        $('div.cell.code_cell.rendered.selected div.input').hide();
+    } else {
+        $('div.cell.code_cell.rendered.selected div.input').show();
+    }
+    code_show = !code_show
+} 
+$( document ).ready(code_toggle);
+</script>
+To show/hide this cell's raw code input, click <a href="javascript:code_toggle()">here</a>.</div><script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "cfca4fc832b6418580b21f75c6ea5cff", "version_major": 2, "version_minor": 0}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.plot_func(initial_condition)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get an overview, we can draw all graphs in a single plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">initial_condition</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">logistic</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">,</span> <span class="n">t1</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;x(t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2020-11-12-non-linear-dynamics_15_01.png" src="../_images/2020-11-12-non-linear-dynamics_15_01.png" />
+</div>
+</div>
+<p>We see that all the curves starting near to <span class="math notranslate nohighlight">\(x_0=1.0\)</span> seem to converge to 1 at long times. If the system starts <em>exactly</em> at 0 then it stays there forever. However, if it starts close to 0, on either side, then it moves <em>away</em> from 0 (on that same side of 0) – starting from a negative value <span class="math notranslate nohighlight">\(x\)</span> becomes ever more negative. (Even though negative populations have no meaning in the original interpretation as the dynamics of a population, we can still ask study the dynamics of the equation with negative initial conditions, since it may model other systems too.)</p>
+<p>The special values <span class="math notranslate nohighlight">\(x^*_1=1\)</span> and <span class="math notranslate nohighlight">\(x^*_2=0\)</span> are called <strong>stationary points</strong> or <strong>fixed points</strong> of the differential equation. If we start at <span class="math notranslate nohighlight">\(x^*_i\)</span>, then the derivative there is <span class="math notranslate nohighlight">\(f'(x^*_i) = 0\)</span>, and hence we cannot move away from <span class="math notranslate nohighlight">\(x^*_i\)</span>! The fixed points can be found as zeros or <strong>roots</strong> of the function <span class="math notranslate nohighlight">\(f\)</span>, i.e. values <span class="math notranslate nohighlight">\(x^*\)</span> such that <span class="math notranslate nohighlight">\(f(x^*) = 0\)</span>.</p>
+<p>We see, though, that the two types of fixed points are <strong>qualitatively different</strong>: trajectories that start close to <span class="math notranslate nohighlight">\(x^*_1 = 1\)</span> move <em>towards</em> <span class="math notranslate nohighlight">\(x^*_1\)</span>, whereas trajectories that start close to <span class="math notranslate nohighlight">\(x^*_2 = 0\)</span> move <em>away</em> from it. We say that <span class="math notranslate nohighlight">\(x^*_1\)</span> is a <strong>stable fixed point</strong> and <span class="math notranslate nohighlight">\(x^*_2\)</span> is an <strong>unstable fixed point</strong>.</p>
+<p>In general it is not possible to find analytical formulas for the position and stability of fixed points; instead, we can use numerical <strong>root-finding algorithms</strong>, for example the Newton method.</p>
+</div>
+<div class="section" id="state-space-vector-field-and-phase-portrait">
+<h2>State space: Vector field and phase portrait<a class="headerlink" href="#state-space-vector-field-and-phase-portrait" title="Permalink to this headline">¶</a></h2>
+<p>If we want to find the whole trajectory for a given initial condition then we need to solve the equations, either numerically or analytically.</p>
+<p>However, we may want less information about the system, for example the <strong>long-time</strong> or <strong>asymptotic</strong> dynamics. It turns out that we can obtain some information about that <em>without</em> explicitly solving the ODE! This is the <strong>qualitative approach</strong> to studying nonlinear systems.</p>
+<p>Instead of drawing trajectories <span class="math notranslate nohighlight">\(x(t)\)</span> as a function of time <span class="math notranslate nohighlight">\(t\)</span>, as we did above, let’s use a different graphical representation, where we draw <strong>state space</strong> or <strong>phase space</strong>: This is the set (“space”) of all possible values of the dependent variables (“states”). For the above ODE there is only a single dependent variable, <span class="math notranslate nohighlight">\(x\)</span>, so the state space is the real line, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<p>At each possible value of <span class="math notranslate nohighlight">\(x\)</span>, the ODE gives us information about the rate of change of <span class="math notranslate nohighlight">\(x(t)\)</span> at that point. Let’s draw an <strong>arrow</strong> at that point, pointing in the direction that a particle placed at that point would move: to the right if <span class="math notranslate nohighlight">\(\dot{x} &gt; 0\)</span> and to the left if <span class="math notranslate nohighlight">\(\dot{x} &lt; 0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<span class="s1">code_show=true; </span>
+<span class="s1">function code_toggle() {</span>
+<span class="s1">    if (code_show){</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).hide();</span>
+<span class="s1">    } else {</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).show();</span>
+<span class="s1">    }</span>
+<span class="s1">    code_show = !code_show</span>
+<span class="s1">} </span>
+<span class="s1">$( document ).ready(code_toggle);</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">To show/hide this cell&#39;s raw code input, click &lt;a href=&quot;javascript:code_toggle()&quot;&gt;here&lt;/a&gt;.&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+
+<span class="n">states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">initial_conditions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">initial_condition</span> <span class="ow">in</span> <span class="n">initial_conditions</span><span class="p">:</span>
+    <span class="n">states</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">logistic</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">,</span> <span class="n">t1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">states</span><span class="p">))</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">initial_conditions</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">states</span><span class="p">))</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">states</span><span class="p">))</span>
+<span class="n">V</span><span class="p">[</span><span class="n">states</span> <span class="o">-</span> <span class="n">initial_conditions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+
+<span class="n">states</span><span class="p">[</span><span class="n">states</span> <span class="o">==</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">([])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script>
+code_show=true; 
+function code_toggle() {
+    if (code_show){
+        $('div.cell.code_cell.rendered.selected div.input').hide();
+    } else {
+        $('div.cell.code_cell.rendered.selected div.input').show();
+    }
+    code_show = !code_show
+} 
+$( document ).ready(code_toggle);
+</script>
+To show/hide this cell's raw code input, click <a href="javascript:code_toggle()">here</a>.</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;[]&#39;)
+</pre></div>
+</div>
+<img alt="../_images/2020-11-12-non-linear-dynamics_18_21.png" src="../_images/2020-11-12-non-linear-dynamics_18_21.png" />
+</div>
+</div>
+<p>This vector field indeed gives us a <em>qualitative</em> picture of the dynamics. It does not tell us how fast the dynamics will occur in each region, but it indicates what the <em>tendency</em> is. We have coded the fixed points according to their stability; this may be calculated using the derivative evaluated at the fixed point, <span class="math notranslate nohighlight">\(f'(x^*)\)</span>, since this derivative controls the behaviour of nearby initial conditions <span class="math notranslate nohighlight">\(x^* + \delta x\)</span>.</p>
+</div>
+<div class="section" id="bifurcations">
+<h2>Bifurcations<a class="headerlink" href="#bifurcations" title="Permalink to this headline">¶</a></h2>
+<p>Now suppose that there is a <strong>parameter</strong> <span class="math notranslate nohighlight">\(\mu\)</span> in the system that can be varied. For each value of <span class="math notranslate nohighlight">\(\mu\)</span> we have a <em>different</em> ODE</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = f_\mu(x).\]</div>
+<p>For example,
+$<span class="math notranslate nohighlight">\(\dot{x} = \mu + x^2.\)</span><span class="math notranslate nohighlight">\(
+Let's draw the state space for each different value of \)</span>\mu$:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<span class="s1">code_show=true; </span>
+<span class="s1">function code_toggle() {</span>
+<span class="s1">    if (code_show){</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).hide();</span>
+<span class="s1">    } else {</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).show();</span>
+<span class="s1">    }</span>
+<span class="s1">    code_show = !code_show</span>
+<span class="s1">} </span>
+<span class="s1">$( document ).ready(code_toggle);</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">To show/hide this cell&#39;s raw code input, click &lt;a href=&quot;javascript:code_toggle()&quot;&gt;here&lt;/a&gt;.&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">xdot</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_func</span><span class="p">(</span><span class="n">initial_condition</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">xdot</span><span class="p">(</span><span class="n">mu</span> <span class="o">=</span> <span class="n">initial_condition</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;x(t)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">zero_crossings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">signbit</span><span class="p">(</span><span class="n">a</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">ymin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span><span class="n">ymax</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span><span class="mf">0.5</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span><span class="mf">0.5</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="mi">5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">+</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">]],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> 
+                      <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="n">interact</span><span class="p">(</span><span class="n">plot_func</span><span class="p">,</span> <span class="n">initial_condition</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+                                                            <span class="nb">min</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span>
+                                                            <span class="nb">max</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                                                            <span class="n">step</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script>
+code_show=true; 
+function code_toggle() {
+    if (code_show){
+        $('div.cell.code_cell.rendered.selected div.input').hide();
+    } else {
+        $('div.cell.code_cell.rendered.selected div.input').show();
+    }
+    code_show = !code_show
+} 
+$( document ).ready(code_toggle);
+</script>
+To show/hide this cell's raw code input, click <a href="javascript:code_toggle()">here</a>.</div><script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "9af9d5e8e08243e585f440af369c5712", "version_major": 2, "version_minor": 0}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.plot_func(initial_condition)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s collect all the vector fields into a single plot. We <em>rotate</em> the vector field to now be vertical, thinking of the dynamics of <span class="math notranslate nohighlight">\(x\)</span> as occurring along the vertical direction. The horizontal axis now represents the different possible values of the parameter <span class="math notranslate nohighlight">\(\mu\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tag</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<span class="s1">code_show=true; </span>
+<span class="s1">function code_toggle() {</span>
+<span class="s1">    if (code_show){</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).hide();</span>
+<span class="s1">    } else {</span>
+<span class="s1">        $(&#39;div.cell.code_cell.rendered.selected div.input&#39;).show();</span>
+<span class="s1">    }</span>
+<span class="s1">    code_show = !code_show</span>
+<span class="s1">} </span>
+<span class="s1">$( document ).ready(code_toggle);</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">To show/hide this cell&#39;s raw code input, click &lt;a href=&quot;javascript:code_toggle()&quot;&gt;here&lt;/a&gt;.&#39;&#39;&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+
+<span class="n">saddle_points0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">saddle_points1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+
+<span class="n">stepsize</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="k">for</span> <span class="n">mu</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">stepsize</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">xdot</span><span class="p">(</span><span class="n">mu</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">zero_crossings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">signbit</span><span class="p">(</span><span class="n">a</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">zero_crossings</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">saddle_points0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saddle_points0</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="n">saddle_points1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saddle_points1</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span><span class="mf">0.25</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">arrows</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.025</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span><span class="mf">0.25</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">arrows</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.025</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.25</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">arrows</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.025</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+
+
+    <span class="k">elif</span> <span class="n">zero_crossings</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">saddle_points0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saddle_points0</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">])</span>
+        <span class="n">saddle_points1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saddle_points0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">saddle_points0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saddle_points0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="n">saddle_points1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">saddle_points1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span> 
+        
+        <span class="k">for</span> <span class="n">arrows</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">0.25</span><span class="p">):</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">arrows</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span><span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.025</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">stepsize</span><span class="p">),</span> <span class="n">saddle_points0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">stepsize</span><span class="p">),</span> <span class="n">saddle_points1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;fixed points and dynamics with given $\mu$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$\mu$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><script>
+code_show=true; 
+function code_toggle() {
+    if (code_show){
+        $('div.cell.code_cell.rendered.selected div.input').hide();
+    } else {
+        $('div.cell.code_cell.rendered.selected div.input').show();
+    }
+    code_show = !code_show
+} 
+$( document ).ready(code_toggle);
+</script>
+To show/hide this cell's raw code input, click <a href="javascript:code_toggle()">here</a>.</div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;$\\mu$&#39;)
+</pre></div>
+</div>
+<img alt="../_images/2020-11-12-non-linear-dynamics_23_21.png" src="../_images/2020-11-12-non-linear-dynamics_23_21.png" />
+</div>
+</div>
+<p>Now let’s collect all the vector fields into a single plot. We <em>rotate</em> the vector field to now be vertical, thinking of the dynamics of <span class="math notranslate nohighlight">\(x\)</span> as occurring along the vertical direction. The horizontal axis now represents the different possible values of the parameter <span class="math notranslate nohighlight">\(\mu\)</span>:</p>
+<p>We see that at the <strong>critical value</strong> <span class="math notranslate nohighlight">\(\mu_c = 0\)</span> there is a <strong>qualitative change in behaviour</strong> in the system: for <span class="math notranslate nohighlight">\(\mu_c &lt; 0\)</span> there are two fixed points, whereas for <span class="math notranslate nohighlight">\(\mu_c &gt; 0\)</span> there are no fixed points at all.  In this particular ODE the two fixed points collide in a <strong>saddle–node</strong> or <strong>fold</strong> bifurcation.</p>
+</div>
+<div class="section" id="bistability-and-hysteresis">
+<h2>Bistability and hysteresis<a class="headerlink" href="#bistability-and-hysteresis" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s look at the dynamics of the following system:</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = \mu + x - x^3.\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">saddle_points</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">stepsize</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="k">for</span> <span class="n">mu</span> <span class="ow">in</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">stepsize</span><span class="p">)):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">mu</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">zero_crossings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">signbit</span><span class="p">(</span><span class="n">a</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zero_crossings</span><span class="p">))</span><span class="o">*</span><span class="n">mu</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">zero_crossings</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Bifurcation Diagramm&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;fixed points and dynamics with given $\mu$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$\mu$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-2.0, 2.0)
+</pre></div>
+</div>
+<img alt="../_images/2020-11-12-non-linear-dynamics_27_11.png" src="../_images/2020-11-12-non-linear-dynamics_27_11.png" />
+</div>
+</div>
+<p>We see that there is a range of values of <span class="math notranslate nohighlight">\(\mu\)</span> for which there are <em>three coexisting fixed points</em>, two stable and one unstable. Since there are two stable fixed points in which the system can remain, we say that the system is <strong>bistable</strong>.</p>
+<p>Now that we understand what the plots mean and the dynamics, let’s plot just the fixed points <span class="math notranslate nohighlight">\(x^*(\mu)\)</span> as a function of <span class="math notranslate nohighlight">\(\mu\)</span>. Such a plot is called a <strong>bifurcation diagram</strong>:</p>
+<p>The pieces of curve are called <strong>branches</strong>.</p>
+</div>
+<div class="section" id="hysteresis">
+<h2>Hysteresis<a class="headerlink" href="#hysteresis" title="Permalink to this headline">¶</a></h2>
+<p>Suppose we now think about slowly varying the parameter <span class="math notranslate nohighlight">\(\mu\)</span>. If we change the parameter <span class="math notranslate nohighlight">\(\mu\)</span> by a little, the system is no longer at a fixed point, since the position of the fixed point moves when <span class="math notranslate nohighlight">\(\mu\)</span> changes. However, the system will then <strong>relax</strong> by following the dynamics at the new value of <span class="math notranslate nohighlight">\(\mu\)</span>, and will rapidly converge to the new fixed point nearby.
+For example, starting at <span class="math notranslate nohighlight">\(\mu=-2\)</span>, the system will stay on the lower black (stable) <strong>branch</strong> until <span class="math notranslate nohighlight">\(\mu=0.4\)</span> or so. At that point, two fixed points collide and annihilate each other! After that there is no longer a fixed point nearby. However, there is another fixed point much further up that will now attract all trajectories, so the system rapidly transitions to that fixed point.
+Now suppose we decrease the parameter again. The system will now track the <em>upper</em> branch until <span class="math notranslate nohighlight">\(\mu=-0.4\)</span> or so, when again it will jump back down.
+For each parameter value <span class="math notranslate nohighlight">\(\mu\)</span> in the interval <span class="math notranslate nohighlight">\([-0.4, 0.4]\)</span> there is <strong>bistability</strong>, i.e. <strong>coexistence</strong> of <em>two</em> fixed points with the same value of <span class="math notranslate nohighlight">\(\mu\)</span> (together with a third, unstable fixed point that is not observable).
+The fact that the system tracks different stable branches depending on where we started, i.e. on the history, is known as <strong>hysteresis</strong>.</p>
+<p>Hysteretic behaviour like this is found in many scientific and engineering contexts, including switches in biology, for example genetic switches, and in the historical dynamics of the earth’s climate.</p>
+</div>
+<div class="section" id="slow-fast-systems">
+<h2>Slow–fast systems<a class="headerlink" href="#slow-fast-systems" title="Permalink to this headline">¶</a></h2>
+<p>What are we actually doing when we let the parameter <span class="math notranslate nohighlight">\(\mu\)</span> vary? Effectively we now have a system with <em>two</em> equations, for example</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = \mu + x - x^3;\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{\mu} = \epsilon,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu\)</span> varies at some slow speed <span class="math notranslate nohighlight">\(\epsilon\)</span>. On a time scale much shorter than <span class="math notranslate nohighlight">\(1 / \epsilon\)</span>, the dynamics of <span class="math notranslate nohighlight">\(x\)</span> “does not know” that <span class="math notranslate nohighlight">\(\mu\)</span> is changing, so it will converge to a fixed point <span class="math notranslate nohighlight">\(x^*(\mu)\)</span> for the current value of <span class="math notranslate nohighlight">\(\mu\)</span>. [An associated term is <strong>adiabatic approximation</strong>.] However, <span class="math notranslate nohighlight">\(\mu\)</span> does gradually change, so the value of <span class="math notranslate nohighlight">\(x\)</span> will effectively “slide along” the curve <span class="math notranslate nohighlight">\(x(t) \simeq x^*(\mu(t))\)</span>, tracking the curve of fixed points as <span class="math notranslate nohighlight">\(\mu\)</span> changes.
+Once <span class="math notranslate nohighlight">\(\mu\)</span> reaches a critical value <span class="math notranslate nohighlight">\(\mu_c\)</span>, however, there is no longer a nearby fixed point, and the dynamics will rapidly transition to the far away alternative fixed point.
+If we now reverse the dynamics of <span class="math notranslate nohighlight">\(\mu\)</span>, we slide back along the upper branch.
+“””</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./solutions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By H. E. Markus Meier, Florian Börgel<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
