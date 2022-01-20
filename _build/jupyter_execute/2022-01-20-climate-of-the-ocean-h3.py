@@ -22,7 +22,7 @@ ds = xr.open_dataset("data/ocean_day3d.nc")
 # 
 # 
 
-# Look at this figure([Meier and Kauker, 2003](https://agupubs.onlinelibrary.wiley.com/cms/asset/144f12b6-8897-474b-b4e7-4dc1ad3c8faa/)) and zoom on the connection between the world ocean and the Baltic Sea.
+# Look at this figure ([Meier and Kauker, 2003](https://agupubs.onlinelibrary.wiley.com/cms/asset/144f12b6-8897-474b-b4e7-4dc1ad3c8faa/)) and zoom on the connection between the world ocean and the Baltic Sea.
 # 
 # The coordinates are : `lon=8-17, lat=53-59`
 # 
@@ -168,7 +168,7 @@ for ax in g.axes[0]:
 g.fig.tight_layout()
 
 
-# **Question:** Focus on the month of February. What is happening?
+# **Question 3:** Focus on the month of February. What is happening?
 
 # These saline inflows are important for the oxygen supply of the deeper layers, since due to the strong stratification in the Baltic Sea only layers above the permanent halocline are directly influenced by the atmosphere and therefore supplied with oxygen (Mohrholz et al., 2015).
 
@@ -188,7 +188,7 @@ ds_temp_season = ds.temp.resample(time="1M").mean("time").mean("st_ocean")
 (ds_temp_season-ds_temp_season.mean()).plot(col="time", col_wrap =3)
 
 
-# **Question: ** Above you see the deviation from the mean temperature of the Baltic Sea for every single month. Try to discuss the differences for every month.
+# **Question 4:** Above you see the deviation from the mean temperature of the Baltic Sea for every single month. Try to discuss the differences for every month.
 
 # ## Sea Ice
 # 
@@ -214,4 +214,4 @@ ice
 ice.MI.resample(time="1M").mean().plot(col="time", col_wrap=4)
 
 
-# **Question:** Why do we find sea ice in the North but not in the central Baltic Sea?
+# **Question 5:** Why do we find sea ice in the North but not in the central Baltic Sea?
