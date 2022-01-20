@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lecture 6, Heat transports &#8212; Climate of the ocean</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -41,9 +41,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -54,7 +54,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -88,7 +91,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Lecture
  </span>
@@ -125,7 +128,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Exercise
  </span>
@@ -141,16 +144,9 @@
    Exercise 2, melting the snowball earth
   </a>
  </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Other code
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../2020-11-05-red_noise_binder.html">
-   Red noise
+  <a class="reference internal" href="../2022-01-20-climate-of-the-ocean-h3.html">
+   Seasonal cycle of the temperature
   </a>
  </li>
 </ul>
@@ -199,7 +195,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -250,7 +246,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -326,7 +322,86 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lecture 6, Heat transports</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lecture 6, Heat transports
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background-two-dimensional-advection-diffusion">
+   1) Background: two-dimensional advection-diffusion
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-two-dimensional-advection-diffusion-equation">
+     1.1) The two-dimensional advection-diffusion equation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multivariable-shorthand-notation">
+     1.2) Multivariable shorthand notation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-flux-form-two-dimensional-advection-diffusion-equation">
+       1.3) The flux-form two-dimensional advection-diffusion equation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numerical-implementation">
+   2) Numerical implementation
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discretizing-advection-in-two-dimensions">
+   2.1) Discretizing advection in two dimensions
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discretizing-diffusion-in-two-dimensions">
+     2.2) Discretizing diffusion in two dimensions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#no-flux-boundary-conditions">
+     2.3) No-flux boundary conditions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timestepping">
+     2.4) Timestepping
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-single-gyre-windfield">
+     Create single gyre windfield
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lecture-6-heat-transports">
@@ -422,7 +497,7 @@ u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} + T\left(\frac{\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2020-12-02-heat-transport_6_01.png" src="../_images/2020-12-02-heat-transport_6_01.png" />
+<img alt="../_images/2020-12-02-heat-transport_6_0.png" src="../_images/2020-12-02-heat-transport_6_0.png" />
 </div>
 </div>
 <p>The first-order partial derivative in <span class="math notranslate nohighlight">\(y\)</span> is similarly discretized as:</p>
@@ -438,7 +513,7 @@ u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} + T\left(\frac{\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2020-12-02-heat-transport_8_01.png" src="../_images/2020-12-02-heat-transport_8_01.png" />
+<img alt="../_images/2020-12-02-heat-transport_8_0.png" src="../_images/2020-12-02-heat-transport_8_0.png" />
 </div>
 </div>
 <p>Now that we have discretized the two derivate terms, we can write out the <em>advective tendency</em> for computing <span class="math notranslate nohighlight">\(T_{i, j, n+1}\)</span> as</p>
@@ -504,7 +579,7 @@ u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} + T\left(\frac{\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2020-12-02-heat-transport_14_01.png" src="../_images/2020-12-02-heat-transport_14_01.png" />
+<img alt="../_images/2020-12-02-heat-transport_14_0.png" src="../_images/2020-12-02-heat-transport_14_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -516,7 +591,7 @@ u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} + T\left(\frac{\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2020-12-02-heat-transport_15_01.png" src="../_images/2020-12-02-heat-transport_15_01.png" />
+<img alt="../_images/2020-12-02-heat-transport_15_0.png" src="../_images/2020-12-02-heat-transport_15_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -606,7 +681,7 @@ u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} + T\left(\frac{\
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f417eb07910&gt;
 </pre></div>
 </div>
-<img alt="../_images/2020-12-02-heat-transport_22_11.png" src="../_images/2020-12-02-heat-transport_22_11.png" />
+<img alt="../_images/2020-12-02-heat-transport_22_1.png" src="../_images/2020-12-02-heat-transport_22_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -627,7 +702,7 @@ u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} + T\left(\frac{\
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x7f417eab2730&gt;
 </pre></div>
 </div>
-<img alt="../_images/2020-12-02-heat-transport_24_11.png" src="../_images/2020-12-02-heat-transport_24_11.png" />
+<img alt="../_images/2020-12-02-heat-transport_24_1.png" src="../_images/2020-12-02-heat-transport_24_1.png" />
 </div>
 </div>
 </div>
@@ -760,7 +835,7 @@ This should result in diffusion only.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2020-12-02-heat-transport_31_01.png" src="../_images/2020-12-02-heat-transport_31_01.png" />
+<img alt="../_images/2020-12-02-heat-transport_31_0.png" src="../_images/2020-12-02-heat-transport_31_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -882,7 +957,7 @@ This should result in diffusion only.</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.quiver.Quiver at 0x7f417e8e3fd0&gt;
 </pre></div>
 </div>
-<img alt="../_images/2020-12-02-heat-transport_39_11.png" src="../_images/2020-12-02-heat-transport_39_11.png" />
+<img alt="../_images/2020-12-02-heat-transport_39_1.png" src="../_images/2020-12-02-heat-transport_39_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -903,7 +978,7 @@ This should result in diffusion only.</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PolyCollection at 0x7f417e4ed130&gt;
 </pre></div>
 </div>
-<img alt="../_images/2020-12-02-heat-transport_41_11.png" src="../_images/2020-12-02-heat-transport_41_11.png" />
+<img alt="../_images/2020-12-02-heat-transport_41_1.png" src="../_images/2020-12-02-heat-transport_41_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1029,36 +1104,28 @@ This should result in diffusion only.</p>
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By H. E. Markus Meier, Florian Börgel<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By H. E. Markus Meier, Florian Börgel<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
