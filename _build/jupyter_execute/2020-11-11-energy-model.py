@@ -3,13 +3,7 @@
 
 # # Lecture 2, A "zero-dimensional" energy balance model of Earth's climate
 
-# Thanks a lot to [Henri Drake](https://github.com/hdrake) for providing the lecture.
-# 
-# The original lecture is part of the MIT class [Introduction to Computational Thinking](https://computationalthinking.mit.edu/Fall20/lecture20/).
-# 
-# This class uses the [Julia programming language](http://www.julialang.org/). The orignal code can be found under https://github.com/hdrake/simplEarth/blob/master/1_energy_balance_model.jl
-
-# In[ ]:
+# In[18]:
 
 
 import xarray as xr
@@ -17,9 +11,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-# ## 1) Background: climate physics
+# ## 1) The observed global energy budget
 # 
-# The simplest climate model can be conceptualized as:
+# In the last lecture you have been disussing the global energy budget.
+# 
+# The figure below shows the current best estimates of the global **annual mean** energy fluxes.
+# 
+# ![](https://brian-rose.github.io/ClimateLaboratoryBook/_images/GlobalEnergyBudget.png)
+# 
+# During this exercise series, we will try to build a simple climate model based on this energy budget. But before we need to simplify this budget even more.
+# 
+# Our simple climate model can be conceptualized as:
 # 
 # > change in heat content = 
 # 
@@ -41,7 +43,7 @@ import matplotlib.pyplot as plt
 # At Earth's orbital distance from the Sun, the power of the Sun's rays that intercept the Earth is equal to
 # 
 
-# In[ ]:
+# In[19]:
 
 
 S = 1368 # solar insolation [W/m^2]  (energy per unit time per unit area)
@@ -49,7 +51,7 @@ S = 1368 # solar insolation [W/m^2]  (energy per unit time per unit area)
 
 # A small fraction
 
-# In[ ]:
+# In[20]:
 
 
 alpha = 0.3 # albedo, or planetary reflectivity [unitless]
@@ -65,29 +67,54 @@ alpha = 0.3 # albedo, or planetary reflectivity [unitless]
 # 
 # $$\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}$$
 
-# In[ ]:
+# In[21]:
 
 
-def absorbed_solar_radiation():
+def absorbed_solar_radiation(S=1368, alpha=0.3):
+    return S*(1-alpha)/4
     # return absorbed solar radiation 
 
 
 # ### 1.2) Outgoing thermal radiation
 # 
+# Suppost the Earth behaves like a blackbody radiatior with an effective global mean emission temperature $T_e$. 
+# 
+# Then
+# 
+# $$ OLR = \sigma T_e^4$$
+# 
+# where OLR = “Outgoing Longwave Radiation”, and $\sigma=5.67\times 10^{-8} W m^{-2}K^{-4}$ the Stefan-Boltzmann constant.
+# 
+# Looking back at the observations, the global, annual mean value for OLR is 238.5 W $m^{-2}$.
+# 
+# Rearranging yields:
+# 
+# $$ T_e = \frac{OLR}{\sigma}^{0.25} $$
+
+# In[22]:
+
+
+Te = (238.5/(5.67*10**-8))**(0.25)
+Te
+
+
+# What value did we find for the emission temperature $T_e$? How does it compare to the actual global mean surface temperature?
+# 
+# Is the simple blackbody radiator a good model for the Earth’s emission to space?
+
 # The outgoing thermal radiation term $G(T)$ (or "blackbody cooling to space") represents the combined effects of negative feedbacks that *dampen warming*, such as **blackbody radiation**, and positive feedbacks that *amplify warming*, such as the **water vapor feedback**.
 # 
-# Since these physics are too complicated to deal with here, we *linearize* the model comining the incoming and the outgoing.
+# Since these physics are too complicated to deal with here, we *linearize* the model combining the incoming and the outgoing radiation.
 # 
 # We assume that the preindustrial world was in energy balance, and thus the equilibrium temperature is the preindustrial temperature.
 # 
-# We assume thus only the first term of a Taylor Series expansion
+# Thus we only the first term of a Taylor Series expansion
 # 
-# $$ G(T) \sim G(T_0) + G^{'}(T_0) (T-T_0) = G^{'}(T_0)T + (G(T_0)-G^{'}(T_0)T_0) $$
+# $$ G(T) \sim G(T_0) + G^{'}(T_0) (T-T_0)$$
 # 
-# around the pre-industrial equilibrium temperature.
-# 
+# around the pre-industrial equilibrium temperature $T_0$.
 
-# In[ ]:
+# In[23]:
 
 
 T0 = 14. # preindustrial temperature [°C]
@@ -103,15 +130,16 @@ T0 = 14. # preindustrial temperature [°C]
 # 
 # $$ \text{outgoing thermal radiation} \equiv G(T) \sim A - BT$$
 
-# In[ ]:
+# In[24]:
 
 
-def outgoing_thermal_radiation():
+def outgoing_thermal_radiation(T, A, B):
+    return A - B*T
 
 
 # The value of the climate feedback parameter used here,
 
-# In[ ]:
+# In[25]:
 
 
 B = -1.3 # climate feedback parameter [W/m^2/°C],
@@ -131,13 +159,13 @@ B = -1.3 # climate feedback parameter [W/m^2/°C],
 # 
 # By rearanging this equation, we find that the value of $A$ is given by
 
-# In[ ]:
+# In[39]:
 
 
-A = 
+A = S*(1-alpha)/4+B*T0
 
 
-# In[ ]:
+# In[40]:
 
 
 print(A)
@@ -151,25 +179,26 @@ print(A)
 # 
 # where
 
-# In[ ]:
+# In[41]:
 
 
 a = 5 # CO2 forcing coefficient [W/m^2]
 
 
-# In[ ]:
+# In[42]:
 
 
 CO2_PI = 280 # preindustrial CO2 concentration [parts per million; ppm];
 
 
-# In[ ]:
+# In[43]:
 
 
-def greenhouse_effect():
+def greenhouse_effect(CO2, a=5, CO2_PI=280):
+    return a * np.log(CO2/CO2_PI)
 
 
-# In[ ]:
+# In[44]:
 
 
 co2_present = 420
@@ -193,7 +222,7 @@ plt.grid()
 # 
 # The heat content $C_{temp}$ is determined by the temperature $T$ (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of
 
-# In[ ]:
+# In[45]:
 
 
 C = 51 # atmosphere and upper-ocean heat capacity [J/m^2/°C]
@@ -231,9 +260,66 @@ C = 51 # atmosphere and upper-ocean heat capacity [J/m^2/°C]
 # 
 # $$ T_{n+1} = T_n + \Delta t \cdot \text{tendency}(T_n; ...),$$
 
-# which we implement below (don't forget to update the time as well, $t_{n+1} = t_n + \Delta t$), which takes in an instance of our anticipated energy balance model EBM type as its only argument.
+# which we implement below (don't forget to update the time as well, $t_{n+1} = t_n + \Delta t$, which takes in an instance of our anticipated energy balance model EBM type as its only argument.
 
-# In[ ]:
+# Calculate the tendency for 
+# 
+# $T_n$ = 15°C
+# 
+# $\Delta t$ = 1 [year]
+
+# In[51]:
+
+
+T_n = 15
+deltat = 1
+t = 0
+
+tendency = 1. / C * (
+            + absorbed_solar_radiation(alpha = alpha, S=S)
+            - outgoing_thermal_radiation(T_n, A = A, B=B)
+            + greenhouse_effect(280, a = a, CO2_PI=CO2_PI)
+            )
+
+
+# Why is the tendency negative?
+# 
+# --> Calculate the temperature for the next timestep.
+
+# In[52]:
+
+
+T_n1 = T_n + deltat * tendency
+
+
+# Now think about how to calculate the temperature change for the next 150 years? What temperature do you expect after 150 years?
+
+# In[64]:
+
+
+T_n = np.zeros(150)
+T_n[0] = 15
+
+for year in range(1, 150):
+    tendency = 1. / C * (
+            + absorbed_solar_radiation(alpha = alpha, S=S)
+            - outgoing_thermal_radiation(T_n[year-1], A = A, B=B)
+            + greenhouse_effect(280, a = a, CO2_PI=CO2_PI)
+            )
+    T_n[year] = T_n[year-1] + deltat*tendency
+
+
+# In[66]:
+
+
+plt.plot(T_n)
+plt.ylabel("Temperature [°C]")
+plt.xlabel("Time [years]")
+
+
+# Now we have everything ready. In the next step we will put this into a class called ebm:
+
+# In[68]:
 
 
 class ebm():
@@ -284,37 +370,42 @@ class ebm():
 # 
 # 
 
-# In[ ]:
+# In[69]:
 
 
-
+def run_ebm(ebm, end_year):
+    for year in range(end_year):
+        ebm.timestep
 
 
 # For example, let us consider the case where CO₂ emissions increase by 1% year-over-year from the preindustrial value [CO$_2$] = $280.0$ ppm, starting at T=T₀=14°C in year t=0 and with a timestep Δt = 1 year.
 
-# In[ ]:
+# In[70]:
 
 
+def CO2_test(t):
+    return CO2_PI ** (1 + 1/100)**t
+
+EBM = ebm(T0, t=0, deltat=1, CO2=CO2_test)
 
 
-
-# In[ ]:
-
+# In[71]:
 
 
+EBM.timestep
 
 
-# In[ ]:
+# In[72]:
 
 
-
+EBM.T
 
 
 # ## 3) Energy balance model applications
 # ### 3.1) Why was Earth's preindustrial climate so stable?
 # Let us consider the simple case where CO₂ concentrations remain at their pre-industrial temperatures.
 
-# In[ ]:
+# In[73]:
 
 
 def CO2_test(t):
@@ -323,13 +414,13 @@ def CO2_test(t):
 EBM = ebm(T0, 0, 1, CO2_test)
 
 
-# In[ ]:
+# In[74]:
 
 
 run_ebm(EBM, 200) 
 
 
-# In[ ]:
+# In[75]:
 
 
 t0s = np.arange(0,28,2)
@@ -354,14 +445,14 @@ plt.ylabel("temperature [°C]")
 # 
 # The observed increase of CO2 concentrations can be fairly accurately modelled by the simple cubic formula below.
 
-# In[ ]:
+# In[76]:
 
 
 def co2_hist(t):
     return 280 * (1+ ((t-1850)/220)**3)
 
 
-# In[ ]:
+# In[77]:
 
 
 EBM = ebm(T0, 1850, 1, co2_hist)
@@ -369,7 +460,7 @@ EBM = ebm(T0, 1850, 1, co2_hist)
 run_ebm(EBM, 170) 
 
 
-# In[ ]:
+# In[78]:
 
 
 import pandas as pd
@@ -388,7 +479,7 @@ co2_data.index = pd.to_datetime(co2_data.index)
 co2_data = co2_data.groupby(co2_data.index.year).mean() 
 
 
-# In[ ]:
+# In[79]:
 
 
 f, (ax, bx) = plt.subplots(1,2, figsize=(8,4))
@@ -429,7 +520,7 @@ f.tight_layout()
 # 
 # 2) a high-emissions world in which emissions continue increasing and CO2 concentrations soar upwards of 1200 ppm ("RCP8.5").
 
-# In[ ]:
+# In[80]:
 
 
 def CO2_RCP26(t):
@@ -440,13 +531,17 @@ def CO2_RCP85(t):
 
 # In the low-emissions scenario, the temperature increase stays below $\Delta T$ = 2 °C by 2100, while in the high-emissions scenario temperatures soar upwards of 3.5ºC above pre-industrial levels.
 
-# In[ ]:
+# In[81]:
 
 
+EBM1 = ebm(T0, 1850, 1, CO2_RCP26)
+EBM2 = ebm(T0, 1850, 1, CO2_RCP85)
+
+run_ebm(EBM1, 249) 
+run_ebm(EBM2, 249) 
 
 
-
-# In[ ]:
+# In[82]:
 
 
 f, (ax, bx) = plt.subplots(1,2, figsize = (8,4))
@@ -471,3 +566,11 @@ bx.legend()
 
 f.tight_layout()
 
+
+# Thanks a lot to [Henri Drake](https://github.com/hdrake) for providing the lecture.
+# 
+# The original lecture is part of the MIT class [Introduction to Computational Thinking](https://computationalthinking.mit.edu/Fall20/lecture20/).
+# 
+# This class uses the [Julia programming language](http://www.julialang.org/). The orignal code can be found under https://github.com/hdrake/simplEarth/blob/master/1_energy_balance_model.jl
+# 
+# Adapted with some content from https://brian-rose.github.io/ClimateLaboratoryBook/courseware/
