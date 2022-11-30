@@ -346,7 +346,7 @@ class OceanModel():
         self.t.append(self.t[-1] + self.deltat)
 
 
-# In[32]:
+# In[17]:
 
 
 class grid:   
@@ -395,7 +395,7 @@ class windfield:
 # 
 # Initialize temperature field with rectangular non-zero box.
 
-# In[33]:
+# In[18]:
 
 
 my_grid = grid(N = 11, L = 6e6)
@@ -404,13 +404,13 @@ my_temp = np.zeros((my_grid.grid.shape))
 my_temp[9:13, 4:8] = 1
 
 
-# In[34]:
+# In[19]:
 
 
 my_grid.grid.shape
 
 
-# In[35]:
+# In[20]:
 
 
 plt.pcolor(my_grid.xs, my_grid.ys, my_temp)
@@ -419,13 +419,13 @@ plt.ylabel("Kilometers Latitude");
 plt.xlabel("Kilometers Longitude");
 
 
-# In[36]:
+# In[21]:
 
 
 deltat = 12*60*60 # 12 Hours
 
 
-# In[37]:
+# In[22]:
 
 
 def plot_func(steps, temp, deltat, windfield, grid, kappa, anomaly = False):
@@ -451,7 +451,7 @@ def plot_func(steps, temp, deltat, windfield, grid, kappa, anomaly = False):
     plt.show()
 
 
-# In[38]:
+# In[23]:
 
 
 interact(plot_func, 

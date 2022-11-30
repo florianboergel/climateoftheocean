@@ -23,7 +23,7 @@ from IPython.display import display
 # # 1) Background: two-dimensional advection-diffusion
 # 
 # ## 1.1) The two-dimensional advection-diffusion equation
-# Recall from **Lecture 5** that the one-dimensional advection-diffusion equation is written as
+# Recall from the **last Lecture** that the one-dimensional advection-diffusion equation is written as
 # 
 # $$\frac{\partial T(x,t)}{\partial t} = -U \frac{\partial T}{\partial x} + \kappa \frac{\partial^{2} T}{\partial x^{2}},$$
 # 
@@ -37,7 +37,7 @@ from IPython.display import display
 # 
 # Throughout the rest of the Climate Modelling module, we will consider $x$ to be the *longitundinal* direction (positive from west to east) and $y$ to the be the *latitudinal* direction (positive from south to north).
 
-# ## 1.2) Multivariable shorthand notation
+# ## 1.2) Reminder: Multivariable shorthand notation
 # 
 # Conventionally, the two-dimensional advection-diffusion equation is written more succintly as
 # 
@@ -47,25 +47,25 @@ from IPython.display import display
 # 
 # The **gradient** operator is defined as 
 # 
-# $\nabla \equiv (\frac{\partial}{\partial x}, \frac{\partial }{\partial y})$
+# $$\nabla \equiv (\frac{\partial}{\partial x}, \frac{\partial }{\partial y})$$
 # 
 # such that
 # 
-# $\nabla T = (\frac{\partial T}{\partial x}, \frac{\partial T}{\partial y})$ and 
+# $$\nabla T = (\frac{\partial T}{\partial x}, \frac{\partial T}{\partial y})$$
 # 
-# $\vec{u} \cdot \nabla T = (u, v) \cdot (\frac{\partial T}{\partial x}, \frac{\partial T}{\partial y}) = u \frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y}.$
+# $$\vec{u} \cdot \nabla T = (u, v) \cdot (\frac{\partial T}{\partial x}, \frac{\partial T}{\partial y}) = u \frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y}.$$
 # 
 # The **Laplacian** operator $\nabla^{2}$ (sometimes denoted $\Delta$) is defined as 
 # 
-# $\nabla^{2} = \frac{\partial^{2}}{\partial x^{2}} + \frac{\partial^{2}}{\partial y^{2}}$
+# $$\nabla^{2} = \frac{\partial^{2}}{\partial x^{2}} + \frac{\partial^{2}}{\partial y^{2}}$$
 # 
 # such that
 # 
-# $\nabla^{2} T = \frac{\partial^{2} T}{\partial x^{2}} + \frac{\partial^{2} T}{\partial y^{2}}.$
+# $$\nabla^{2} T = \frac{\partial^{2} T}{\partial x^{2}} + \frac{\partial^{2} T}{\partial y^{2}}.$$
 # 
 # The **divergence** operator is defined as $\nabla \cdot [\quad]$, such that
 # 
-# $\nabla \cdot \vec{u} = \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial x} \right) \cdot (u,v) = \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}.$
+# $$\nabla \cdot \vec{u} = \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial x} \right) \cdot (u,v) = \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}.$$
 # 
 # **Note:** Since seawater is largely incompressible, we can approximate ocean currents as a *non-divergent flow*, with $\nabla \cdot \vec{u} = \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} = 0$. Among other implications, this allows us to write:
 # 
@@ -76,15 +76,13 @@ from IPython.display import display
 # \left( u\frac{\partial T}{\partial x} + T\frac{\partial u}{\partial x} \right) +
 # \left( v\frac{\partial T}{\partial y} + \frac{\partial v}{\partial y} \right)
 # \newline &=
-# \frac{\partial (uT)}{\partial x} + \frac{\partial (vT)}{\partial x}\newline &=
+# \frac{\partial (uT)}{\partial x} + \frac{\partial (vT)}{\partial y}\newline &=
 # \nabla \cdot (\vec{u}T)
 # \end{align}
 # 
 # using the product rule (separately in both $x$ and $y$).
 # 
 
-# ##### 1.3) The flux-form two-dimensional advection-diffusion equation
-# 
 # This lets us finally re-write the two-dimensional advection-diffusion equation as:
 # 
 # $\frac{\partial T}{\partial t} = - \nabla \cdot (\vec{u}T) + \kappa \nabla^{2} T$
@@ -95,7 +93,7 @@ from IPython.display import display
 # 
 # # 2.1) Discretizing advection in two dimensions
 # 
-# In Lecture XX we saw that in one dimension we can discretize a first-partial derivative in space using the *centered finite difference*
+# In the last lecture we saw that in one dimension we can discretize a first-partial derivative in space using the *centered finite difference*
 # 
 # $$\frac{\partial T(x_{i}, t_{n})}{\partial x} \approx \frac{T_{i+1}^{n} - T_{i-1}^{n}}{2 \Delta x}.$$
 # 
@@ -256,15 +254,15 @@ class OceanModel():
 # 
 # We want to impose the no-flux boundary conditions, which states that
 # 
-# $$u\frac{\partial T}{\partial x} = \kappa \frac{\partial T}{\partial x} = 0$$ at $x$ boundaries and 
+# $u\frac{\partial T}{\partial x} = \kappa \frac{\partial T}{\partial x} = 0$ at $x$ boundaries and 
 # 
-# $$v\frac{\partial T}{\partial y} = \kappa \frac{\partial T}{\partial y} = 0$$ at the $y$ boundaries.
+# $v\frac{\partial T}{\partial y} = \kappa \frac{\partial T}{\partial y} = 0$ at the $y$ boundaries.
 # 
 # To impose this, we treat $i=1$ and $i=N_{x}$ as *ghost cells*, which do not do anything expect help us impose these boundaries conditions. Discretely, the boundary fluxes between $i=1$ and $i=2$ vanish if
 # 
-# $$\dfrac{T_{2,\,j}^{n} -T_{1,\,j}^{n}}{\Delta x} = 0$$ or 
+# $\dfrac{T_{2,\,j}^{n} -T_{1,\,j}^{n}}{\Delta x} = 0$ or 
 # 
-# $$T_{1,\,j}^{n} = T_{2,\,j}^{n}.$$
+# $T_{1,\,j}^{n} = T_{2,\,j}^{n}.$
 # 
 # Thus, we can implement the boundary conditions by updating the temperature of the ghost cells to match their interior-point neighbors:
 
@@ -346,7 +344,7 @@ class OceanModel():
         self.t.append(self.t[-1] + self.deltat)
 
 
-# In[32]:
+# In[17]:
 
 
 class grid:   
@@ -384,10 +382,9 @@ class windfield:
             self.u = np.zeros((grid.grid.shape))
             self.v = np.zeros((grid.grid.shape))
         if option == "single_gyre":
-            u, v = PointVortex(my_grid)
+            u, v = PointVortex(grid)
             self.u = u
             self.v = v
-            
 
 
 # Initialize $10x10$ grid domain with $L=6000000m$ and a windfield, where all velocities are set to zero.
@@ -395,7 +392,7 @@ class windfield:
 # 
 # Initialize temperature field with rectangular non-zero box.
 
-# In[33]:
+# In[18]:
 
 
 my_grid = grid(N = 11, L = 6e6)
@@ -404,13 +401,13 @@ my_temp = np.zeros((my_grid.grid.shape))
 my_temp[9:13, 4:8] = 1
 
 
-# In[34]:
+# In[19]:
 
 
 my_grid.grid.shape
 
 
-# In[35]:
+# In[20]:
 
 
 plt.pcolor(my_grid.xs, my_grid.ys, my_temp)
@@ -419,13 +416,13 @@ plt.ylabel("Kilometers Latitude");
 plt.xlabel("Kilometers Longitude");
 
 
-# In[36]:
+# In[21]:
 
 
 deltat = 12*60*60 # 12 Hours
 
 
-# In[37]:
+# In[22]:
 
 
 def plot_func(steps, temp, deltat, windfield, grid, kappa, anomaly = False):
@@ -451,7 +448,7 @@ def plot_func(steps, temp, deltat, windfield, grid, kappa, anomaly = False):
     plt.show()
 
 
-# In[38]:
+# In[23]:
 
 
 interact(plot_func, 
@@ -466,7 +463,7 @@ interact(plot_func,
 
 # ## Create single gyre windfield
 
-# In[23]:
+# In[24]:
 
 
 def diagnose_velocities(stream, G):    
@@ -485,7 +482,7 @@ def diagnose_velocities(stream, G):
     return u, v
 
 
-# In[24]:
+# In[25]:
 
 
 def impose_no_flux(u, v):
@@ -497,15 +494,13 @@ def impose_no_flux(u, v):
     return u, v
 
 
-# In[25]:
+# In[26]:
 
 
 def PointVortex(G, omega = 0.6, a = 0.2, x0=0.5, y0 = 0.):
     x = np.arange(-G.deltax/G.L, 1 + G.deltax / G.L, G.deltax / G.L).reshape(1, -1)
     y = np.arange(-1-G.deltay/G.L, 1+ G.deltay / G.L, G.deltay / G.L).reshape(-1, 1)
-    
-#     x = x[:,:-1]    
-    
+        
     r = np.sqrt((y - y0)**2 + (x - x0)**2)
     stream = -omega/4*r**2 
     stream[r > a] =  -omega*a**2/4*(1. + 2*np.log(r[r > a]/a))
@@ -516,27 +511,27 @@ def PointVortex(G, omega = 0.6, a = 0.2, x0=0.5, y0 = 0.):
     return u, v
 
 
-# In[26]:
+# In[27]:
 
 
 my_wind = windfield(my_grid, option="single_gyre")
 plt.quiver(my_wind.u, my_wind.v)
 
 
-# In[39]:
+# In[28]:
 
 
 my_temp = np.zeros((my_grid.grid.shape)) 
 my_temp[8:13, :] = 1
 
 
-# In[40]:
+# In[29]:
 
 
 plt.pcolor(my_temp)
 
 
-# In[41]:
+# In[30]:
 
 
 my_model = OceanModel(T=my_temp,
@@ -546,7 +541,7 @@ my_model = OceanModel(T=my_temp,
                       kappa = 1e4)
 
 
-# In[42]:
+# In[31]:
 
 
 interact(plot_func, 
@@ -559,95 +554,4 @@ interact(plot_func,
          steps = widgets.IntSlider(description="Timesteps", value = 1, min = 1, max = 1000, step = 1));
 
 
-# ToDo add two gyre
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-u, v = PointVortex(my_grid)
-u, v = u[1:], v[1:]
-
-
-# In[ ]:
-
-
-my_grid.grid.shape
-
-
-# In[ ]:
-
-
-print(u.shape)
-
-
-# In[ ]:
-
-
-epsilon = 0.05
-xpsi = np.arange(-deltax, 1+deltax, deltax)
-ypsi = np.arange(-1-deltay, 1+deltay, deltay)
-
-def psihat(x, y):
-    psi = np.zeros((x.size, y.size))
-    np.psi
-    
-
-
-# In[ ]:
-
-
-psi = np.zeros((ypsi.size, xpsi.size))
-
-for i, x in enumerate(xpsi):
-    for j, y in enumerate(ypsi):
-        psi[j, i] = np.pi * np.sin(np.pi * y) * (
-        1 - x - np.exp(-x/(2*epsilon)) *
-            (np.cos(np.sqrt(3)*x/(2*epsilon)) + (1 / np.sqrt(3)) * np.sin(np.sqrt(3)*x/(2*epsilon)))+epsilon*np.exp((x-1)/epsilon))
-        
-        
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-plt.pcolor(psi)
-plt.colorbar()
-
-
-# In[ ]:
-
-
-np.pi * np.sin(np.pi * y) * (
-        1 - x - np.exp(-x/(2*epsilon)) *
-            (np.cos(np.sqrt(3)*x/(2*epsilon)) + (1 / np.sqrt(3)) * np.sin(np.sqrt(3)*x/(2*epsilon)))+epsilon*np.exp((x-1)/epsilon))
-
+# Optional: Create two gyres!

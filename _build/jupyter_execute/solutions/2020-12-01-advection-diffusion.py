@@ -5,7 +5,7 @@
 # 
 # > Advection and diffusion in 1D
 
-# In[17]:
+# In[1]:
 
 
 import xarray as xr
@@ -48,7 +48,7 @@ from IPython.display import display
 # For example, let's consider an initial temperature profile given by a sine curve:
 # 
 
-# In[18]:
+# In[2]:
 
 
 def t0(x):
@@ -58,7 +58,7 @@ def t0(x):
 # and define the grid points as follows:
 # 
 
-# In[16]:
+# In[3]:
 
 
 Nx = 20
@@ -69,7 +69,7 @@ deltax = Lx / Nx
 xs = np.arange(0.025, Lx, deltax)
 
 
-# In[19]:
+# In[4]:
 
 
 xs
@@ -81,7 +81,7 @@ xs
 # We call such a function of $x$ at a given time a **temperature profile**. Let's draw it as a function and as a heatmap:
 # 
 
-# In[20]:
+# In[5]:
 
 
 t = np.arange(0,Lx, 0.001)
@@ -104,7 +104,7 @@ plt.legend()
 # A useful way to think about $T^n_i$ is as the (spatial) average of $T(t_n, x)$ over the interval of positions between neighbouring grid points, so $T_i$ is the average over the interval between $x_i - \frac{\delta x}{2}$ and $x_i + \frac{\delta x}{2}$. We can thus think of the following **piecewise constant** approximation to the original continuous function:
 # 
 
-# In[5]:
+# In[6]:
 
 
 t = np.arange(0, Lx, 0.001)
@@ -178,7 +178,7 @@ plt.legend()
 # We can then write this as follows, where we separate out the case $i=0$:
 # 
 
-# In[6]:
+# In[7]:
 
 
 def advection(T, deltat, deltax, U):
@@ -196,7 +196,7 @@ def advection(T, deltat, deltax, U):
 # We use a function `plot_func` that carries out a generic time evolution. This is basically the Euler method again, except now we apply it to a vector of values at different points in space at each step. 
 # 
 
-# In[21]:
+# In[8]:
 
 
 deltat = 0.001
@@ -204,13 +204,13 @@ U = 0.2
 initcondition = t0(xs)
 
 
-# In[22]:
+# In[9]:
 
 
 initcondition
 
 
-# In[8]:
+# In[10]:
 
 
 def plot_func(function, deltat, U, xs, steps, T0 = initcondition):
@@ -230,7 +230,7 @@ def plot_func(function, deltat, U, xs, steps, T0 = initcondition):
     plt.show()
 
 
-# In[9]:
+# In[11]:
 
 
 interact(plot_func, 
@@ -248,7 +248,7 @@ interact(plot_func,
 # $$\frac{\partial T(t_n, x_i)}{\partial x} \simeq \frac{T^n_{i+1} - T^n_{i-1}}{2 \delta x}$$
 # 
 
-# In[23]:
+# In[12]:
 
 
 def advection2(T, deltat, deltax, U):
@@ -264,7 +264,7 @@ def advection2(T, deltat, deltax, U):
     return T2
 
 
-# In[11]:
+# In[13]:
 
 
 interact(plot_func, 
@@ -291,7 +291,7 @@ interact(plot_func,
 # This may again be transcribed directly into code:
 # 
 
-# In[24]:
+# In[14]:
 
 
 def diffusion(T, deltat, deltax, D):
@@ -307,7 +307,7 @@ def diffusion(T, deltat, deltax, D):
     return T2
 
 
-# In[13]:
+# In[15]:
 
 
 interact(plot_func, 
@@ -324,7 +324,7 @@ interact(plot_func,
 # Finally we can combine both mechanisms, to describe a tracer that is both being advected at a constant speed and diffusing. This basically utilises the composition of the advection and diffusion functions:
 # 
 
-# In[14]:
+# In[16]:
 
 
 def advection_diffusion(T, deltat, deltax, U):
@@ -333,7 +333,7 @@ def advection_diffusion(T, deltat, deltax, U):
     return diffusion(temp, deltat, deltax, D)
 
 
-# In[15]:
+# In[17]:
 
 
 interact(plot_func, 
@@ -343,4 +343,10 @@ interact(plot_func,
          U = fixed(0.2),         
          xs = fixed(xs),
          T0 = fixed(advection(initcondition, deltat, xs[0], U)));
+
+
+# In[ ]:
+
+
+
 
