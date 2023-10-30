@@ -1,0 +1,29 @@
+---
+title: "The observed global energy budget"
+---
+
+## 1) The observed global energy budget
+
+In the last lecture you have been discussing the global energy budget.
+
+The figure below shows the current best estimates of the global **annual mean** energy fluxes.
+
+![Global Energy Budget](https://brian-rose.github.io/ClimateLaboratoryBook/_images/GlobalEnergyBudget.png)
+
+During this exercise series, we will try to build a simple climate model based on this energy budget. But before, we need to simplify this budget even more.
+
+Our simple climate model can be conceptualized as:
+
+> change in heat content = 
+> 
+> - $+$ absorbed solar radiation (energy from the Sun's rays)
+> 
+> - $-$ outgoing thermal radiation (i.e. blackbody cooling to space)
+> 
+> - $+$ human-caused greenhouse effect (trapped outgoing radiation)
+
+where each of these is interpreted as an average over the entire globe (hence "zero-dimensional").
+
+![](https://raw.githubusercontent.com/hdrake/hdrake.github.io/master/figures/planetary_energy_balance.png)
+
+To make this simple conceptual model quantitative, we need a mathematical formulation for each of these four processes.

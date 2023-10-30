@@ -1,13 +1,19 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Climate of the ocean
-author: H. E. Markus Meier, Florian Börgel
+title: Climate of the Earth
+author: H. E. Markus Meier, Florian Börgel, Sven Karsten
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: "off"
+
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+
+only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -31,3 +37,4 @@ html:
 
 launch_buttons:
   binderhub_url: "https://mybinder.org" 
+

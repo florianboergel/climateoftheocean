@@ -1,48 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria &#8212; Climate of the ocean</title>
-    
+    <title>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria &#8212; Climate of the Earth</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,56 +65,97 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2020-11-13-ice-albedo';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Lecture 5, Evolution in time and space" href="2020-12-01-advection-diffusion.html" />
     <link rel="prev" title="Lecture 3, Nonlinear dynamics, stability and bifurcations" href="2020-11-12-non-linear-dynamics.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Climate of the Earth</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -110,477 +164,300 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Lecture
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-09-introduction_to_python.html">
-   Lecture 1, Introduction to python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-11-energy-model.html">
-   Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-12-non-linear-dynamics.html">
-   Lecture 3, Nonlinear dynamics, stability and bifurcations
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-12-01-advection-diffusion.html">
-   Lecture 5, Evolution in time and space
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-12-02-heat-transport.html">
-   Lecture 6, Heat transports
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-09-introduction_to_python.html">Lecture 1, Introduction to python</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="2020-11-11-energy-model.html">Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-12-non-linear-dynamics.html">Lecture 3, Nonlinear dynamics, stability and bifurcations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="2020-12-01-advection-diffusion.html">Lecture 5, Evolution in time and space</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="2020-12-02-heat-transport.html">Lecture 6, Heat transports</a></li>
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Exercise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-14-climate-of-the-ocean-h1.html">
-   Exercise 1, policy goals under uncertainty
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-15-climate-of-the-ocean-h2.html">
-   Exercise 2, melting the snowball earth
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2022-01-20-climate-of-the-ocean-h3.html">
-   Exercise 3, analyzing the Baltic Sea
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-14-climate-of-the-ocean-h1.html">Exercise 1, policy goals under uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-15-climate-of-the-ocean-h2.html">Exercise 2, melting the snowball earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2022-01-20-climate-of-the-ocean-h3.html">Exercise 3, analyzing the Baltic Sea</a></li>
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/florianboergel/climateoftheocean/main?urlpath=tree/2020-11-13-ice-albedo.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/florianboergel/climateoftheocean/main?urlpath=tree/2020-11-13-ice-albedo.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/florianboergel/climateoftheocean" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/florianboergel/climateoftheocean/issues/new?title=Issue%20on%20page%20%2F2020-11-13-ice-albedo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/2020-11-13-ice-albedo.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/florianboergel/climateoftheocean"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/florianboergel/climateoftheocean/issues/new?title=Issue%20on%20page%20%2F2020-11-13-ice-albedo.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/2020-11-13-ice-albedo.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
-   Snowball Earth, the ice-albedo feedback, and multiple equilibria
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-of-lecture-2">
-     Review of Lecture 2
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#background-snowball-earth">
-     1) Background: Snowball Earth
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-ice-albedo-feedback">
-       1.1) The ice-albedo feedback
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model">
-       1.2) Adding the ice-albedo feedback to our simple climate model
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-equilibria">
-     2) Multiple Equilibria
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#excourse">
-       Excourse:
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#radiative-stability-analysis">
-       2.2) Radiative stability analysis
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#transitioning-to-and-from-snowball-earth">
-     3) Transitioning to and from Snowball Earth
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#turning-up-the-sun">
-       3.1) Turning up the Sun
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball">
-       3.2) Did the increasing brightness of the Sun melt the Snowball?
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#abrupt-climate-transitions">
-       Abrupt climate transitions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-not-the-sun-how-did-snowball-earth-melt">
-       3.3) If not the Sun, how did Snowball Earth melt?
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#towards-realistic-climate-modelling">
-       Towards realistic climate modelling
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
-   Snowball Earth, the ice-albedo feedback, and multiple equilibria
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review-of-lecture-2">
-     Review of Lecture 2
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#background-snowball-earth">
-     1) Background: Snowball Earth
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-ice-albedo-feedback">
-       1.1) The ice-albedo feedback
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model">
-       1.2) Adding the ice-albedo feedback to our simple climate model
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-equilibria">
-     2) Multiple Equilibria
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#excourse">
-       Excourse:
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#radiative-stability-analysis">
-       2.2) Radiative stability analysis
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#transitioning-to-and-from-snowball-earth">
-     3) Transitioning to and from Snowball Earth
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#turning-up-the-sun">
-       3.1) Turning up the Sun
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball">
-       3.2) Did the increasing brightness of the Sun melt the Snowball?
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#abrupt-climate-transitions">
-       Abrupt climate transitions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#if-not-the-sun-how-did-snowball-earth-melt">
-       3.3) If not the Sun, how did Snowball Earth melt?
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#towards-realistic-climate-modelling">
-       Towards realistic climate modelling
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">Snowball Earth, the ice-albedo feedback, and multiple equilibria</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-lecture-2">Review of Lecture 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background-snowball-earth">1) Background: Snowball Earth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ice-albedo-feedback">1.1) The ice-albedo feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model">1.2) Adding the ice-albedo feedback to our simple climate model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-equilibria">2) Multiple Equilibria</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excourse">Excourse:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiative-stability-analysis">2.2) Radiative stability analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transitioning-to-and-from-snowball-earth">3) Transitioning to and from Snowball Earth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turning-up-the-sun">3.1) Turning up the Sun</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball">3.2) Did the increasing brightness of the Sun melt the Snowball?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abrupt-climate-transitions">Abrupt climate transitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-not-the-sun-how-did-snowball-earth-melt">3.3) If not the Sun, how did Snowball Earth melt?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#towards-realistic-climate-modelling">Towards realistic climate modelling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
-<h1>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this headline">#</a></h1>
+<h1>Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#lecture-4-snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this heading">#</a></h1>
 <p>Thanks a lot to <a class="reference external" href="https://github.com/hdrake">Henri Drake</a> for providing the lecture.</p>
 <p>The original lecture is part of the MIT class <a class="reference external" href="https://computationalthinking.mit.edu/Fall20/lecture20/">Introduction to Computational Thinking</a>.</p>
-<p>This class uses the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>. The orignal code can be found under <a class="reference external" href="https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl">https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl</a></p>
+<p>This class uses the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>. The orignal code can be found under <a class="github reference external" href="https://github.com/hdrake/simplEarth/blob/master/2_ebm_multiple_equilibria.jl">hdrake/simplEarth</a></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">
-<h1>Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this headline">#</a></h1>
+<h1>Snowball Earth, the ice-albedo feedback, and multiple equilibria<a class="headerlink" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria" title="Permalink to this heading">#</a></h1>
 <p><img alt="" src="https://static01.nyt.com/images/2019/12/17/science/02TB-SNOWBALLEARTH1/02TB-SNOWBALLEARTH1-superJumbo-v2.jpg?quality=90&amp;auto=webp" />
 <a class="reference external" href="https://static01.nyt.com/images/2019/12/17/science/02TB-SNOWBALLEARTH1/02TB-SNOWBALLEARTH1-superJumbo-v2.jpg?quality=90&amp;auto=webp">Source (New York Times)</a></p>
 <section id="review-of-lecture-2">
-<h2>Review of Lecture 2<a class="headerlink" href="#review-of-lecture-2" title="Permalink to this headline">#</a></h2>
+<h2>Review of Lecture 2<a class="headerlink" href="#review-of-lecture-2" title="Permalink to this heading">#</a></h2>
 <p>Recall from the last Lecture that the zero-dimensional energy balance equation is</p>
 <p>\begin{gather}
 \color{brown}{C \frac{dT}{dt}}
@@ -622,11 +499,11 @@ title="Print to PDF"
 </div>
 </section>
 <section id="background-snowball-earth">
-<h2>1) Background: Snowball Earth<a class="headerlink" href="#background-snowball-earth" title="Permalink to this headline">#</a></h2>
+<h2>1) Background: Snowball Earth<a class="headerlink" href="#background-snowball-earth" title="Permalink to this heading">#</a></h2>
 <p>Geological evidence shows that the Neoproterozoic Era (550 to 1000 million years ago) is marked by two global glaciation events, in which Earth’s surface was covered in ice and snow from the Equator to the poles (see review by <a class="reference external" href="https://www.annualreviews.org/doi/full/10.1146/annurev-earth-040809-152447">Pierrehumbert et al. 2011</a>.</p>
 <p><img alt="" src="https://news.cnrs.fr/sites/default/files/styles/asset_image_full/public/assets/images/frise_earths_glaciations_72dpi.jpg?itok=MgKrHlIV" /></p>
 <section id="the-ice-albedo-feedback">
-<h3>1.1) The ice-albedo feedback<a class="headerlink" href="#the-ice-albedo-feedback" title="Permalink to this headline">#</a></h3>
+<h3>1.1) The ice-albedo feedback<a class="headerlink" href="#the-ice-albedo-feedback" title="Permalink to this heading">#</a></h3>
 <p>In Lecture 1, we used a <strong>constant</strong> value <span class="math notranslate nohighlight">\(α = 0.3\)</span> for Earth’s planetary albedo, which is a reasonable thing to do for small climate variations relative to the present (such as the difference between the present-day and preindustrial climates). In the case of large variations, however, this approximation is not very reliable.</p>
 <p>While oceans are dark and absorbant, <span class="math notranslate nohighlight">\(α_{ocean} \approx 0.05\)</span>, ice and snow are bright and reflective: <span class="math notranslate nohighlight">\(\alpha_{ice,\,snow} \approx 0.5\)</span> to <span class="math notranslate nohighlight">\(0.9\)</span>. Thus, if much of the ocean’s surface freezes over, we expect Earth’s albedo to rise dramatically, causing more sunlight to be reflected to space, which in turn causes even more cooling and more of the ocean to freeze, etc. This <em>non-linear positive feedback effect</em> is referred to as the <strong>ice-albedo feedback</strong> (see illustration below).</p>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/d/df/Ice_albedo_feedback.jpg" /></p>
@@ -639,7 +516,7 @@ title="Print to PDF"
 \end{cases}\end{split}\]</div>
 </section>
 <section id="adding-the-ice-albedo-feedback-to-our-simple-climate-model">
-<h3>1.2) Adding the ice-albedo feedback to our simple climate model<a class="headerlink" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model" title="Permalink to this headline">#</a></h3>
+<h3>1.2) Adding the ice-albedo feedback to our simple climate model<a class="headerlink" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model" title="Permalink to this heading">#</a></h3>
 <p>First, we program albedo as a function of temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -675,14 +552,14 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(13, 0.252, &#39;no ice&#39;)
 </pre></div>
 </div>
-<img alt="_images/2020-11-13-ice-albedo_11_1.png" src="_images/2020-11-13-ice-albedo_11_1.png" />
+<img alt="_images/f7200e93843cadf3699e56acc60ee090750516e9c71eb5e260965689232e7373.png" src="_images/f7200e93843cadf3699e56acc60ee090750516e9c71eb5e260965689232e7373.png" />
 </div>
 </div>
 <p>To add this function into our energy balance model from Lecture 1 (which we’ve copied into the cell below), all we have to do is overwrite the definition of the timestep! method to specify that the temperature-dependent albedo should be updated based on the current state:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ebm</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Zero order energy balance model</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -748,7 +625,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="multiple-equilibria">
-<h2>2) Multiple Equilibria<a class="headerlink" href="#multiple-equilibria" title="Permalink to this headline">#</a></h2>
+<h2>2) Multiple Equilibria<a class="headerlink" href="#multiple-equilibria" title="Permalink to this heading">#</a></h2>
 <p>OR: the existence of “alternate Earths”</p>
 <p>Human civilization flourished over the last several thousand years in part because Earth’s global climate has been remarkably stable and forgiving. The preindustrial combination of natural greenhouse effect and incoming solar radiation yielded temperatures between the freezing and boiling points of water across most of the planet, allowing ecoystems based on liquid water to thrive.</p>
 <p>The climate system, however, is rife with non-linear effects like the ice-albedo effect, which reveal just how fragile our habitable planet is and just how unique our stable pre-industrial climate was.</p>
@@ -798,20 +675,20 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7efe0f539eb0&gt;
 </pre></div>
 </div>
-<img alt="_images/2020-11-13-ice-albedo_16_1.png" src="_images/2020-11-13-ice-albedo_16_1.png" />
+<img alt="_images/f4914308b24b87ac0459ffacc69c20823485a700d9b4602a659f2642b0a0b0e5.png" src="_images/f4914308b24b87ac0459ffacc69c20823485a700d9b4602a659f2642b0a0b0e5.png" />
 </div>
 </div>
 <p>We see that for T₀ ⪆ 7.55 °C, all of the curves seem to converge on the T = 14°C equilibrium (or fixed point) that we saw in Lecture 20. Curves that start below this value warm up and while curves that start above this value will cool down. For T₀ ⪅ 7.55 °C, however, the temperatures converge on a much colder equilibrium around T = -40°C. This is the Snowball Earth equilibrium. These two states are referred to as stable equilibria because even if the state gets temporarily pushed slightly away from its equilibrium, it will eventually converge right back to its equilibrium.</p>
 <p>So what happens is T₀ ≈ 7.55 °C? For some exact temperature near there, there is indeed an equilibrim state: if you start with that temperature you will stay there forever. However, if the temperature starts off even one one-hundredth of a degree above or below this exact value, we see that temperatures eventually converge to one of the other two equilibria. Thus, we call this intermediate equilibrium an unstable equilibrium, because any infinitesimal push away will cause it to careen away towards another state.</p>
 <section id="excourse">
-<h3>Excourse:<a class="headerlink" href="#excourse" title="Permalink to this headline">#</a></h3>
+<h3>Excourse:<a class="headerlink" href="#excourse" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Nonlinear dynamics: stability and bifurcations</p></li>
 </ul>
-<p><a class="reference external" href="https://github.com/mitmath/18S191/blob/master/lecture_notebooks/week11/nonlinear_dynamics_bifurcations.jl">https://github.com/mitmath/18S191/blob/master/lecture_notebooks/week11/nonlinear_dynamics_bifurcations.jl</a></p>
+<p><a class="github reference external" href="https://github.com/mitmath/18S191/blob/master/lecture_notebooks/week11/nonlinear_dynamics_bifurcations.jl">mitmath/18S191</a></p>
 </section>
 <section id="radiative-stability-analysis">
-<h3>2.2) Radiative stability analysis<a class="headerlink" href="#radiative-stability-analysis" title="Permalink to this headline">#</a></h3>
+<h3>2.2) Radiative stability analysis<a class="headerlink" href="#radiative-stability-analysis" title="Permalink to this heading">#</a></h3>
 <p>We can understand why our model has two stable equilibria and one unstable equilibrium by applying concepts from dynamical systems theory.</p>
 <p>Recall that, with fixed CO₂ concentrations, our energy balance model differential equation can be expressed as:</p>
 <div class="math notranslate nohighlight">
@@ -862,21 +739,21 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2020-11-13-ice-albedo_21_0.png" src="_images/2020-11-13-ice-albedo_21_0.png" />
+<img alt="_images/4e7d71a1971e7405fbe7e0c94c4256fe00b4033d03a62138ec8830c51f03a5a6.png" src="_images/4e7d71a1971e7405fbe7e0c94c4256fe00b4033d03a62138ec8830c51f03a5a6.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="transitioning-to-and-from-snowball-earth">
-<h2>3) Transitioning to and from Snowball Earth<a class="headerlink" href="#transitioning-to-and-from-snowball-earth" title="Permalink to this headline">#</a></h2>
+<h2>3) Transitioning to and from Snowball Earth<a class="headerlink" href="#transitioning-to-and-from-snowball-earth" title="Permalink to this heading">#</a></h2>
 <section id="turning-up-the-sun">
-<h3>3.1) Turning up the Sun<a class="headerlink" href="#turning-up-the-sun" title="Permalink to this headline">#</a></h3>
+<h3>3.1) Turning up the Sun<a class="headerlink" href="#turning-up-the-sun" title="Permalink to this heading">#</a></h3>
 <p>Over the entire history of the Earth, the Sun is thought to have brightened by about 40%.</p>
 <p><img alt="" src="https://rainbow.ldeo.columbia.edu/courses/s4021/ec98/fys.gif" /></p>
 <p>In the Neoproterozoic (~700 million years ago), the Sun was 93% as bright as it is today, such that the incoming solar radiation was <span class="math notranslate nohighlight">\(S\)</span> = 1272 W/m², Earth’s average temperature plunged to <span class="math notranslate nohighlight">\(T = -50\)</span>°C, and Earth’s ice-covered surface had a high albedo (reflectivity) of <span class="math notranslate nohighlight">\(\alpha_i = 0.5\)</span>.</p>
 </section>
 <section id="did-the-increasing-brightness-of-the-sun-melt-the-snowball">
-<h3>3.2) Did the increasing brightness of the Sun melt the Snowball?<a class="headerlink" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball" title="Permalink to this headline">#</a></h3>
+<h3>3.2) Did the increasing brightness of the Sun melt the Snowball?<a class="headerlink" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball" title="Permalink to this heading">#</a></h3>
 <p>If we start out in the Neoproterozoic climate and all we do is increase solar insolation to today’s value of <span class="math notranslate nohighlight">\( S = 1368 W/m^2\)</span>, can we warm the planet up to the pre-industrial temperature of T = 14°C?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -929,24 +806,24 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2020-11-13-ice-albedo_27_0.png" src="_images/2020-11-13-ice-albedo_27_0.png" />
+<img alt="_images/a9793569569d0fd89f0c9d3d61c9ce4e13c21457bb37fa42aa284c6e10a5f7ce.png" src="_images/a9793569569d0fd89f0c9d3d61c9ce4e13c21457bb37fa42aa284c6e10a5f7ce.png" />
 </div>
 </div>
 </section>
 <section id="abrupt-climate-transitions">
-<h3>Abrupt climate transitions<a class="headerlink" href="#abrupt-climate-transitions" title="Permalink to this headline">#</a></h3>
+<h3>Abrupt climate transitions<a class="headerlink" href="#abrupt-climate-transitions" title="Permalink to this heading">#</a></h3>
 <p>In this model, temperature variations are fairly smooth unless temperatures rise above -10°C or fall below 10°C, in which case the <em>ice-albedo positive feedback</em> kicks in and causes an <strong>abrupt climate transition</strong>. While this is just a simple hypothetical model, these kinds of abrupt climate transitions show up all the time in the paleoclimate record and in more realistic climate model simulations.
 <img alt="" src="https://www.pnas.org/content/pnas/115/52/13288/F1.large.jpg" /></p>
 <p>This simulation teaches us that we should not take the stability of our climate for granted and that pushing our present climate outside of its historical regime of stability could trigger catastrophic abrupt climate transitions.</p>
 </section>
 <section id="if-not-the-sun-how-did-snowball-earth-melt">
-<h3>3.3) If not the Sun, how did Snowball Earth melt?<a class="headerlink" href="#if-not-the-sun-how-did-snowball-earth-melt" title="Permalink to this headline">#</a></h3>
+<h3>3.3) If not the Sun, how did Snowball Earth melt?<a class="headerlink" href="#if-not-the-sun-how-did-snowball-earth-melt" title="Permalink to this heading">#</a></h3>
 <p>The leading theory is that a slow but steady outgassing of CO<span class="math notranslate nohighlight">\(_2\)</span> from volcanoes eventually caused a strong enough greenhouse gas effect to offset the cooling effect of the frozen surface’s high albedo and raise temperatures above the melting point <span class="math notranslate nohighlight">\(-10\)</span>°C.</p>
 <p><img alt="" src="https://hartm242.files.wordpress.com/2011/03/snowball-earth.jpg" /></p>
 <p>In Homework 1, you will extend the above model to include the effect of CO₂ and determine how much CO2 would need to be added to the snowball for it to melt.</p>
 </section>
 <section id="towards-realistic-climate-modelling">
-<h3>Towards realistic climate modelling<a class="headerlink" href="#towards-realistic-climate-modelling" title="Permalink to this headline">#</a></h3>
+<h3>Towards realistic climate modelling<a class="headerlink" href="#towards-realistic-climate-modelling" title="Permalink to this heading">#</a></h3>
 <p>In this simple model, the preindustrial climate of °C is so warm that there is no ice anywhere on the planet. Indeed, the only two valid stable climates are one with no ice or one with ice everywhere.</p>
 <p>So how did Earth’s preindustrial climate, which was relatively stable for thousands of years, have substantial ice caps at the poles?</p>
 <p>The “Aquaplanet”, a simple three-dimensional ocean-world climate model</p>
@@ -970,7 +847,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -978,50 +855,124 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2020-11-12-non-linear-dynamics.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lecture 3, Nonlinear dynamics, stability and bifurcations</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2020-11-12-non-linear-dynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 3, Nonlinear dynamics, stability and bifurcations</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="2020-12-01-advection-diffusion.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="2020-12-01-advection-diffusion.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Lecture 5, Evolution in time and space</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#snowball-earth-the-ice-albedo-feedback-and-multiple-equilibria">Snowball Earth, the ice-albedo feedback, and multiple equilibria</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-of-lecture-2">Review of Lecture 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background-snowball-earth">1) Background: Snowball Earth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ice-albedo-feedback">1.1) The ice-albedo feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-the-ice-albedo-feedback-to-our-simple-climate-model">1.2) Adding the ice-albedo feedback to our simple climate model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-equilibria">2) Multiple Equilibria</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excourse">Excourse:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiative-stability-analysis">2.2) Radiative stability analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transitioning-to-and-from-snowball-earth">3) Transitioning to and from Snowball Earth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turning-up-the-sun">3.1) Turning up the Sun</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#did-the-increasing-brightness-of-the-sun-melt-the-snowball">3.2) Did the increasing brightness of the Sun melt the Snowball?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abrupt-climate-transitions">Abrupt climate transitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-not-the-sun-how-did-snowball-earth-melt">3.3) If not the Sun, how did Snowball Earth melt?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#towards-realistic-climate-modelling">Towards realistic climate modelling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By H. E. Markus Meier, Florian Börgel<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By H. E. Markus Meier, Florian Börgel, Sven Karsten
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

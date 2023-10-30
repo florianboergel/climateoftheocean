@@ -1,48 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate &#8212; Climate of the ocean</title>
-    
+    <title>Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate &#8212; Climate of the Earth</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,56 +65,97 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2020-11-11-energy-model';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Lecture 3, Nonlinear dynamics, stability and bifurcations" href="2020-11-12-non-linear-dynamics.html" />
     <link rel="prev" title="Lecture 1, Introduction to python" href="2020-11-09-introduction_to_python.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Climate of the ocean</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Climate of the Earth</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -110,484 +164,292 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Lecture
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-09-introduction_to_python.html">
-   Lecture 1, Introduction to python
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-12-non-linear-dynamics.html">
-   Lecture 3, Nonlinear dynamics, stability and bifurcations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-13-ice-albedo.html">
-   Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-12-01-advection-diffusion.html">
-   Lecture 5, Evolution in time and space
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-12-02-heat-transport.html">
-   Lecture 6, Heat transports
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-09-introduction_to_python.html">Lecture 1, Introduction to python</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-12-non-linear-dynamics.html">Lecture 3, Nonlinear dynamics, stability and bifurcations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-13-ice-albedo.html">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="2020-12-01-advection-diffusion.html">Lecture 5, Evolution in time and space</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="2020-12-02-heat-transport.html">Lecture 6, Heat transports</a></li>
+
+
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Exercise
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-14-climate-of-the-ocean-h1.html">
-   Exercise 1, policy goals under uncertainty
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2020-11-15-climate-of-the-ocean-h2.html">
-   Exercise 2, melting the snowball earth
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="2022-01-20-climate-of-the-ocean-h3.html">
-   Exercise 3, analyzing the Baltic Sea
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-14-climate-of-the-ocean-h1.html">Exercise 1, policy goals under uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2020-11-15-climate-of-the-ocean-h2.html">Exercise 2, melting the snowball earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2022-01-20-climate-of-the-ocean-h3.html">Exercise 3, analyzing the Baltic Sea</a></li>
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/florianboergel/climateoftheocean/main?urlpath=tree/2020-11-11-energy-model.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/florianboergel/climateoftheocean/main?urlpath=tree/2020-11-11-energy-model.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/florianboergel/climateoftheocean" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/florianboergel/climateoftheocean/issues/new?title=Issue%20on%20page%20%2F2020-11-11-energy-model.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/2020-11-11-energy-model.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/florianboergel/climateoftheocean"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/florianboergel/climateoftheocean/issues/new?title=Issue%20on%20page%20%2F2020-11-11-energy-model.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/2020-11-11-energy-model.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-observed-global-energy-budget">
-   1) The observed global energy budget
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#absorbed-solar-radiation">
-     1.1 Absorbed solar radiation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outgoing-thermal-radiation">
-     1.2) Outgoing thermal radiation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#human-caused-greenhouse-effect">
-     Human-caused greenhouse effect
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observations-from-mauna-loa-volcano">
-     Observations from Mauna Loa Volcano
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#change-in-heat-content">
-     1.4) Change in heat content
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zero-dimensional-climate-model-equation">
-     1.5) “zero-dimensional” climate model equation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerical-solution-method-and-data-structures">
-   2) Numerical solution method and data structures
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#discretization">
-     2.1) Discretization
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#timestepping">
-     2.2) Timestepping
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-simulations-of-the-energy-balance-model">
-     2.4) Running simulations of the energy balance model
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#energy-balance-model-applications">
-   3) Energy balance model applications
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#why-was-earth-s-preindustrial-climate-so-stable">
-     3.1) Why was Earth’s preindustrial climate so stable?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#historical-global-warming-fueled-by-greenhouse-gas-emissions">
-     3.2) Historical global warming fueled by greenhouse gas emissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#co-2-emissions-predict-the-trend-but-what-about-the-climate-noise">
-     CO
-     <span class="math notranslate nohighlight">
-      \(_2\)
-     </span>
-     emissions predict the trend, but what about the climate noise?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#best-and-worst-case-projections-of-future-global-warming">
-     3.3) Best- and worst-case projections of future global warming
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-observed-global-energy-budget">
-   1) The observed global energy budget
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#absorbed-solar-radiation">
-     1.1 Absorbed solar radiation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outgoing-thermal-radiation">
-     1.2) Outgoing thermal radiation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#human-caused-greenhouse-effect">
-     Human-caused greenhouse effect
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#observations-from-mauna-loa-volcano">
-     Observations from Mauna Loa Volcano
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#change-in-heat-content">
-     1.4) Change in heat content
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zero-dimensional-climate-model-equation">
-     1.5) “zero-dimensional” climate model equation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numerical-solution-method-and-data-structures">
-   2) Numerical solution method and data structures
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#discretization">
-     2.1) Discretization
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#timestepping">
-     2.2) Timestepping
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#running-simulations-of-the-energy-balance-model">
-     2.4) Running simulations of the energy balance model
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#energy-balance-model-applications">
-   3) Energy balance model applications
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#why-was-earth-s-preindustrial-climate-so-stable">
-     3.1) Why was Earth’s preindustrial climate so stable?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#historical-global-warming-fueled-by-greenhouse-gas-emissions">
-     3.2) Historical global warming fueled by greenhouse gas emissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#co-2-emissions-predict-the-trend-but-what-about-the-climate-noise">
-     CO
-     <span class="math notranslate nohighlight">
-      \(_2\)
-     </span>
-     emissions predict the trend, but what about the climate noise?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#best-and-worst-case-projections-of-future-global-warming">
-     3.3) Best- and worst-case projections of future global warming
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-observed-global-energy-budget">The Observed Global Energy Budget</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#so-why-does-it-matter">So, Why Does It Matter?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absorbed-solar-radiation">1.1 Absorbed solar radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outgoing-thermal-radiation">1.2 Outgoing Thermal Radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#human-caused-greenhouse-effect">Human-caused greenhouse effect</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observations-from-mauna-loa-volcano">Observations from Mauna Loa Volcano</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-in-heat-content">1.4) Change in heat content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-dimensional-climate-model-equation">1.5) “zero-dimensional” climate model equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-solution-method-and-data-structures">2) Numerical solution method and data structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">2.1) Discretization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timestepping">2.2) Timestepping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-simulations-of-the-energy-balance-model">2.4) Running simulations of the energy balance model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance-model-applications">3) Energy balance model applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-was-earth-s-preindustrial-climate-so-stable">3.1) Why was Earth’s preindustrial climate so stable?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-global-warming-fueled-by-greenhouse-gas-emissions">3.2) Historical global warming fueled by greenhouse gas emissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-and-worst-case-projections-of-future-global-warming">3.3) Best- and worst-case projections of future global warming</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-a-zero-dimensional-energy-balance-model-of-earth-s-climate">
-<h1>Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate<a class="headerlink" href="#lecture-2-a-zero-dimensional-energy-balance-model-of-earth-s-climate" title="Permalink to this headline">#</a></h1>
+<h1>Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate<a class="headerlink" href="#lecture-2-a-zero-dimensional-energy-balance-model-of-earth-s-climate" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -595,29 +457,64 @@ title="Print to PDF"
 </div>
 </div>
 <section id="the-observed-global-energy-budget">
-<h2>1) The observed global energy budget<a class="headerlink" href="#the-observed-global-energy-budget" title="Permalink to this headline">#</a></h2>
-<p>In the last lecture you have been disussing the global energy budget.</p>
-<p>The figure below shows the current best estimates of the global <strong>annual mean</strong> energy fluxes.</p>
-<p><img alt="" src="https://brian-rose.github.io/ClimateLaboratoryBook/_images/GlobalEnergyBudget.png" /></p>
-<p>During this exercise series, we will try to build a simple climate model based on this energy budget. But before we need to simplify this budget even more.</p>
-<p>Our simple climate model can be conceptualized as:</p>
-<blockquote>
-<div><p>change in heat content =</p>
-</div></blockquote>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(+\)</span> absorbed solar radiation (energy from the Sun’s rays)</p>
-</div></blockquote>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(-\)</span> outgoing thermal radiation (i.e. blackbody cooling to space)</p>
-</div></blockquote>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(+\)</span> human-caused greenhouse effect (trapped outgoing radiation)</p>
-</div></blockquote>
-<p>where each of these is interpreted as an average over the entire globe (hence “zero-dimensional”).</p>
-<p><img alt="" src="https://raw.githubusercontent.com/hdrake/hdrake.github.io/master/figures/planetary_energy_balance.png" /></p>
-<p>To make this simple conceptual model quantitative, we need a mathematical formulation for each of these four processes.</p>
+<h2>The Observed Global Energy Budget<a class="headerlink" href="#the-observed-global-energy-budget" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The global energy budget is the balance of energy coming into and going out of Earth, influenced mainly by the sun’s radiation and Earth’s reflective and absorptive properties.</p>
+</div>
+<section id="so-why-does-it-matter">
+<h3>So, Why Does It Matter?<a class="headerlink" href="#so-why-does-it-matter" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p><strong>Climate Change Connection</strong>: Alterations in the energy budget directly impact global warming and weather patterns. More greenhouse gases mean more trapped energy, leading to a hotter planet.</p></li>
+<li><p><strong>Real-world Consequences</strong>:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title">Quick Fact</p>
+<p>Energy imbalances are responsible for unpredictable climate events.</p>
+</aside>
+<ul class="simple">
+<li><p><strong>Weather Events</strong>: Such as powerful hurricanes and erratic rainfall.</p></li>
+<li><p><strong>Melting Ice Caps</strong>: Increased energy melts polar ice, raising sea levels and altering ocean currents.</p></li>
+<li><p><strong>Biodiversity Risk</strong>: Warmer regions put numerous species’ habitats in danger.</p></li>
+</ul>
+</li>
+<li><p><strong>The Role of Humans</strong>: Our actions, like burning fossil fuels and clearing forests, modify the energy budget. This heightens greenhouse gas levels and planetary temperatures. Grasping the energy budget lets us evaluate our environmental impact and consider more sustainable practices.</p></li>
+</ul>
+<figure class="align-default" id="energy-budget">
+<a class="reference internal image-reference" href="https://brian-rose.github.io/ClimateLaboratoryBook/_images/GlobalEnergyBudget.png"><img alt="https://brian-rose.github.io/ClimateLaboratoryBook/_images/GlobalEnergyBudget.png" src="https://brian-rose.github.io/ClimateLaboratoryBook/_images/GlobalEnergyBudget.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The global <strong>annual mean</strong> energy fluxes.</span><a class="headerlink" href="#energy-budget" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In upcoming exercises, we’ll build a basic climate model grounded in this energy budget. But first, we need a simpler version of this budget.</p>
+<div class="proof assumption admonition" id="assumption-0">
+<p class="admonition-title"><span class="caption-number">Assumption 1 </span> (Climate Model Basics)</p>
+<section class="assumption-content" id="proof-content">
+<p>Our rudimentary climate model can be expressed as</p>
+<ul class="simple">
+<li><p><strong>Heat Content Change</strong> =</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(+\)</span> Energy from the Sun’s rays</p></li>
+<li><p><span class="math notranslate nohighlight">\(-\)</span> Blackbody cooling to space</p></li>
+<li><p><span class="math notranslate nohighlight">\(+\)</span> Radiation trapped due to human activities</p></li>
+</ul>
+</li>
+</ul>
+<p>These elements represent a global average, hence the term “zero-dimensional.”</p>
+</section>
+</div><figure class="align-default" id="energy-balance">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/hdrake/hdrake.github.io/master/figures/planetary_energy_balance.png"><img alt="https://raw.githubusercontent.com/hdrake/hdrake.github.io/master/figures/planetary_energy_balance.png" src="https://raw.githubusercontent.com/hdrake/hdrake.github.io/master/figures/planetary_energy_balance.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Planetary Energy Balance</span><a class="headerlink" href="#energy-balance" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>How to build the model?
+To make this simple conceptual model quantitative, we need a mathematical formulation for each of these four processes.</p>
+</div>
+</section>
 <section id="absorbed-solar-radiation">
-<h3>1.1 Absorbed solar radiation<a class="headerlink" href="#absorbed-solar-radiation" title="Permalink to this headline">#</a></h3>
+<h3>1.1 Absorbed solar radiation<a class="headerlink" href="#absorbed-solar-radiation" title="Permalink to this heading">#</a></h3>
 <p>At Earth’s orbital distance from the Sun, the power of the Sun’s rays that intercept the Earth is equal to</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -636,7 +533,12 @@ title="Print to PDF"
 </div>
 <p>of this incoming solar radiation is reflected back out to space (by reflective surfaces like white clouds, snow, and ice), with the remaining fraction <span class="math notranslate nohighlight">\((1-\alpha)\)</span> being absorbed.</p>
 <p>Since the incoming solar rays are all approximately parallel this far from the Sun, the cross-sectional area of the Earth that intercepts them is just a disc of area <span class="math notranslate nohighlight">\(\pi R^{2}\)</span>. Since all of the other terms we will consider act on the entire surface area <span class="math notranslate nohighlight">\(4\pi R^{2}\)</span> of the spherical Earth, the absorbed solar radiation <em>per unit surface area</em> (averaged over the entire globe) is reduced by a factor of 4.</p>
-<p><img alt="" src="https://www.open.edu/openlearn/ocw/pluginfile.php/101161/mod_oucontent/oucontent/890/639dcd57/ce3f1c3a/s250_3_002i.jpg" /></p>
+<figure class="align-default" id="incoming-solar-radiation">
+<a class="reference internal image-reference" href="https://www.open.edu/openlearn/ocw/pluginfile.php/101161/mod_oucontent/oucontent/890/639dcd57/ce3f1c3a/s250_3_002i.jpg"><img alt="https://www.open.edu/openlearn/ocw/pluginfile.php/101161/mod_oucontent/oucontent/890/639dcd57/ce3f1c3a/s250_3_002i.jpg" src="https://www.open.edu/openlearn/ocw/pluginfile.php/101161/mod_oucontent/oucontent/890/639dcd57/ce3f1c3a/s250_3_002i.jpg" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Incoming solar ration</span><a class="headerlink" href="#incoming-solar-radiation" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The absorbed solar radiation per unit area is thus</p>
 <div class="math notranslate nohighlight">
 \[\text{absorbed solar radiation} \equiv \frac{S(1-\alpha)}{4}\]</div>
@@ -644,23 +546,25 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">absorbed_solar_radiation</span><span class="p">(</span><span class="n">S</span><span class="o">=</span><span class="mi">1368</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
-    <span class="c1"># return absorbed solar radiation </span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="outgoing-thermal-radiation">
-<h3>1.2) Outgoing thermal radiation<a class="headerlink" href="#outgoing-thermal-radiation" title="Permalink to this headline">#</a></h3>
-<p>Suppost the Earth behaves like a blackbody radiatior with an effective global mean emission temperature <span class="math notranslate nohighlight">\(T_e\)</span>.</p>
-<p>Then</p>
+<h3>1.2 Outgoing Thermal Radiation<a class="headerlink" href="#outgoing-thermal-radiation" title="Permalink to this heading">#</a></h3>
+<p>Assume that the Earth acts similarly to a blackbody radiator. If we consider the Earth’s effective global mean emission temperature as <span class="math notranslate nohighlight">\(T_e\)</span> then the relation is given by:</p>
 <div class="math notranslate nohighlight">
-\[ OLR = \sigma T_e^4\]</div>
-<p>where OLR = “Outgoing Longwave Radiation”, and <span class="math notranslate nohighlight">\(\sigma=5.67\times 10^{-8} W m^{-2}K^{-4}\)</span> the Stefan-Boltzmann constant.</p>
-<p>Looking back at the observations, the global, annual mean value for OLR is 238.5 W <span class="math notranslate nohighlight">\(m^{-2}\)</span>.</p>
-<p>Rearranging yields:</p>
+\[OLR = \sigma T_e^4\]</div>
+<p>In the above equation:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(OLR\)</span> stands for Outgoing Longwave Radiation</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> represents the Stefan-Boltzmann constant and has a value of <span class="math notranslate nohighlight">\(5.67\times 10^{-8} W m^{-2}K^{-4}\)</span></p></li>
+</ul>
+<p>From observational data, the average global annual value for <span class="math notranslate nohighlight">\(OLR\)</span> is 238.5 W <span class="math notranslate nohighlight">\(m^{-2}\)</span>.</p>
+<p>Given this value, we can rearrange the equation to find <span class="math notranslate nohighlight">\(T_e\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ T_e = \frac{OLR}{\sigma}^{0.25} \]</div>
+\[T_e = \frac{OLR}{\sigma}^{0.25}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Te</span> <span class="o">=</span> <span class="p">(</span><span class="mf">238.5</span><span class="o">/</span><span class="p">(</span><span class="mf">5.67</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">8</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
@@ -674,14 +578,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>What value did we find for the emission temperature <span class="math notranslate nohighlight">\(T_e\)</span>? How does it compare to the actual global mean surface temperature?</p>
-<p>Is the simple blackbody radiator a good model for the Earth’s emission to space?</p>
-<p>The outgoing thermal radiation term <span class="math notranslate nohighlight">\(G(T)\)</span> (or “blackbody cooling to space”) represents the combined effects of negative feedbacks that <em>dampen warming</em>, such as <strong>blackbody radiation</strong>, and positive feedbacks that <em>amplify warming</em>, such as the <strong>water vapor feedback</strong>.</p>
-<p>Since these physics are too complicated to deal with here, we <em>linearize</em> the model combining the incoming and the outgoing radiation.</p>
-<p>We assume that the preindustrial world was in energy balance, and thus the equilibrium temperature is the preindustrial temperature.</p>
-<p>Thus we only the first term of a Taylor Series expansion</p>
+<p>The outgoing thermal radiation (blackbody cooling to space), denoted as <span class="math notranslate nohighlight">\(G(T)\)</span>, represents the combined effects of negative feedbacks that <em>dampen warming</em>, such as <strong>blackbody radiation</strong>, and positive feedbacks that <em>amplify warming</em>, such as the <strong>water vapor feedback</strong>.</p>
+<p>Since these physics are too complicated to deal with here, we <em>linearize</em> the model by combining the incoming and the outgoing radiation.</p>
+<p>We assume that the preindustrial world was in energy balance and thus that the equilibrium temperature aligns with the preindustrial temperature.</p>
+<p>Consequently, our focus narrows down to just the first term of a Taylor Series expansion:</p>
 <div class="math notranslate nohighlight">
-\[ G(T) \sim G(T_0) + G^{'}(T_0) (T-T_0)\]</div>
+\[G(T) \sim G(T_0) + G^{'}(T_0) (T-T_0)\]</div>
 <p>around the pre-industrial equilibrium temperature <span class="math notranslate nohighlight">\(T_0\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -691,20 +593,26 @@ title="Print to PDF"
 </div>
 </div>
 <p>To simplify the expression, we define:</p>
-<p><span class="math notranslate nohighlight">\( A \equiv G(T_0) - G^{'}(T_0)T_0 \)</span></p>
-<p><span class="math notranslate nohighlight">\( B \equiv - G^{'}(T_0) \text{       (the climate feedback parameter),}\)</span></p>
+<div class="math notranslate nohighlight">
+\[ A \equiv G(T_0) - G^{'}(T_0)T_0 \]</div>
+<div class="math notranslate nohighlight">
+\[B \equiv - G^{'}(T_0) \text{       (the climate feedback parameter),}\]</div>
 <p>which gives</p>
 <div class="math notranslate nohighlight">
 \[ \text{outgoing thermal radiation} \equiv G(T) \sim A - BT\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outgoing_thermal_radiation</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="o">*</span><span class="n">T</span>
+    <span class="k">return</span> <span class="n">A</span><span class="o">-</span><span class="n">B</span><span class="o">*</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The value of the climate feedback parameter used here,</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Value of the climate feedback parameter B
+<span class="math notranslate nohighlight">\(B\)</span> comes from a bottom-up estimate based on the best understanding of the various climate feedbacks (read more <a class="reference external" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwikwbfrm9LsAhVjhuAKHQhZCm8QFjAEegQIAhAC&amp;url=https%3A%2F%2Fclimateextremes.org.au%2Fwp-content%2Fuploads%2F2020%2F07%2FWCRP_ECS_Final_manuscript_2019RG000678R_FINAL_200720.pdf&amp;usg=AOvVaw0hWIM3t4kJTovxoeobcRIN">here</a>).</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.3</span> <span class="c1"># climate feedback parameter [W/m^2/°C],</span>
@@ -712,20 +620,21 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>comes from a bottom-up estimate based on the best understanding of the various climate feedbacks (read more <a class="reference external" href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwikwbfrm9LsAhVjhuAKHQhZCm8QFjAEegQIAhAC&amp;url=https%3A%2F%2Fclimateextremes.org.au%2Fwp-content%2Fuploads%2F2020%2F07%2FWCRP_ECS_Final_manuscript_2019RG000678R_FINAL_200720.pdf&amp;usg=AOvVaw0hWIM3t4kJTovxoeobcRIN">here</a>).</p>
-<p>Note: Since <span class="math notranslate nohighlight">\(B&lt;0\)</span> , this tells us that the overall climate feedback is negative (i.e. stabilizing). Positive feedbacks cause <span class="math notranslate nohighlight">\(B\)</span> to become less negative, reducing the efficiency with which Earth cools itself by radiating thermal energy to space, and thus amplifying warming.</p>
-<p>The value <span class="math notranslate nohighlight">\(A\)</span> of is given by the definition of a preindustrial equilibrium, i.e. the fact that before human influence, Earth’s energy budget was perfectly balanced:</p>
-<blockquote>
-<div><p>absorbed solar radiation = outgoing thermal radiation</p>
-</div></blockquote>
-<p>or</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(\frac{S (1-\alpha)}{4} \equiv A - BT_0\)</span></p>
-</div></blockquote>
-<p>By rearanging this equation, we find that the value of <span class="math notranslate nohighlight">\(A\)</span> is given by</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since <span class="math notranslate nohighlight">\(B&lt;0\)</span>, this tells us that the overall climate feedback is negative (i.e., stabilizing). Positive feedbacks cause <span class="math notranslate nohighlight">\(B\)</span> to become less negative, reducing the efficiency with which Earth cools itself by radiating thermal energy to space and thus amplifying warming.</p>
+</div>
+<div class="proof assumption admonition" id="assumption-1">
+<p class="admonition-title"><span class="caption-number">Assumption 2 </span></p>
+<section class="assumption-content" id="proof-content">
+<p>The value <span class="math notranslate nohighlight">\(A\)</span> of is given by the definition of a preindustrial equilibrium, i.e., the fact that before human influence, Earth’s energy budget was perfectly balanced:</p>
+<div class="math notranslate nohighlight">
+\[\frac{S (1-\alpha)}{4} \equiv A - BT_0\]</div>
+</section>
+</div><p>By rearanging this equation, we find that the value of <span class="math notranslate nohighlight">\(A\)</span> is given by</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">T0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">absorbed_solar_radiation</span><span class="p">()</span> <span class="o">+</span> <span class="n">B</span><span class="o">*</span><span class="n">T0</span>
 </pre></div>
 </div>
 </div>
@@ -744,7 +653,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="human-caused-greenhouse-effect">
-<h3>Human-caused greenhouse effect<a class="headerlink" href="#human-caused-greenhouse-effect" title="Permalink to this headline">#</a></h3>
+<h3>Human-caused greenhouse effect<a class="headerlink" href="#human-caused-greenhouse-effect" title="Permalink to this heading">#</a></h3>
 <p>Empirically, the greenhouse effect is known to be a logarithmic function of gaseous carbon dioxide (<span class="math notranslate nohighlight">\(CO_2\)</span>) concentrations</p>
 <div class="math notranslate nohighlight">
 \[ \text{Human-caused greenhouse effect} = a * ln  \frac{CO_2}{CO_{2, PI}}  \]</div>
@@ -766,7 +675,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greenhouse_effect</span><span class="p">(</span><span class="n">CO2</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">CO2_PI</span><span class="o">=</span><span class="mi">280</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">CO2</span><span class="o">/</span><span class="n">CO2_PI</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">CO2</span><span class="o">/</span><span class="n">CO2_PI</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -788,16 +697,21 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2020-11-11-energy-model_29_0.png" src="_images/2020-11-11-energy-model_29_0.png" />
+<img alt="_images/112d5306cd402934165c11ada6d2dee2bb8839d45f60e8f6918198e9b17bc86b.png" src="_images/112d5306cd402934165c11ada6d2dee2bb8839d45f60e8f6918198e9b17bc86b.png" />
 </div>
 </div>
 </section>
 <section id="observations-from-mauna-loa-volcano">
-<h3>Observations from Mauna Loa Volcano<a class="headerlink" href="#observations-from-mauna-loa-volcano" title="Permalink to this headline">#</a></h3>
-<p><img alt="" src="https://i.pinimg.com/originals/df/1a/e7/df1ae72cfd5e6d0d535c0ec99e708f6f.jpg" /></p>
+<h3>Observations from Mauna Loa Volcano<a class="headerlink" href="#observations-from-mauna-loa-volcano" title="Permalink to this heading">#</a></h3>
+<figure class="align-default" id="volcano-mauna-loa">
+<a class="reference internal image-reference" href="https://i.pinimg.com/originals/df/1a/e7/df1ae72cfd5e6d0d535c0ec99e708f6f.jpg"><img alt="https://i.pinimg.com/originals/df/1a/e7/df1ae72cfd5e6d0d535c0ec99e708f6f.jpg" src="https://i.pinimg.com/originals/df/1a/e7/df1ae72cfd5e6d0d535c0ec99e708f6f.jpg" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Mauna Loa Volcano</span><a class="headerlink" href="#volcano-mauna-loa" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="change-in-heat-content">
-<h3>1.4) Change in heat content<a class="headerlink" href="#change-in-heat-content" title="Permalink to this headline">#</a></h3>
+<h3>1.4) Change in heat content<a class="headerlink" href="#change-in-heat-content" title="Permalink to this heading">#</a></h3>
 <p>The heat content <span class="math notranslate nohighlight">\(C_{temp}\)</span> is determined by the temperature <span class="math notranslate nohighlight">\(T\)</span> (in Kelvin) and the heat capacity of the climate system. While we are interested in the temperature of the atmosphere, which has a very small heat capacity, its heat is closely coupled with that of the upper ocean, which has a much larger heat capacity of</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -806,12 +720,18 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The change in heat content over time is thus simply given by <span class="math notranslate nohighlight">\(\frac{d(C_{temp})}{dt}\)</span>. Since the heat capacity of sea water hardly changes with temperature, we can rewrite this in terms of the change in temperature with time as:</p>
+<div class="proof assumption admonition" id="assumption-2">
+<p class="admonition-title"><span class="caption-number">Assumption 3 </span> (Constant heat-capacity)</p>
+<section class="assumption-content" id="proof-content">
+<p>The change in heat content over time is given by
+$<span class="math notranslate nohighlight">\(\frac{d(C_{temp})}{dt}\)</span>$.</p>
+<p>Since the heat capacity of seawater hardly changes with temperature, we can rewrite this in terms of the change in temperature with time</p>
 <div class="math notranslate nohighlight">
-\[\text{change in heat content} = C\frac{dT}{dt} \]</div>
+\[ \frac{d(C_{temp})}{dt} = C\frac{dT}{dt} \]</div>
 </section>
+</div></section>
 <section id="zero-dimensional-climate-model-equation">
-<h3>1.5) “zero-dimensional” climate model equation<a class="headerlink" href="#zero-dimensional-climate-model-equation" title="Permalink to this headline">#</a></h3>
+<h3>1.5) “zero-dimensional” climate model equation<a class="headerlink" href="#zero-dimensional-climate-model-equation" title="Permalink to this heading">#</a></h3>
 <p>Combining all of these subcomponent models, we write the governing equation of the “zero-dimensional” energy balance climate model as the Ordinary Differential Equation (ODE)</p>
 <div class="math notranslate nohighlight">
 \[ C\frac{dT}{dt} = \frac{S (1-\alpha)}{4} - ( A - BT_0) + a * ln  \frac{CO_2}{CO{_2}_{PI}} \]</div>
@@ -819,9 +739,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="numerical-solution-method-and-data-structures">
-<h2>2) Numerical solution method and data structures<a class="headerlink" href="#numerical-solution-method-and-data-structures" title="Permalink to this headline">#</a></h2>
+<h2>2) Numerical solution method and data structures<a class="headerlink" href="#numerical-solution-method-and-data-structures" title="Permalink to this heading">#</a></h2>
 <section id="discretization">
-<h3>2.1) Discretization<a class="headerlink" href="#discretization" title="Permalink to this headline">#</a></h3>
+<h3>2.1) Discretization<a class="headerlink" href="#discretization" title="Permalink to this heading">#</a></h3>
 <p>The energy balance model equation above can be discretized in time as</p>
 <div class="math notranslate nohighlight">
 \[ C\frac{T(t+\Delta t) - T(t)}{\Delta t} = \frac{S (1-\alpha)}{4} - ( A - BT_0) + a * ln  \frac{CO_2}{CO{_2}_{PI}} \]</div>
@@ -832,7 +752,7 @@ title="Print to PDF"
 \[ T_{n+1} = T_n + \frac{\Delta t}{C} \bigg[\frac{S (1-\alpha)}{4} - ( A - BT_n) + a * ln  \frac{CO_2}{CO{_2}_{PI}}\bigg] \]</div>
 </section>
 <section id="timestepping">
-<h3>2.2) Timestepping<a class="headerlink" href="#timestepping" title="Permalink to this headline">#</a></h3>
+<h3>2.2) Timestepping<a class="headerlink" href="#timestepping" title="Permalink to this heading">#</a></h3>
 <p>More generally, we recognize this equation to be of the form:</p>
 <div class="math notranslate nohighlight">
 \[ T_{n+1} = T_n + \Delta t \cdot \text{tendency}(T_n; ...),\]</div>
@@ -893,21 +813,37 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Time [years]&#39;)
 </pre></div>
 </div>
-<img alt="_images/2020-11-11-energy-model_45_1.png" src="_images/2020-11-11-energy-model_45_1.png" />
+<img alt="_images/4ae5b382823b123a42d3bfb20c0bf1710522e60230e2962da1c39b733aec6795.png" src="_images/4ae5b382823b123a42d3bfb20c0bf1710522e60230e2962da1c39b733aec6795.png" />
 </div>
 </div>
 <p>Now we have everything ready. In the next step we will put this into a class called ebm:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ebm</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Zero order energy balance model</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">EBM</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Zero Order Energy Balance Model (EBM)</span>
+
+<span class="sd">    The Energy Balance Model (EBM) represents the balance between incoming solar radiation and outgoing thermal radiation.</span>
+<span class="sd">    It also considers the greenhouse effect caused by CO2 levels. This model can simulate the temporal evolution of temperature </span>
+<span class="sd">    based on various parameters like albedo, solar constant, and greenhouse effect coefficients.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">    - T : Temperature (in Kelvin)</span>
+<span class="sd">    - t : Time</span>
+<span class="sd">    - deltat : Time step</span>
+<span class="sd">    - CO2 : Carbon Dioxide function that returns CO2 levels in dependency of time t</span>
+<span class="sd">    - C : Heat capacity</span>
+<span class="sd">    - a : Greenhouse effect coefficient</span>
+<span class="sd">    - A : Outgoing thermal radiation constant</span>
+<span class="sd">    - B : Temperature sensitivity of outgoing radiation</span>
+<span class="sd">    - CO2_PI : Pre-industrial CO2 concentration</span>
+<span class="sd">    - alpha : Albedo</span>
+<span class="sd">    - S : Solar constant</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">CO2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">deltat</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">CO2_PI</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">S</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span>
-        
         <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">=</span> <span class="n">deltat</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">=</span> <span class="n">C</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
@@ -917,41 +853,46 @@ title="Print to PDF"
         <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">S</span> <span class="o">=</span> <span class="n">S</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">co2</span> <span class="o">=</span> <span class="n">CO2</span>
-    
+
+    <span class="k">def</span> <span class="nf">absorbed_solar_radiation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">S</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">outgoing_thermal_radiation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">A</span> <span class="o">-</span> <span class="n">B</span><span class="o">*</span><span class="n">T</span>
+
+    <span class="k">def</span> <span class="nf">greenhouse_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">CO2_PI</span> <span class="o">=</span> <span class="mi">280</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">CO2</span><span class="o">/</span><span class="n">CO2_PI</span><span class="p">)</span>
+
     <span class="k">def</span> <span class="nf">tendency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-             <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">*</span> <span class="p">(</span>
-            <span class="o">+</span> <span class="n">absorbed_solar_radiation</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="n">S</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
-            <span class="o">-</span> <span class="n">outgoing_thermal_radiation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
-            <span class="o">+</span> <span class="n">greenhouse_effect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">co2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">),</span> <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">CO2_PI</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">co2_pi</span><span class="p">)</span>
-            <span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">*</span> <span class="p">(</span>
-            <span class="o">+</span> <span class="n">absorbed_solar_radiation</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span> <span class="n">S</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
-            <span class="o">-</span> <span class="n">outgoing_thermal_radiation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
-            <span class="o">+</span> <span class="n">greenhouse_effect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">co2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">CO2_PI</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">co2_pi</span><span class="p">)</span>
-            <span class="p">)</span>
+        <span class="n">current_T</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">current_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span>
+        
+        <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">*</span> <span class="p">(</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">absorbed_solar_radiation</span><span class="p">(</span><span class="n">S</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">S</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
+            <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">outgoing_thermal_radiation</span><span class="p">(</span><span class="n">current_T</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+            <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">greenhouse_effect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">co2</span><span class="p">(</span><span class="n">current_t</span><span class="p">),</span> <span class="n">a</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">CO2_PI</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">co2_pi</span><span class="p">)</span>
+        <span class="p">)</span>
+
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">timestep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tendency</span><span class="p">())</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tendency</span><span class="p">())</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span><span class="p">)</span>       
+        <span class="n">new_T</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tendency</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tendency</span><span class="p">()</span>
+        <span class="n">new_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltat</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">new_T</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">new_t</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="running-simulations-of-the-energy-balance-model">
-<h3>2.4) Running simulations of the energy balance model<a class="headerlink" href="#running-simulations-of-the-energy-balance-model" title="Permalink to this headline">#</a></h3>
+<h3>2.4) Running simulations of the energy balance model<a class="headerlink" href="#running-simulations-of-the-energy-balance-model" title="Permalink to this heading">#</a></h3>
 <p>Let’s define a function that runs an EBM simulation by timestepping forward until a given end_year.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_ebm</span><span class="p">(</span><span class="n">ebm</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">end_year</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">end_year</span><span class="p">):</span>
-        <span class="n">ebm</span><span class="o">.</span><span class="n">timestep</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">timestep</span>
 </pre></div>
 </div>
 </div>
@@ -959,24 +900,53 @@ title="Print to PDF"
 <p>For example, let us consider the case where CO₂ emissions increase by 1% year-over-year from the preindustrial value [CO<span class="math notranslate nohighlight">\(_2\)</span>] = <span class="math notranslate nohighlight">\(280.0\)</span> ppm, starting at T=T₀=14°C in year t=0 and with a timestep Δt = 1 year.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CO2_test</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CO2_test</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">CO2_PI</span><span class="o">=</span><span class="mi">280</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">CO2_PI</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="n">t</span>
-
-<span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T0</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">deltat</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">CO2</span><span class="o">=</span><span class="n">CO2_test</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EBM</span><span class="o">.</span><span class="n">timestep</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;T&quot;</span><span class="p">:</span><span class="n">T0</span><span class="p">,</span>
+    <span class="s2">&quot;t&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;deltat&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;CO2&quot;</span><span class="p">:</span><span class="n">CO2_test</span><span class="p">,</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span><span class="n">C</span><span class="p">,</span>
+    <span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="n">a</span><span class="p">,</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span><span class="n">A</span><span class="p">,</span>
+    <span class="s2">&quot;B&quot;</span><span class="p">:</span><span class="n">B</span><span class="p">,</span>
+    <span class="s2">&quot;CO2_PI&quot;</span><span class="p">:</span><span class="mi">280</span><span class="p">,</span>
+    <span class="s2">&quot;alpha&quot;</span><span class="p">:</span><span class="n">alpha</span><span class="p">,</span>
+    <span class="s2">&quot;S&quot;</span><span class="p">:</span><span class="n">S</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Python, the ** syntax in a function call is used for unpacking key-value pairs from dictionaries directly into function arguments. This is particularly useful when working with functions that accept a variable number of keyword arguments.</p>
+<p>In summary, ** in a function call is used to unpack dictionary items as keyword arguments.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">EBM</span><span class="p">(</span><span class="o">**</span><span class="n">model_parameters</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EBM</span><span class="o">.</span><span class="n">T</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">timestep</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">T</span>
 </pre></div>
 </div>
 </div>
@@ -989,23 +959,30 @@ title="Print to PDF"
 </section>
 </section>
 <section id="energy-balance-model-applications">
-<h2>3) Energy balance model applications<a class="headerlink" href="#energy-balance-model-applications" title="Permalink to this headline">#</a></h2>
+<h2>3) Energy balance model applications<a class="headerlink" href="#energy-balance-model-applications" title="Permalink to this heading">#</a></h2>
 <section id="why-was-earth-s-preindustrial-climate-so-stable">
-<h3>3.1) Why was Earth’s preindustrial climate so stable?<a class="headerlink" href="#why-was-earth-s-preindustrial-climate-so-stable" title="Permalink to this headline">#</a></h3>
+<h3>3.1) Why was Earth’s preindustrial climate so stable?<a class="headerlink" href="#why-was-earth-s-preindustrial-climate-so-stable" title="Permalink to this heading">#</a></h3>
 <p>Let us consider the simple case where CO₂ concentrations remain at their pre-industrial temperatures.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">CO2_test</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">280</span>
 
-<span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CO2_test</span><span class="p">)</span>
+<span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;CO2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_test</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">run_ebm</span><span class="p">(</span><span class="n">EBM</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">EBM</span><span class="p">(</span><span class="o">**</span><span class="n">model_parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">run_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -1015,9 +992,10 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t0s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">t0s</span><span class="p">:</span>
-    <span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CO2_test</span><span class="p">)</span>
-    <span class="n">run_ebm</span><span class="p">(</span><span class="n">EBM</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> 
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">EBM</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">EBM</span><span class="p">(</span><span class="o">**</span><span class="n">model_parameters</span><span class="p">)</span>
+    <span class="n">run_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
@@ -1029,13 +1007,13 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;temperature [°C]&#39;)
 </pre></div>
 </div>
-<img alt="_images/2020-11-11-energy-model_57_1.png" src="_images/2020-11-11-energy-model_57_1.png" />
+<img alt="_images/490d498283333dee47c66a9370ce872b8b5a4ff5ed2ef185f0b5ed2458596966.png" src="_images/490d498283333dee47c66a9370ce872b8b5a4ff5ed2ef185f0b5ed2458596966.png" />
 </div>
 </div>
 <p>This figure shows that, no matter where we start out, the overall negative feedbacks (<span class="math notranslate nohighlight">\(B&lt;0\)</span>) restore the temperature to the preindustrial equilibrum value of <span class="math notranslate nohighlight">\(T_0\)</span> = 14.0 °C, over an exponential timescale of about 100 years.</p>
 </section>
 <section id="historical-global-warming-fueled-by-greenhouse-gas-emissions">
-<h3>3.2) Historical global warming fueled by greenhouse gas emissions<a class="headerlink" href="#historical-global-warming-fueled-by-greenhouse-gas-emissions" title="Permalink to this headline">#</a></h3>
+<h3>3.2) Historical global warming fueled by greenhouse gas emissions<a class="headerlink" href="#historical-global-warming-fueled-by-greenhouse-gas-emissions" title="Permalink to this heading">#</a></h3>
 <p>Human greenhouse gas emissions have fundamentally altered Earth’s energy balance, moving us away from the stable preindustrial climate of the past few thousand years.</p>
 <p>Since human CO₂ emissions are the main driver of global warming, we expect that if we plug historical CO₂ increases into our model (“forcing” it), we should roughly reproduce the observed historical global warming.</p>
 <p>The observed increase of CO2 concentrations can be fairly accurately modelled by the simple cubic formula below.</p>
@@ -1049,35 +1027,37 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EBM</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T0</span><span class="p">,</span> <span class="mi">1850</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">co2_hist</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;CO2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">co2_hist</span>
+<span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">T0</span>
+<span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;t&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1850</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">EBM</span><span class="p">(</span><span class="o">**</span><span class="n">model_parameters</span><span class="p">)</span>
 
-<span class="n">run_ebm</span><span class="p">(</span><span class="n">EBM</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span> 
+<span class="n">run_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="mi">170</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://data.giss.nasa.gov/gistemp/graphs/graph_data/Global_Mean_Estimates_based_on_Land_and_Ocean_Data/graph.txt&quot;</span>
-<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datapath</span> <span class="o">=</span> <span class="s2">&quot;data/graph.txt&quot;</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datapath</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">skiprows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                    <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;     &quot;</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">+</span> <span class="mf">14.15</span>
 
-<span class="n">CO2_url</span> <span class="o">=</span> <span class="s2">&quot;https://scrippsco2.ucsd.edu/assets/data/atmospheric/stations/in_situ_co2/monthly/monthly_in_situ_co2_mlo.csv&quot;</span>
-<span class="n">co2_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">CO2_url</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">46</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
+<span class="n">CO2_url</span> <span class="o">=</span> <span class="s2">&quot;data/monthly_in_situ_co2_mlo.csv&quot;</span>
+<span class="n">co2_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">CO2_url</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">58</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> 
 <span class="n">co2_data</span> <span class="o">=</span> <span class="n">co2_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span> 
 <span class="n">co2_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">co2_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">5</span><span class="p">])</span> 
 <span class="n">co2_data</span><span class="p">[</span><span class="n">co2_data</span><span class="o">&lt;=</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">co2_data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">co2_data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">co2_data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">co2_data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span>
 <span class="n">co2_data</span> <span class="o">=</span> <span class="n">co2_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">co2_data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/38/z0l88jxs5cxc27_d0dp0r78c0000gn/T/ipykernel_11654/2825592875.py:3: ParserWarning: Falling back to the &#39;python&#39; engine because the &#39;c&#39; engine does not support regex separators (separators &gt; 1 char and different from &#39;\s+&#39; are interpreted as regex); you can avoid this warning by specifying engine=&#39;python&#39;.
-  temp = pd.read_csv(url, header = None,
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/38/z0l88jxs5cxc27_d0dp0r78c0000gn/T/ipykernel_38547/1054007210.py:2: ParserWarning: Falling back to the &#39;python&#39; engine because the &#39;c&#39; engine does not support regex separators (separators &gt; 1 char and different from &#39;\s+&#39; are interpreted as regex); you can avoid this warning by specifying engine=&#39;python&#39;.
+  temp = pd.read_csv(datapath, header = None,
 </pre></div>
 </div>
 </div>
@@ -1093,7 +1073,7 @@ title="Print to PDF"
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 
 
-<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="n">EBM</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;EBM model&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2021</span><span class="p">),</span> <span class="n">model</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;EBM model&quot;</span><span class="p">)</span>
 <span class="n">temp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">bx</span><span class="p">)</span>
 <span class="n">bx</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
 <span class="n">bx</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
@@ -1105,22 +1085,22 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2020-11-11-energy-model_63_0.png" src="_images/2020-11-11-energy-model_63_0.png" />
+<img alt="_images/92057a03c021ca3fbdbaee1f1c562bd7dfa780a4a9d1897fb0b1d3b3f28f9a13.png" src="_images/92057a03c021ca3fbdbaee1f1c562bd7dfa780a4a9d1897fb0b1d3b3f28f9a13.png" />
 </div>
 </div>
-</section>
-<section id="co-2-emissions-predict-the-trend-but-what-about-the-climate-noise">
-<h3>CO<span class="math notranslate nohighlight">\(_2\)</span> emissions predict the trend, but what about the climate noise?<a class="headerlink" href="#co-2-emissions-predict-the-trend-but-what-about-the-climate-noise" title="Permalink to this headline">#</a></h3>
-<p>CO<span class="math notranslate nohighlight">\(_2\)</span> emissions predict the trend, but what about the climate noise?
-Our model does a good job of predicting the long-term trend of increasing temperatures, but what about all of the noise in the observations? These are real signals due to natural variability of the Earth system, not artifacts due to instrumental noise.</p>
-<p>This natural noise arises due to the turbulent and chaotic fluid dynamics of the atmosphere and ocean, which we will explore further in Lecture 4 and are illustrated below.</p>
-<p><a class="reference external" href="https://youtu.be/oRsY_UviBPE">youtube</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>CO<sub>2</sub> Emissions: Beyond Trend Predictions to Climate Noise</p>
+<p>While CO<sub>2</sub> emissions can be used to predict the overarching trend in climate, we must also consider the inherent climate noise present in observations. This noise doesn’t arise from instrumental inaccuracies but represents genuine signals from the Earth’s natural variability.</p>
+<p>Such natural fluctuations are mainly attributed to the turbulent and chaotic fluid dynamics of both the atmosphere and the ocean. We will delve deeper into this topic in <strong>Lecture 4</strong>. The dynamics are visually represented in the following illustrations:</p>
+</div>
+<p><a class="reference external" href="https://youtu.be/oRsY_UviBPE"><img alt="Video Thumbnail" src="https://img.youtube.com/vi/oRsY_UviBPE/maxresdefault.jpg" /></a></p>
 <p>Now that we’ve convinced ourselves that the model accurately reproduces historical warming, we can use it to project how much warming we might expect due to future CO₂ emissions.</p>
 </section>
 <section id="best-and-worst-case-projections-of-future-global-warming">
-<h3>3.3) Best- and worst-case projections of future global warming<a class="headerlink" href="#best-and-worst-case-projections-of-future-global-warming" title="Permalink to this headline">#</a></h3>
+<h3>3.3) Best- and worst-case projections of future global warming<a class="headerlink" href="#best-and-worst-case-projections-of-future-global-warming" title="Permalink to this heading">#</a></h3>
 <p>Consider two divergent hypothetical futures:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>a low-emissions world in which emissions decrease such that CO2 concentrations stay below 500 ppm by 2100 (known in climate circles as “RCP2.6”) and</p></li>
 <li><p>a high-emissions world in which emissions continue increasing and CO2 concentrations soar upwards of 1200 ppm (“RCP8.5”).</p></li>
 </ol>
@@ -1137,11 +1117,14 @@ Our model does a good job of predicting the long-term trend of increasing temper
 <p>In the low-emissions scenario, the temperature increase stays below <span class="math notranslate nohighlight">\(\Delta T\)</span> = 2 °C by 2100, while in the high-emissions scenario temperatures soar upwards of 3.5ºC above pre-industrial levels.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">EBM1</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T0</span><span class="p">,</span> <span class="mi">1850</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CO2_RCP26</span><span class="p">)</span>
-<span class="n">EBM2</span> <span class="o">=</span> <span class="n">ebm</span><span class="p">(</span><span class="n">T0</span><span class="p">,</span> <span class="mi">1850</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CO2_RCP85</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;CO2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_RCP26</span>
+<span class="n">model1</span> <span class="o">=</span> <span class="n">EBM</span><span class="p">(</span><span class="o">**</span><span class="n">model_parameters</span><span class="p">)</span>
 
-<span class="n">run_ebm</span><span class="p">(</span><span class="n">EBM1</span><span class="p">,</span> <span class="mi">249</span><span class="p">)</span> 
-<span class="n">run_ebm</span><span class="p">(</span><span class="n">EBM2</span><span class="p">,</span> <span class="mi">249</span><span class="p">)</span> 
+<span class="n">model_parameters</span><span class="p">[</span><span class="s2">&quot;CO2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CO2_RCP85</span>
+<span class="n">model2</span> <span class="o">=</span> <span class="n">EBM</span><span class="p">(</span><span class="o">**</span><span class="n">model_parameters</span><span class="p">)</span>
+
+<span class="n">run_model</span><span class="p">(</span><span class="n">model1</span><span class="p">,</span> <span class="mi">249</span><span class="p">)</span> 
+<span class="n">run_model</span><span class="p">(</span><span class="n">model2</span><span class="p">,</span> <span class="mi">249</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -1154,17 +1137,17 @@ Our model does a good job of predicting the long-term trend of increasing temper
         <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Blue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;RCP 2.6 low emissions&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2100</span><span class="p">),</span> <span class="n">CO2_RCP85</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span><span class="mi">2100</span><span class="p">)),</span>
         <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;RCP 8.5 High emissions&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="n">CO2_RCP26</span><span class="p">(</span><span class="mi">2020</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="n">CO2_RCP26</span><span class="p">(</span><span class="mi">2023</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
         <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;we are here&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$CO_2$ concentration [ppm]&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 
-<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2100</span><span class="p">),</span> <span class="n">EBM1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
-<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2100</span><span class="p">),</span> <span class="n">EBM2</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>  <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2100</span><span class="p">),</span> <span class="n">model1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1850</span><span class="p">,</span> <span class="mi">2100</span><span class="p">),</span> <span class="n">model2</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>  <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span><span class="p">)</span>
 <span class="n">bx</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Paris Agreement</span><span class="se">\n</span><span class="s2"> threshold (2°C warming)&quot;</span><span class="p">,</span>
            <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
 <span class="n">bx</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature [°C]&quot;</span><span class="p">)</span>
-<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="n">EBM1</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">170</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> 
+<span class="n">bx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="n">model1</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">173</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> 
          <span class="n">markersize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;we are here&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
 <span class="n">bx</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 
@@ -1173,13 +1156,16 @@ Our model does a good job of predicting the long-term trend of increasing temper
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2020-11-11-energy-model_71_0.png" src="_images/2020-11-11-energy-model_71_0.png" />
+<img alt="_images/4f49f9db2d17b4298bf426021a10691a39add17c5f627dd864395629791fcdc1.png" src="_images/4f49f9db2d17b4298bf426021a10691a39add17c5f627dd864395629791fcdc1.png" />
 </div>
 </div>
-<p>Thanks a lot to <a class="reference external" href="https://github.com/hdrake">Henri Drake</a> for providing the lecture.</p>
-<p>The original lecture is part of the MIT class <a class="reference external" href="https://computationalthinking.mit.edu/Fall20/lecture20/">Introduction to Computational Thinking</a>.</p>
-<p>This class uses the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>. The orignal code can be found under <a class="reference external" href="https://github.com/hdrake/simplEarth/blob/master/1_energy_balance_model.jl">https://github.com/hdrake/simplEarth/blob/master/1_energy_balance_model.jl</a></p>
-<p>Adapted with some content from <a class="reference external" href="https://brian-rose.github.io/ClimateLaboratoryBook/courseware/">https://brian-rose.github.io/ClimateLaboratoryBook/courseware/</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A big thank you to <a class="reference external" href="https://github.com/hdrake">Henri Drake</a> for the insightful lecture!</p>
+<p>The content is sourced from the MIT course titled <a class="reference external" href="https://computationalthinking.mit.edu/Fall20/lecture20/">Introduction to Computational Thinking</a>. This course is structured around the <a class="reference external" href="http://www.julialang.org/">Julia programming language</a>.</p>
+<p>The original code corresponding to this lecture is available on GitHub: <a class="reference external" href="https://github.com/hdrake/simplEarth/blob/master/1_energy_balance_model.jl">simplEarth/1_energy_balance_model.jl</a>.</p>
+<p>Additionally, some content has been adapted from <a class="reference external" href="https://brian-rose.github.io/ClimateLaboratoryBook/courseware/">Brian Rose’s Climate Laboratory Book</a>.</p>
+</div>
 </section>
 </section>
 </section>
@@ -1196,7 +1182,7 @@ Our model does a good job of predicting the long-term trend of increasing temper
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -1204,50 +1190,122 @@ Our model does a good job of predicting the long-term trend of increasing temper
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2020-11-09-introduction_to_python.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lecture 1, Introduction to python</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2020-11-09-introduction_to_python.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 1, Introduction to python</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="2020-11-12-non-linear-dynamics.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="2020-11-12-non-linear-dynamics.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Lecture 3, Nonlinear dynamics, stability and bifurcations</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-observed-global-energy-budget">The Observed Global Energy Budget</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#so-why-does-it-matter">So, Why Does It Matter?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absorbed-solar-radiation">1.1 Absorbed solar radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outgoing-thermal-radiation">1.2 Outgoing Thermal Radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#human-caused-greenhouse-effect">Human-caused greenhouse effect</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observations-from-mauna-loa-volcano">Observations from Mauna Loa Volcano</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-in-heat-content">1.4) Change in heat content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-dimensional-climate-model-equation">1.5) “zero-dimensional” climate model equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-solution-method-and-data-structures">2) Numerical solution method and data structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">2.1) Discretization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timestepping">2.2) Timestepping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-simulations-of-the-energy-balance-model">2.4) Running simulations of the energy balance model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance-model-applications">3) Energy balance model applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-was-earth-s-preindustrial-climate-so-stable">3.1) Why was Earth’s preindustrial climate so stable?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-global-warming-fueled-by-greenhouse-gas-emissions">3.2) Historical global warming fueled by greenhouse gas emissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-and-worst-case-projections-of-future-global-warming">3.3) Best- and worst-case projections of future global warming</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By H. E. Markus Meier, Florian Börgel<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By H. E. Markus Meier, Florian Börgel, Sven Karsten
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
