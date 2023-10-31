@@ -37,4 +37,4 @@ html:
 
 launch_buttons:
   binderhub_url: "https://mybinder.org" 
-
+  jupyterhub_url: "https://jupyter.ostseeforschung.info/"
