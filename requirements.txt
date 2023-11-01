@@ -3,3 +3,4 @@ numpy
 xarray
 netcdf4
 ipywidgets
+scipy
